@@ -102,8 +102,8 @@
 %
 
 % If you get rid of \disscopyright, restore the \blankpage line after it
-% \disscopyright{}
-\blankpage
+\disscopyright{}
+% \blankpage
 
 % SB: Space hack for abstract
 \iftoggle{compact-space}
@@ -188,18 +188,17 @@
     \newpage
     \input{introduction}     % tell them what you are going to tell them
 
-    \newpage
+    % \newpage
 
-    \input{background}   % describe the problem statement
+    % \input{background}   % describe the problem statement
 
-    \newpage
+    % \newpage
 
-    \input{contrib1}    % what is your solution
-    \input{contrib2}
-    \input{contrib3}
-    \input{relatedwork}
-    \input{futurework}
-    \input{conclusion}       % conclusion stuff
+    \input{literatureReview}   
+    \input{methedology}
+    \input{results}
+    \input{discussion}
+    \input{conclusion}
 
     %
     % If you have appendices in your dissertation, you will need the
