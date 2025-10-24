@@ -15,7 +15,7 @@ The most common areas where lymph vessels of the breast drain into are the under
 The method of cancer cells metastasizing through the lymphatic system is illustrated below in Figure~\ref{fig:introduction:lymphatic_system_in_a_breast} and Figure~\ref{fig:introduction:lymphatic_process_of_metastatic_breast_cancer}.
 
 \begin{figure}[h!]
-        \fbox{\begin{minipage}{0.92\textwidth}
+        \begin{minipage}{0.92\textwidth}
                         \centering
                         \begin{subfigure}[b]{0.45\textwidth}
                                 \centering
@@ -29,7 +29,7 @@ The method of cancer cells metastasizing through the lymphatic system is illustr
                                 \caption{Lymph Nodes Overview \cite{RefWorks:RefID:364-riggio2020lingering}.}
                                 \label{fig:introduction:lymphatic_process_of_metastatic_breast_cancer}
                         \end{subfigure}
-                \end{minipage}}
+                \end{minipage}
         \caption{Lymphatic System and Lymph Nodes Overview \cite{RefWorks:RefID:364-riggio2020lingering} \cite{RefWorks:RefID:37-memorialsurgery}.}
         \label{fig:introduction:lymphatic_system_and_nodes_overview}
 \end{figure}
@@ -105,7 +105,7 @@ Targeted therapies, or precision medicines, attack specific characteristics of a
 
 \begin{figure}[h!]
         \centering
-        \fbox{\includegraphics[width=0.6\textwidth]{../figs/introduction/breast_cancer_treatment_process_flowchart.png}}
+        \includegraphics[width=0.6\textwidth]{../figs/introduction/breast_cancer_treatment_process_flowchart.png}
         \caption{Breast Cancer Treatment Options Overview \cite{RefWorks:RefID:37-memorialsurgery}, \cite{RefWorks:RefID:370-einsteinisaac}.}
         \label{fig:introduction:breast_cancer_treatment_options_overview}
 \end{figure}
@@ -123,7 +123,7 @@ WBI is delivered over the course of five to six weeks while APBI is delivered ov
 
 \begin{figure}[h!]
         \centering
-        \fbox{\includegraphics[width=0.6\textwidth]{../figs/introduction/WBI_vs_APBI_irradiation_comparison.png}}
+        \includegraphics[width=0.6\textwidth]{../figs/introduction/WBI_vs_APBI_irradiation_comparison.png}
         \caption{Comparison of radiation exposure between Whole Breast Irradiation (WBI) (left) and Accelerated Partial Breast Irradiation (APBI) (right) \cite{RefWorks:RefID:157-thomasscience}. The yellow area indicates the irradiated region.}
         \label{fig:introduction:WBI_vs_APBI_irradiation_comparison}
 \end{figure}
@@ -131,12 +131,67 @@ WBI is delivered over the course of five to six weeks while APBI is delivered ov
 \subsubsection{Radiation Therapy Treatment Planning\label{sec:introduction:radiationtherapy:treatmentplanning}}
 Radiation therapy (WBI or APBI) requires tumor bed delineation to identify and outline the tumor as well as a surrounding healthy tissue margin. This treatment planning ensures radiation is delivered accurately to the tumor site while minimizing exposure to healthy surrounding tissue and organs~\cite{RefWorks:RefID:197-den2015postlumpectomy}.
 
-One concern with tumor bed (TB) delineation is the interobserver variability in accurately marking the TB~\cite{RefWorks:RefID:197-den2015postlumpectomy},~\cite{RefWorks:RefID:179-yang2013tumor}.There are many methods and devices used to assist in TB delineation to address these concerns such as surgical clips, pre-operative imaging, seroma formation, fiducial markers, and other implantable devices~\cite{RefWorks:RefID:179-yang2013tumor},~\cite{RefWorks:RefID:25-acree2022review}. A more detailed explanation of the radiation therapy treatment planning process, current methods, and shortcomings can be found in Chapter ~\ref{chap:literatureReview}
+One concern with tumor bed (TB) delineation is the interobserver variability in accurately marking the TB~\cite{RefWorks:RefID:197-den2015postlumpectomy},~\cite{RefWorks:RefID:179-yang2013tumor}. There are many methods and devices used to assist in TB delineation to address these concerns such as surgical clips, pre-operative imaging, seroma formation, fiducial markers, and other implantable devices~\cite{RefWorks:RefID:179-yang2013tumor},~\cite{RefWorks:RefID:25-acree2022review}. \hl{A more detailed explanation of the radiation therapy treatment planning process, current methods, and shortcomings can be found in} Chapter~\ref{chap:literatureReview}.
 
 \hl{(Specify section of lit review once it's made).}
 
-
-
-
 \subsection{Motivation\label{sec:introduction:motivation}}
-This is a subsection of the background in the introduction!
+The motivation for this work stems from the need to standardize and improve the accuracy and consistency of tumor bed (TB) delineation in radiation therapy following a lumpectomy procedure. Current devices and methods used for TB delineation have limitations that affect the overall consistency and accuracy of post-lumpectomy radiation therapy. As over 70\% of breast cancer recurrences occur at the original tumor site, accurate TB delineation and radiation delivery is important in improving patient outcomes\cite{RefWorks:RefID:25-acree2022review}. \hl{This section provides an overview of current devices and methods, though they will be explored further in} Chapter~\ref{chap:literatureReview}.
+
+\subsubsection{Current Devices and Methods\label{sec:introduction:motivation:currentdevicesandmethods}}
+Current devices and methods used for TB delineation include titanium, gold, or liquid fiducial markers/surgical clips, surgeon discretion, seroma formation, or implantable devices\cite{RefWorks:RefID:25-acree2022review}
+
+Fiducial markers are solid metal clips inserted around the border of a tumor cavity immediately following the tumor removal\cite{RefWorks:RefID:358-defining}. These provide a 2D point mapping of the tumor space as shown below in Figure~\ref{fig:introduction:imaging_of_fiducal_clips_in_phantom_breast}.
+
+Liquid fiducial markers were first used as spacers for prostate cancer treatment planning. They have since been repurposed to be used for TB delineation. These markers provide a clearer delineation than solid clips as they conform to the tumor cavity shape \cite{RefWorks:RefID:25-acree2022review}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.6\textwidth]{../figs/introduction/imaging_of_fiducal_clips_in_phantom_breast.png}
+        \caption{Imaging of Fiducial Clips in Phantom Breast. Yellow arrows indicate fiducial clips placed around tumor cavity. Adapted from \cite{RefWorks:RefID:178-krawczyk1994importance}.}
+        \label{fig:introduction:imaging_of_fiducal_clips_in_phantom_breast}
+\end{figure}
+
+Using seroma formation to mark the tumor bed for radiation therapy involves outlining the seroma that forms following a lumpectomy procedure\cite{RefWorks:RefID:25-acree2022review}.
+
+Lastly, implantable devices can be used to mark the tumor bed. One example is BioZorb (Hologic) which is a 3-dimensional coil-like structure with titanium clips embedded. This device is implanted into the tumor cavity following a lumpectomy procedure and improves on titanium clips alone by creating a 3D outline of the tumor bed. BioZorb was also designed to be reabsorbed into the body within a year\cite{RefWorks:RefID:25-acree2022review}. BioZorb is shown below in Figure~\ref{fig:introduction:biozorb_implant}.
+
+\begin{figure}[h!]
+        \begin{minipage}{0.92\textwidth}
+                        \centering
+                        \begin{subfigure}[b]{0.9\textwidth}
+                                \centering
+                                \includegraphics[width=\textwidth]{../figs/introduction/BioZorb_physically.png}
+                                \caption{BioZorb physically (top).}
+                                \label{fig:introduction:biozorb_physically}
+                        \end{subfigure}
+
+                        \vspace{1em} % optional space between images
+
+                        \begin{subfigure}[b]{0.9\textwidth}
+                                \centering
+                                \includegraphics[width=\textwidth]{../figs/introduction/BioZorb_in_imaging.png}
+                                \caption{BioZorb in imaging.}
+                                \label{fig:introduction:biozorb_in_imaging}
+                        \end{subfigure}
+                \end{minipage}
+        \caption{BioZorb, an implantable device to assist with TB delineation\cite{RefWorks:RefID:370-einsteinisaac}.}
+        \label{fig:introduction:biozorb_implant}
+\end{figure}
+
+\hl{Also talk about the new suture material from Adrian's Thesis}
+
+\subsubsection{Challenges with Current Devices and Methods\label{sec:introduction:motivation:challengeswithcurrentdevicesandmethods}}
+
+% Challenges
+% * Need for re-excision (10 to 20% Ref:5)
+% * Migration as tissue grows in
+% * Migration after oncoplastic surgery (30,000 patients anually Ref:5)
+
+% Clip challenges (See RefID 25)
+Utilizing seroma formation can be unreliable, however, as the seroma may not always be localized to the tumor bed, relies on the excision closure method, and time elapsed after surgery\cite{RefWorks:RefID:25-acree2022review}.
+
+% Show competitive matrix from Isaac's thesis
+
+\subsubsection{Proposed Solution\label{sec:introduction:motivation:proposedsolution}}
+% Explain our research and the proposed mesh
