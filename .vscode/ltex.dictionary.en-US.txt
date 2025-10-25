@@ -3,3 +3,5 @@ sevarity
 interobserver
 seroma
 BioZorb
+Seroma
+Biozorb
