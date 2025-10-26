@@ -82,19 +82,19 @@ Breast cancer stages can be divided into early and late stage breast cancer. Ear
 
 \subsubsection{Current Treatment Options\label{sec:introduction:breastcancer:currenttreatmentoptions}}
 
-\subsubsection*{Surgical Options\label{sec:introduction:breastcancer:currenttreatmentoptions:surgicaloptions}}
+\paragraph*{Surgical Options\label{sec:introduction:breastcancer:currenttreatmentoptions:surgicaloptions}}
 
 Treatment options for breast cancer largely depend on the type and stage of the cancer. Surgical choices include a lumpectomy, which removes the tumor and a small margin of surrounding healthy tissue, or a mastectomy, which removes the entire breast~\cite{RefWorks:RefID:165-czajka2023breast}.
 
 A lumpectomy is followed by radiation therapy to kill any stray cancer cells that may remain in the breast. This combination helps lower the risk of recurrence, or the return of the cancer~\cite{RefWorks:RefID:159-depolo2024radiation}. Radiation therapy is performed using high-energy X-rays to damage a cancer cell's DNA, preventing it from dividing further until it dies. Healthy tissue cells grow and divide slower than cancer cells, allowing them to repair themselves after radiation therapy while cancer cells cannot~\cite{RefWorks:RefID:159-depolo2024radiation}. See Section~\ref{sec:introduction:radiationtherapy} for more information on radiation therapy.
 
-\subsubsection*{Lymph Node Biopsy\label{sec:introduction:breastcancer:currenttreatmentoptions:lymphnodebiopsy}}
+\paragraph*{Lymph Node Biopsy\label{sec:introduction:breastcancer:currenttreatmentoptions:lymphnodebiopsy}}
 In most surgical treatments for breast cancer, a lymph node biopsy is performed to check if cancer has spread past the breast tissue and to the lymph nodes. Samples from one or more lymph nodes are removed and examined under a microscope for cancer cells~\cite{RefWorks:RefID:37-memorialsurgery}. Standard practice was removing most of the lymph nodes in the underarm, called an axillary dissection. Today, a sentinel lymph node biopsy is more commonly performed to allow a faster recovery time~\cite{RefWorks:RefID:37-memorialsurgery}.
 
-\subsubsection*{Sentinel Lymph Node Biopsy\label{sec:introduction:breastcancer:currenttreatmentoptions:sentinellymphnodebiopsy}}
+\paragraph*{Sentinel Lymph Node Biopsy\label{sec:introduction:breastcancer:currenttreatmentoptions:sentinellymphnodebiopsy}}
 The sentinel lymph node is the first lymph node that breast cancer cells spread to after leaving the breast. In a sentinel lymph node biopsy, a radioactive tracer (often technetium-99m) and/or a blue dye is injected into the side of the tumor. The tracer(s) travel through the lymphatic system to the sentinel lymph node. The blue stain and radiotracer signal, found with a gamma probe, can be used to identify and excise this lymph node for examination under a microscope for cancer cells~\cite{RefWorks:RefID:37-memorialsurgery},~\cite{RefWorks:RefID:165-czajka2023breast}.
 
-\subsubsection*{Systemic Therapies\label{sec:introduction:breastcancer:currenttreatmentoptions:systemictherapies}}
+\paragraph*{Systemic Therapies\label{sec:introduction:breastcancer:currenttreatmentoptions:systemictherapies}}
 While breast cancer treatment commonly starts with surgery, systemic therapies such as chemotherapy, hormone therapy, or targeted therapies may also be used~\cite{RefWorks:RefID:37-memorialsurgery}.
 
 Chemotherapy, often called "chemo," uses strong medicines to slow or stop cancer cells from growing further. As chemotherapy often works by attacking cells that divide quickly, it can attack cancer cells but also other healthy cells that divide quickly such as those that make your hair grow. This can lead to side effects such as hair loss and nausea~\cite{RefWorks:RefID:37-memorialsurgery}.
@@ -129,10 +129,30 @@ WBI is delivered over the course of five to six weeks while APBI is delivered ov
 \end{figure}
 
 \subsubsection{Radiation Therapy Treatment Planning\label{sec:introduction:radiationtherapy:treatmentplanning}}
-\hl{Explain CTV and PTV\\}
+
+\paragraph*{Whole vs Partial Breast Irradiation\label{sec:introduction:radiationtherapy:treatmentplanning:WBIvsPBI}}
 Radiation therapy (WBI or APBI) requires tumor bed delineation to identify and outline the tumor as well as a surrounding healthy tissue margin. This treatment planning ensures radiation is delivered accurately to the tumor site while minimizing exposure to healthy surrounding tissue and organs~\cite{RefWorks:RefID:197-den2015postlumpectomy}.
 
 One concern with tumor bed (TB) delineation is the interobserver variability in accurately marking the TB~\cite{RefWorks:RefID:197-den2015postlumpectomy},~\cite{RefWorks:RefID:179-yang2013tumor}. There are many methods and devices used to assist in TB delineation to address these concerns such as surgical clips, pre-operative imaging, seroma formation, fiducial markers, and other implantable devices~\cite{RefWorks:RefID:179-yang2013tumor},~\cite{RefWorks:RefID:25-acree2022review}.
+
+\paragraph*{Treatment Planning Volumes\label{sec:introduction:radiationtherapy:treatmentplanning:planningVolumes}}
+% Ref 190:
+The treatment planning volumes are divided into three sub-volumes: the gross target volume (GTV), the clinical target volume (CTV), and the planning target volume (PTV).
+
+The GTV is the confirmed tumor based on visible or radiological examination. This is delineated based on clinical judgment~\cite{RefWorks:RefID:190-antolakplanning}.
+
+The CTV encompasses the GTV with a margin for subclinical disease. Subclinical disease is an illness that is not clinically detectable but will show signs and symptoms after they surface~\cite{RefWorks:RefID:373-stöpplermedical}. Like the GTV, the CTV is also determined largely by clinical decisions, though it can be aided by computer software tools~\cite{RefWorks:RefID:190-antolakplanning}.
+
+The PTV encompasses the CTV with a margin for uncertainty due to organ mobility, organ deformation, and variations in patient setup. The PTV is the target volume that receives radiation during radiation therapy. Once the CTV is delineated, the PTV can be created automatically using software tools. There is debate regarding the necessary margin size for CTV and PTV creation~\cite{RefWorks:RefID:190-antolakplanning}.
+
+The differences between these three margins is illustrated below in Figure~\ref{fig:introduction:treatment_target_volumes_comparison}.
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.6\textwidth]{../figs/introduction/treatment_target_volumes.png}
+        \caption{Difference between radiation therapy treatment target volumes (GTV, CTV, and PTV)\cite{RefWorks:RefID:370-einsteinisaac}.}
+        \label{fig:introduction:treatment_target_volumes_comparison}
+\end{figure}
+
 
 \subsection{Motivation\label{sec:introduction:motivation}}
 The motivation for this work stems from the need to standardize and improve the accuracy and consistency of tumor bed (TB) delineation in radiation therapy following a lumpectomy procedure.

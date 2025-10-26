@@ -53,9 +53,16 @@
 
 \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
 
+% Things I added
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \usepackage{float}
+\usepackage{titlesec}
+\titleformat{\paragraph}[block]
+  {\normalfont\normalsize\bfseries}
+  {\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{2ex plus .4ex minus .2ex}{0.5ex}
+
 
 %%% Local Variables:
 %%% mode: latex
