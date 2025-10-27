@@ -105,7 +105,7 @@ Targeted therapies, or precision medicines, attack specific characteristics of a
 
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\textwidth]{../figs/introduction/breast_cancer_treatment_process_flowchart.png}
+        \includegraphics[width=\textwidth]{../figs/introduction/breast_cancer_treatment_process_flowchart.png}
         \caption{Breast Cancer Treatment Options Overview \cite{RefWorks:RefID:37-memorialsurgery}, \cite{RefWorks:RefID:370-einsteinisaac}.}
         \label{fig:introduction:breast_cancer_treatment_options_overview}
 \end{figure}
@@ -114,7 +114,7 @@ Targeted therapies, or precision medicines, attack specific characteristics of a
 \subsubsection{Radiation Therapy Overview\label{sec:introduction:radiationtherapy:overview}}
 As mentioned in Section~\ref{sec:introduction:breastcancer:currenttreatmentoptions:surgicaloptions}, radiation therapy often follows a lumpectomy procedure to kill any stray cancer cells and prevent the cancer from resurfacing. Together, a lumpectomy procedure followed by radiation therapy is commonly known as breast-conserving therapy (BCT). Some compare breast cancer surgery to picking up the large pieces of a broken glass off the floor, while radiation therapy is like vacuuming the remaining shards at the end.
 
-Including radiation therapy after a lumpectomy has been shown to reduce the risk of ipsilateral (same side) recurrence as well as increase overall survival rates~\cite{RefWorks:RefID:157-thomasscience}, ~\cite{RefWorks:RefID:198-jiao2024interobserver}.
+Including radiation therapy after a lumpectomy has been shown to reduce the risk of ipsilateral (same side) recurrence as well as increase overall survival rates~\cite{RefWorks:RefID:157-thomasscience}~\cite{RefWorks:RefID:198-jiao2024interobserver}~\cite{RefWorks:RefID:375-joosten2013evaluation}.
 
 \subsubsection{Whole vs Accelerated Partial Breast Irradiation\label{sec:introduction:radiationtherapy:wholevsacceleratedpartialbreastirradiation}}
 Patients undergoing BCT can receive either whole breast irradation (WBI) or accelerated partial breast irradiation (APBI). WBI is the more common of the two techniques, although APBI has been gaining traction in recent years due to its unique benefits~\cite{RefWorks:RefID:157-thomasscience}.
@@ -123,7 +123,7 @@ WBI is delivered over the course of five to six weeks while APBI is delivered ov
 
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\textwidth]{../figs/introduction/WBI_vs_APBI_irradiation_comparison.png}
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/WBI_vs_APBI_irradiation_comparison.png}
         \caption{Comparison of radiation exposure between Whole Breast Irradiation (WBI) (left) and Accelerated Partial Breast Irradiation (APBI) (right) \cite{RefWorks:RefID:157-thomasscience}. The yellow area indicates the irradiated region.}
         \label{fig:introduction:WBI_vs_APBI_irradiation_comparison}
 \end{figure}
@@ -148,8 +148,8 @@ The PTV encompasses the CTV with a margin for uncertainty due to organ mobility,
 The differences between these three margins is illustrated below in Figure~\ref{fig:introduction:treatment_target_volumes_comparison}.
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\textwidth]{../figs/introduction/treatment_target_volumes.png}
-        \caption{Difference between radiation therapy treatment target volumes (GTV, CTV, and PTV)\cite{RefWorks:RefID:370-einsteinisaac}.}
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/treatment_target_volumes.png}
+        \caption{Difference between radiation therapy treatment target volumes (GTV, CTV, and PTV). Adapted from~\cite{RefWorks:RefID:370-einsteinisaac}.}
         \label{fig:introduction:treatment_target_volumes_comparison}
 \end{figure}
 
@@ -157,11 +157,11 @@ The differences between these three margins is illustrated below in Figure~\ref{
 \subsection{Motivation\label{sec:introduction:motivation}}
 The motivation for this work stems from the need to standardize and improve the accuracy and consistency of tumor bed (TB) delineation in radiation therapy following a lumpectomy procedure.
 
-The challenges with accurate TB delineation following a lumpectomy procedure arise because the cancerous tissue has been removed, leaving behind a tumor cavity that is difficult to accurately trace~\cite{RefWorks:RefID:25-acree2022review}. Additionally, unlike other parts of the body, the breast lacks anatomic landmarks to assist with tumor bed delineation~\cite{RefWorks:RefID:344-mitchell2019adaptable}. This need for a marking method is visualized below in Figure~\ref{fig:introduction:need_for_tumor_bed_marker}.
+The challenges with accurate TB delineation following a lumpectomy procedure arise because the cancerous tissue has been removed, leaving behind a tumor cavity that is difficult to accurately trace~\cite{RefWorks:RefID:25-acree2022review}. Additionally, unlike other parts of the body, the breast lacks anatomic landmarks to assist with tumor bed delineation~\cite{RefWorks:RefID:344-mitchell2019adaptable}. This need for a marking method is visualized below in Figure~\ref{fig:introduction:need_for_tumor_bed_marker}. These challenges have been shown to lead to significant interobserver variability amongst radiation oncologists when marking TB volumes~\cite{RefWorks:RefID:191-kader2008ctbased}~\cite{RefWorks:RefID:194-kirby2013tumour}. To address this variability, one study explored the use of artificial intelligence (AI) to standardize the TB delineation process~\cite{RefWorks:RefID:195-poortmans2019winter}.
 
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\textwidth]{../figs/introduction/need_for_tumor_bed_marker.png}
+        \includegraphics[width=\linewidth]{../figs/introduction/need_for_tumor_bed_marker.png}
         \caption{Motivation for tumor cavity marker following lumpectomy procedure. Adapted from \cite{RefWorks:RefID:38-johnbreastconserving}.}
         \label{fig:introduction:need_for_tumor_bed_marker}
 \end{figure}
@@ -170,14 +170,25 @@ Current devices and methods used for TB delineation have limitations that affect
 
 % Current Devices
 \subsubsection{Current Devices and Treatment Methods}
-While this will be further explored in Section ~\ref{sec:literatureReview:currentMethods}, this section provides a brief overview of current treatment methods for radiation therapy planning. (\hl{Update section if necessary})
+\hl{Finish this section}
+While this will be further explored in Section ~\ref{sec:literatureReview:currentMethods}, this section provides a brief overview of current treatment methods for radiation therapy planning. (\hl{Update section reference if necessary})
+(See Figure~\ref{sec:intro})
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/introduction/current_devices_overview.png}
+        \caption{Overview of Current TB Volume Marking Devices and Methods. Fiducial Clips (a), Biozorb (b), Seromas (c), and Veraform (d).}
+        \label{fig:introduction:current_devices_overview}
+\end{figure}
 
 \subsubsection{Importance of Accurate Tumor Bed Delineation\label{sec:introduction:motivation:importanceofaccuratetumorbeddelineation}}
-\hl{See if this could use more detail.\\}
-Accurate TB delineation is crucial in effective radiation therapy following a lumpectomy procedure given the increasing use of APBI. Since APBI targets a small area of tissue surrounding the tumor bed, accurate delineation is necessary to ensure the radiation dose is delivered precisely to the intended area while minimizing exposure to surrounding healthy tissue and organs~\cite{RefWorks:RefID:197-den2015postlumpectomy}, ~\cite{RefWorks:RefID:25-acree2022review}.
+
+For breast cancer, TB delineation is largely based on Accurate TB delineation is crucial in effective radiation therapy following a lumpectomy procedure given the increasing use of APBI. Since APBI targets a small area of tissue surrounding the tumor bed, accurate delineation is necessary to ensure the radiation dose is delivered precisely to the intended area while minimizing exposure to surrounding healthy tissue and organs~\cite{RefWorks:RefID:197-den2015postlumpectomy}, ~\cite{RefWorks:RefID:25-acree2022review}.
 
 Overestimating TB volume, common in seroma-based delineation, is associated with an increased risk of subcutaneous fibrosis and poorer cosmetic results~\cite{RefWorks:RefID:197-den2015postlumpectomy}. Conversely, underestimating TB volume can lead to insufficient radiation coverage of the tumor bed, increasing the risk of local recurrence~\cite{RefWorks:RefID:198-jiao2024interobserver}. An inaccurate TB volume can
 also lead to alteration of management of a radiation boost and completely missing one or more margins of the TB~\cite{RefWorks:RefID:344-mitchell2019adaptable}.
+
+
 
 \subsubsection{Proposed Solution\label{sec:introduction:motivation:proposedsolution}}
 % Explain our research and the proposed mesh
