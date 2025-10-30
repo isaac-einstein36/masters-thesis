@@ -125,14 +125,86 @@ The senior capstone, while making strides in the early development of the device
 \subsection{Additional Research Team Work\label{sec:introduction:priorWork:otherTeamWork}}
 
 \subsubsection{Design of Device\label{sec:introduction:priorWork:otherTeamWork:deviceDesign}}
-% a.	Device geometry
-% b.	Surface texture
-% c.	Friction testing
 
-\subsubsection{Material Evaluation\label{sec:introduction:priorWork:otherTeamWork:materialEval}}
-% a.	Biodegradability testing
+Culminating in the successful defense of a master's thesis, Adrian Bakhtar spearheaded the overall design of the device~\cite{RefWorks:RefID:371-bakhtardesign}.
+
+\paragraph*{Device Geometry\label{introduction:priorWork:otherTeamWork:deviceDesign:deviceGeometry}}
+
+It was initially anticipated that the device geometry would be patient specific based on each unique tumor volume. Based on stakeholder and end-user feedback, it was determined that this approach would not be feasible given the high cost, implementation time, and differences between pre- and post-surgery tumor shapes (See Section~\ref{sec:introduction:priorWork:otherTeamWork:customerDiscovery} for more information).
+
+Given this change, the device was converted from a patient-specific geometry to a uniform mesh with a thickness of 0.125mm. This mesh is shown below in Figure~\ref{fig:introduction:initialThinMeshDesign}. The minimal profile of this mesh allows it to be flexible and easily cuttable by surgeons. Additionally, triangular  cutouts were added to provide directional orientation for radiation oncologists when creating treatment plans. The mesh sheets were created in 20 x 20$mm^2$ and 38 x 38$mm^2$ squares to adequately cover traditional tumor sizes~\cite{RefWorks:RefID:371-bakhtardesign}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/thin_flat_mesh_design_with_cutouts.png}
+        \caption{Refined thin mesh design with directional cutouts~\cite{RefWorks:RefID:371-bakhtardesign}.}
+        \label{fig:introduction:initialThinMeshDesign}
+\end{figure}
+
+\paragraph*{Surface Texture\label{introduction:priorWork:otherTeamWork:deviceDesign:surfaceTexture}}
+
+The mesh design needed to be fixed in place to address the concern of migration seen by existing devices like fiducial clips~\cite{RefWorks:RefID:344-mitchell2019adaptable}. The initial capstone team planned to secure the mesh to the tumor bed walls via suturing, though this could increase the implementation time substantially~\cite{RefWorks:RefID:372-krakovskytumor}. To address this adhesion concern, a texture was added to the top of the flat mesh to grab onto and increase friction between the mesh and tissue. Using the SolidWorks built in "Treadplate Bump" feature, a 3 x 3 mm treadplate bump with a texture offset of 0.75 mm and maximum element size of 0.125 mm was applied to the initial mesh~\cite{RefWorks:RefID:371-bakhtardesign}. This is shown below in Figure~\ref{fig:introduction:meshWithTreadplate}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/mesh_design_with_treadplate.png}
+        \caption{Isometric (a) and front view (b) of thin mesh design with treadplate bump appliedRefined thin mesh design with directional cutouts~\cite{RefWorks:RefID:371-bakhtardesign}.}
+        \label{fig:introduction:meshWithTreadplate}
+\end{figure}
+
+\paragraph*{Friction and Implantation Testing\label{introduction:priorWork:otherTeamWork:deviceDesign:frictionTesting}}
+To test the efficacy of the added surface texture, a friction test was performed. This test evaluated various texture and mesh geometry settings. The friction testing helped inform the device design by illustrating that a higher offset height and larger treadplate features yielded a higher static coefficient of friction.
+
+The mock implantation testing, performed using raw chicken breast, showed that the textured mesh adhered closely to the cavity walls following excessive force and handling of the chicken breast. Both of these test setups are illustrated below in Figure~\ref{fig:introduction:frictionAndImplantationTesting}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/friction_and_implantation_testing.png}
+        \caption{Friction testing (left) and implantation testing (right)~\cite{RefWorks:RefID:371-bakhtardesign}.}
+        \label{fig:introduction:frictionAndImplantationTesting}
+\end{figure}
+
+
+\subsubsection{Biodegradability Evaluation\label{sec:introduction:priorWork:otherTeamWork:biodegradabilityEval}}
+
+Expanding on the capstone team's initial testing, a long-term biodegradability test was performed on the base material, PLCL. This degradation study used thin mesh squares to evaluate degradation timeline between 1 and 7 months at 37\textdegree C. While this study is still ongoing, one-month results showed an average mass loss of 0.071$\frac{gram}{month}$~\cite{RefWorks:RefID:371-bakhtardesign}.
+
+\subsubsection{Initial Imaging Testing}
+
+To help inform the device design, specifically the internal printing parameters of the device, initial imaging testing was performed on PLCL, PCL, PLA, and PLGA-HA filaments. The effects on radiopacity of infill density, infill pattern, sample height, and sample composition were evaluated through this imaging study.
+
+It was found that PLCL, PCL, and PLA were essentially indistinguishable from one another, while PLGA-HA was marginally brighter. Limitations on this study resulted from the size of samples and subsequent resolution of results. In the future, larger samples may help draw clearer radiopacity conclusions~\cite{RefWorks:RefID:371-bakhtardesign}.
 
 \subsubsection{3D Printing Work\label{sec:introduction:priorWork:otherTeamWork:3dPrinting}}
+
+\paragraph*{Optimizing PLCL Printing Parameters\label{sec:introduction:priorWork:otherTeamWork:3dPrinting:plclParameters}}
+
+While development of a custom PLCL 3D printable filament was underway, externally sourced PLCL filament was bought for mechanical testing and improvement of device design. 1.75mm filament was bought from Lattice Medical, a French-based company~\cite{RefWorks:RefID:42-latticemedical}.
+
+Fused deposition modeling (FDM) printing was conducted with this filament (see Section~\ref{chap:literatureReview}\hl{Update \# after adding 3D printing section} for additional information on FDM printing).
+
+Necessary printing parameters, including nozzle temperature, bed temperature, layer height, infill density, and print speed, needed to be adjusted and optimized for the Lattice PLCL filament. Multiple line tests and scaled device prints were preformed to manually optimize the printing parameters for this filament. The optimal parameters are shown below in Table~\ref{tab:introduction:priorWork:plclPrintingParameters}~\cite{RefWorks:RefID:371-bakhtardesign}. These tests were conducted using a Prusa i3 MK3 printer.
+
+\begin{table}[h!]
+        \centering
+        \caption{Optimal Printing Parameters for Lattice PLCL on Prusa i3 MK3 Printer}
+        \label{tab:introduction:priorWork:plclPrintingParameters}
+        \begin{tabularx}{0.8\textwidth}{
+                >{\raggedright\arraybackslash}p{5cm}
+                >{\raggedright\arraybackslash}X
+                }
+                \toprule
+                \textbf{Parameter}                  & \textbf{Optimal Value} \\
+                \midrule
+                First layer print speed             & 20 mm/s                \\
+                First layer nozzle temperature      & 180\,\textdegree C     \\
+                Subsequent layer nozzle temperature & 190\,\textdegree C     \\
+                Bed temperature                     & 30\,\textdegree C      \\
+                Infill density                      & 10\%                   \\
+                \bottomrule
+        \end{tabularx}
+\end{table}
+
 % a.	Optimizing PLCL printing parameters
 % b.	Layer shape
 
