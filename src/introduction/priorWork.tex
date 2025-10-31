@@ -118,16 +118,68 @@ Imaging capabilities and radiopacity of the initial prototype was evaluated by t
         \label{fig:introduction:capstoneImagingTesting}
 \end{figure}
 
-\subsubsection{Future Questions\label{sec:introduction:priorWork:seniorCapstone:futureQuestions}}
+\subsubsection{Future Work\label{sec:introduction:priorWork:seniorCapstone:futureWork}}
 
 The senior capstone, while making strides in the early development of the device, had areas that could benefit from additional testing. This includes focusing on optimizing the manufacturing process, making the overall mesh thinner, decreasing the amount of barium sulfate embedded, and performing longer-term biodegradability testing.
 
 \subsection{Additional Research Team Work\label{sec:introduction:priorWork:otherTeamWork}}
 
 \subsubsection{Customer Discovery\label{sec:introduction:priorWork:otherTeamWork:customerDiscovery}}
-% a.	I-Corps
-% i.	Led to thin sheet instead of patient-specific shape
 
+\paragraph*{Stakeholder Interviews\label{sec:introduction:priorWork:otherTeamWork:customerDiscovery:interviews}}
+
+Numerous interviews were conducted throughout the early-stage development of this device to ensure the device was designed with stakeholder needs in mind. These stakeholders and potential end-users included: surgical oncologists, plastic and reconstructive surgeons, and radiation oncologists. As shown in Figure~\ref{fig:ecosystemMap}, an ecosystem map was developed to illustrate how this device may interact with potential stakeholders.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/ecosystem_mapping.png}
+        \caption{Interactions between this device and potential stakeholders. Stakeholder impact on the device development are shown in red while the device's potential impact on stakeholders is shown in gray~\cite{RefWorks:RefID:386-bakhtarvisualizing}.}
+        \label{fig:introduction:ecosystemMap}
+\end{figure}
+
+These interviews challenged the team's current device assumptions with topics such as using fiducial markers in surgery, imaging visibility, adoption barriers, and feedback on the current design~\cite{RefWorks:RefID:371-bakhtardesign}.
+
+From these preliminary interviews, various stakeholder key requirements were developed. These key requirements are detailed below in Table~\ref{tab:introduction:priorWork:preliminaryStakeholderInterviewResults}.
+
+\begin{table}[h!]
+        \centering
+        \caption{Stakeholder Key Requirements From Preliminary Interviews~\cite{RefWorks:RefID:172-2024reexcision}}
+        \label{tab:introduction:priorWork:preliminaryStakeholderInterviewResults}
+        \begin{tabular}{p{4cm} p{10cm}}
+                \hline
+                \textbf{Clinician Group}        & \textbf{Key Requirements}       \\
+                \hline
+                Surgical Oncologists            &
+                \vspace{-\baselineskip}\begin{itemize}[leftmargin=*]
+                                               \item Flexible and trimmable
+                                               \item Easily insertable/fixable
+                                               \item Fully resorbable in 6--12 months
+                                       \end{itemize}      \\
+
+                Plastic/Reconstructive Surgeons &
+                \vspace{-\baselineskip}\begin{itemize}[leftmargin=*]
+                                               \item Conformable to tissue
+                                               \item Easy to secure and trimmable
+                                       \end{itemize}          \\
+
+                Radiation Oncologists           &
+                \vspace{-\baselineskip}\begin{itemize}[leftmargin=*]
+                                               \item Continuous lumpectomy cavity coverage
+                                               \item Stable positioning over time
+                                               \item Reliably radiopaque
+                                               \item Accurate marking to allow for APBI
+                                       \end{itemize} \\
+                \hline
+        \end{tabular}
+\end{table}
+
+\paragraph*{I-Corps\label{sec:introduction:priorWork:otherTeamWork:customerDiscovery:iCorps}}
+
+The research team participated in the NSF Local I-Corps program at Ohio State University. This is a six-week training focused on helping early-stage researchers establish and verify a marketable need for their research as well as prepare them for future commercialization. Through this program, many user interviews were conducted that helped redefine the team's initial assumptions~\cite{RefWorks:RefID:386-bakhtarvisualizing}.
+
+Initially, the team assumed that creating a mesh with patient specific geometry would be helpful and advantageous, point markers are insufficient for accurately marking a tumor margin, and a continuously radiopaque marker would standardize and quicken the therapy planning process~\cite{RefWorks:RefID:386-bakhtarvisualizing}.
+
+Some of these assumptions were validated while others were challenged through this I-Corps training. It was found that rather than patient-specific geometry, thin flexible sheets that could be cut to a patient's tumor during surgery are preferred by surgeons. It was also found that a textured side to the mesh would benefit surgeons and radiation oncologists. Radiation oncologists agreed that fiducial markers alone are an inadequate method of marking tumor margins. Lastly, though radiation oncologists felt this device may not save time when creating treatment plans, they did feel it would greatly improve the accuracy, cost, and number of treatment sessions for each patient~\cite{RefWorks:RefID:386-bakhtarvisualizing}.
 \subsubsection{3D Printing Work\label{sec:introduction:priorWork:otherTeamWork:3dPrinting}}
 
 \paragraph*{Optimizing PLCL Printing Parameters\label{sec:introduction:priorWork:otherTeamWork:3dPrinting:plclParameters}}
@@ -164,7 +216,7 @@ Culminating in the successful defense of a master's thesis, Adrian Bakhtar spear
 
 \paragraph*{Device Geometry\label{introduction:priorWork:otherTeamWork:deviceDesign:deviceGeometry}}
 
-It was initially anticipated that the device geometry would be patient specific based on each unique tumor volume. Based on stakeholder and end-user feedback, it was determined that this approach would not be feasible given the high cost, implementation time, and differences between pre- and post-surgery tumor shapes (See Section~\ref{sec:introduction:priorWork:otherTeamWork:customerDiscovery} for more information).
+It was initially anticipated that the device geometry would be patient specific based on each unique tumor volume. Based on stakeholder and end-user feedback, it was determined that this approach would not be feasible given the high cost, implementation time, and differences between pre- and post-surgery tumor shapes (See Section~\ref{sec:introduction:priorWork:otherTeamWork:customerDiscovery:iCorps} for more information).
 
 Given this change, the device was converted from a patient-specific geometry to a uniform mesh with a thickness of 0.125mm. This mesh is shown below in Figure~\ref{fig:introduction:initialThinMeshDesign}. The minimal profile of this mesh allows it to be flexible and easily cuttable by surgeons. Additionally, triangular  cutouts were added to provide directional orientation for radiation oncologists when creating treatment plans. The mesh sheets were created in 20 x 20$mm^2$ and 38 x 38$mm^2$ squares to adequately cover traditional tumor sizes~\cite{RefWorks:RefID:371-bakhtardesign}.
 
@@ -210,10 +262,30 @@ It was found that PLCL, PCL, and PLA were essentially indistinguishable from one
 
 \subsubsection{Finite Element Modeling (FEM)\label{sec:introduction:priorWork:otherTeamWork:FEM}}
 
-\subsection{Undergraduate Thesis\label{sec:introduction:priorWork:undergradThesis}}
+One researcher on the team, Zuhaib Jama, focused primarily on finite element modeling (FEM) as it pertained to the development of this new device. Three models were generated to evaluate the effects of line thickness on deformation, and it was found that a thickness of 0.5mm best matched the soft and ductile characteristics of breast tissue. Adipose tissue and glandular tissue were also evaluated using normal forces experienced during mamographies (49 to 186 N) to determine how much deformation the device may experience. Since adipose is softer than glandular tissue, the deformation and stresses found through this modeling represented the lower and upper bounds of deformation respectively~\cite{RefWorks:RefID:384-jamacomputational}. Visuals of this modeling are shown below in Figure~\ref{fig:introduction:femTesting}.
 
-\subsubsection{Felfil Extrusion Work\label{sec:introduction:priorWork:undergradThesis:felfil}}
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/fem_testing.png}
+        \caption{FEM Modeling evaluating segment thickness (a-c, 3.175mm to 0.5mm) and properties of glandular (d) and adipose (e) tissue~\cite{RefWorks:RefID:384-jamacomputational}.}
+        \label{fig:introduction:femTesting}
+\end{figure}
+
+\subsubsection{Initial PLCL Extrusions\label{sec:introduction:priorWork:otherTeamWork:plclExtrusions}}
 % Trying to extrude a powder unsuccessfully
+Initial extrusion testing was conducted on a Felfil EVO and Filabot EX6. Nomisma 70/30 PLCL powder was used for this extrusion testing~\cite{RefWorks:RefID:387-nomisma}. These two tabletop extruder systems are shown below in Figure~\ref{fig:introduction:felfilAndFilabotExtruders}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\textwidth]{../figs/introduction/felfil_and_filabot_extruders.png}
+        \caption{Felfil Evo extruder and spooler setup (a) and Filabot EX6 extruder and spooler setup (b)~\cite{RefWorks:RefID:371-bakhtardesign}.}
+        \label{fig:introduction:felfilAndFilabotExtruders}
+\end{figure}
+
+Both systems presented inconsistent flow speeds, severe diameter fluctuations, and yielded extremely brittle filaments. Drying the powder and filaments did not help with brittleness. It was determined that powder extrusions would require substantial additional research and development to yield printable filament~\cite{RefWorks:RefID:371-bakhtardesign}.
+
+\subsection{Undergraduate Thesis\label{sec:introduction:priorWork:undergradThesis}}
+The author defended an undergraduate thesis on the early stage development of this research in 2024. This thesis explored the mechanical properties of externally sourced PLCL filament to eventually compare to custom-made PLCL filament~\cite{RefWorks:RefID:370-einsteinisaac}~\cite{RefWorks:RefID:42-latticemedical}.
 
 \subsubsection{Mechanical Testing of Lattice PLCL Filaments\label{sec:introduction:priorWork:undergradThesis:mechTesting}}
 % a. Tensile Strength
