@@ -38,18 +38,52 @@ There are many parameters that need to be optimized for each material when extru
 
 Before performing the extrusion, the material preparation and selection are important. Most materials require drying before the extrusion. Materials are either hygroscopic or non-hygroscopic. If a material is hygroscopic, that means it absorbs moisture from the air and thus requires drying to eliminate this moisture. If a material is non-hygroscopic, it does not absorb moisture, but moisture can still accumulate on its surface through condensation. As a result, it is helpful when extruding to dry all materials beforehand~\cite{RefWorks:RefID:395-plastic}.
 
-Additionally, a material's melt flow index (MFI) is a crucial parameter to indicate how well it can be extruded. This property indicates a polymer's flow characteristics or Rheological properties in molten state. The MFI is a measure of the extrusion flow in $\frac{gram}{10 min}$~\cite{RefWorks:RefID:312-melt}. Using materials with an MFI less than ten is ideal for extrusion~\cite{RefWorks:RefID:309-3devo20253devo}. Additionally, if mixing materials or transitioning from one material to another, it is important to ensure the materials have compatible MFIs, or they likely will not extrude smoothly. A material's MFI can be measured using ASTM standard D1238-23a~\cite{RefWorks:RefID:55-test}.
+Additionally, a material's melt flow index (MFI) is a crucial parameter to indicate how well it can be extruded. This property indicates a polymer's flow characteristics or Rheological properties in molten state. The MFI is a measure of the extrusion flow in grams per 10 minutes ($\frac{gram}{10 min}$)~\cite{RefWorks:RefID:312-melt}. Using materials with an MFI less than ten is ideal for extrusion~\cite{RefWorks:RefID:309-3devo20253devo}. Additionally, if mixing materials or transitioning from one material to another, it is important to ensure the materials have compatible MFIs, or they likely will not extrude smoothly. A material's MFI can be measured using ASTM standard D1238-23a~\cite{RefWorks:RefID:55-test}.
 
 \paragraph*{While Extruding}
 The barrel temperature, crucial for properly melting the extrusion material, can be divided into a single or multiple heat zones. These zone(s) must be optimized to avoid any complications with the extrusion~\cite{RefWorks:RefID:269-2018set}. The melt temperature zone(s) should be adjusted when there are changes to the raw material, excessive moisture, clogging, or changes to the screw speed~\cite{RefWorks:RefID:269-2018set}.
 
-When performing the extrusion, the extrusion screw RPM, cooling fan speed, and spooler pull speed are also all important parameters that must be adjusted~\cite{RefWorks:RefID:393-3devo},~\cite{RefWorks:RefID:394-2024make}.
+When performing the extrusion, the extrusion screw RPM, cooling fan speed, and spooler pull speed are also all important parameters that must be adjusted~\cite{RefWorks:RefID:393-3devo, RefWorks:RefID:394-2024make}.
 
 \subsection{Possible Issues with Extruding\label{sec:literatureReview:extrusion:issues}}
 
+\paragraph*{Filament Quality}
+There are many factors to look for when evaluating filament quality following an extrusion. Issues with filament quality can stem from multiple sources, but likely result from non-optimized extrusion parameters (See Section~\ref{sec:literatureReview:extrusion:mechanics:parameters}). These issues can include: nozzle build-up, bumps or particles in filament, inconsistent filament thickness, low or thin outut, smoke at nozzle, ovular or flat filament, or rough filament surface~\cite{RefWorks:RefID:396-3devotroubleshooting}. An overview of these filament quality issues is shown below in Figure~\ref{fig:literatureReview:extrusion_filament_quality_issues}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/extrusion/filament_quality_issues.png}
+        \caption{Examples of issues with filament quality when extruding~\cite{RefWorks:RefID:396-3devotroubleshooting}.}
+        \label{fig:literatureReview:extrusion_filament_quality_issues}
+\end{figure}
+
+\paragraph*{Improper Temperature Zone(s)}
 If the temperature zone(s) of the extruder are not optimal for a given material, resulting problems include inhomogeneities in the melt, distortion, issues cooling the filament, low throughput, black spots and specs in the filament, and deterioriation of mechanical properties~\cite{RefWorks:RefID:269-2018set}.
 
-% Detail potential issues: clumping at hopper, clogging during extrusion, or inconsistent extrusion.
+\paragraph*{Grinding or Squeaking Noise}
+It's possible to experience a loud grinding or squeaking noise when extruding, resembling metal on metal. This is likely a result of the screw touching the barrel, which is often caused by a particle that is too large moving through the barrel. This large unmelted particle pushes on the screw thereby affecting its alignment and causing the screw to contact the barrel~\cite{RefWorks:RefID:396-3devotroubleshooting}. This issue is shown visually in Figure~\ref{fig:literatureReview:extrusion_grinding_noise}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/extrusion/grinding_noise_cause.png}
+        \caption{Cause of Grinding Noise from Large Particle~\cite{RefWorks:RefID:396-3devotroubleshooting}.}
+        \label{fig:literatureReview:extrusion_grinding_noise}
+\end{figure}
+
+\paragraph*{Clumping at Hopper}
+
+A common issue when extruding is clumping at the hopper, the area where the material enters the extruder. This often occurs when using regrind and variable size materials, or with early melting if a material has a low melt point. As materials clump together, cohesive structures, ratholing or bridging, in the hopper can form that in turn limit flow rate~\cite{RefWorks:RefID:393-3devo}. This clumping process is shown in Figure~\ref{fig:literatureReview:hopper_clumping}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/extrusion/hopper_clumping.png}
+        \caption{Cases of clumping at the hopper. Green shape indicates clumping structure formed~\cite{RefWorks:RefID:393-3devo}.}
+        \label{fig:literatureReview:hopper_clumping}
+\end{figure}
+
+\paragraph*{Clogging}
+
+In extreme cases, the barrel can clog with material when it has not melted thoroughly. This can lead to pressure buildup in the barrel and unusable filament output. The screw motor current is a helpful indicator of a clog~\cite{RefWorks:RefID:396-3devotroubleshooting}.
 
 \subsection{Extruding Regrind\label{sec:literatureReview:extrusion:regrind}}
 % Discuss reprocessing of polymer waste or failed prints.

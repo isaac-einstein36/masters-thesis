@@ -59,10 +59,12 @@
 \usepackage{float}
 \usepackage{titlesec}
 \titleformat{\paragraph}[block]
-% {\normalfont\normalsize\bfseries}
-{\small\bfseries\itshape}
+{\normalfont\normalsize\bfseries\itshape}
+% {\small\bfseries\itshape} % If you want the paragraph title font to be smaller
 {\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{2ex plus .4ex minus .2ex}{0.5ex}
+
+\usepackage{indentfirst}
 
 \usepackage{tabularx}
 \usepackage{array}
