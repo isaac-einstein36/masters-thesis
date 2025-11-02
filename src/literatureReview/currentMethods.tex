@@ -1,7 +1,7 @@
 \section{Current Tumor Bed Localization Devices and Methods\label{sec:literatureReview:currentMethods}}
 
 \hl{This could possibly go in background instead.\\}
-Current devices and methods used for TB delineation include titanium, gold, or liquid fiducial markers/surgical clips, surgeon discretion, seroma formation, or implantable devices~\cite{RefWorks:RefID:25-acree2022review}.
+Current devices and methods used for TB delineation include titanium, gold, or liquid fiducial markers/surgical clips, surgeon discretion based on the lumpectomy scar, seroma formation, or implantable devices~\cite{RefWorks:RefID:25-acree2022review}.
 
 \subsection{Fiducial Markers and Surgical Clips\label{sec:literatureReview:currentMethods:fiducialMarkers}}
 Fiducial markers are solid metal clips inserted around the border of a tumor cavity immediately following the tumor removal~\cite{RefWorks:RefID:358-nihdefining}. These provide a 2D point mapping of the tumor space as shown below in Figure~\ref{fig:literatureReview:imaging_of_fiducal_clips_in_phantom_breast}.
@@ -10,22 +10,24 @@ Liquid fiducial markers were first used as spacers for prostate cancer treatment
 
 \begin{figure}[H]
         \centering
-        \includegraphics[height=0.3\textheight]{../figs/literature_review/imaging_of_fiducal_clips_in_phantom_breast.png}
+        \includegraphics[height=0.3\textheight]{../figs/literature_review/currentMethods/imaging_of_fiducal_clips_in_phantom_breast.png}
         \caption{Imaging of Fiducial Clips in Phantom Breast. Yellow arrows indicate fiducial clips placed around tumor cavity. Adapted from \cite{RefWorks:RefID:178-krawczyk1994importance}.}
         \label{fig:literatureReview:imaging_of_fiducal_clips_in_phantom_breast}
 \end{figure}
 
 \subsection{Seroma Formation\label{sec:literatureReview:currentMethods:seromaFormation}}
-\hl{Add more here about seromas}
-Review of current accepted...\cite{RefWorks:RefID:25-acree2022review} has great stats on this (see Figure~\ref{fig:literatureReview:seromaFormationStats}).
-\begin{figure}[h]
-        \centering
-        \includegraphics[width=0.7\textwidth]{../figs/literature_review/seroma_visibility_study_results.png}
-        \caption{Statistics on Seroma Formation from \cite{RefWorks:RefID:25-acree2022review}.}
-        \label{fig:literatureReview:seromaFormationStats}
-\end{figure}
+Seroma formation has also been used to mark the margins for radiation therapy. A seroma is a collection of clear fluids (serous and lymphatic) that gather subdermally where a tumor or tissue was resected~\cite{RefWorks:RefID:389-2023seroma},~\cite{RefWorks:RefID:371-bakhtardesign}.
 
 Using seroma formation to mark the tumor bed for radiation therapy involves outlining the seroma that forms following a lumpectomy procedure~\cite{RefWorks:RefID:25-acree2022review}.
+
+An example of tumor margin marking based on a seroma is shown below in Figure~\ref{fig:literatureReview:seroma_contouring_guidelines}. See Section~\ref{sec:introduction:radiationtherapy:treatmentplanning:planningVolumes} for more information on GTV, CTV, and PTV margins. In this image, GTV (Gross Tumor Volume) is replaced by STV (Seroma Target Volume).
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[height=0.3\textheight]{../figs/literature_review/currentMethods/seroma_contouring_guidelines.png}
+        \caption{Seroma contouring guidelines on a CT scan~\cite{RefWorks:RefID:187-wong2006consistency}.}
+        \label{fig:literatureReview:seroma_contouring_guidelines}
+\end{figure}
 
 \subsection{Implantable Devices\label{sec:literatureReview:currentMethods:implantableDevices}}
 Lastly, implantable devices can be used to mark the tumor bed. One example is BioZorb (Hologic) which is a 3-dimensional coil-like structure with titanium clips embedded. This device is implanted into the tumor cavity following a lumpectomy procedure and improves on titanium clips alone by creating a 3D outline of the tumor bed. BioZorb was also designed to be reabsorbed into the body within a year~\cite{RefWorks:RefID:25-acree2022review}. BioZorb is shown below in Figure~\ref{fig:literatureReview:biozorb_implant}.
@@ -34,7 +36,7 @@ Lastly, implantable devices can be used to mark the tumor bed. One example is Bi
                 \centering
                 \begin{subfigure}[b]{0.9\textwidth}
                         \centering
-                        \includegraphics[width=\textwidth]{../figs/literature_review/BioZorb_physically.png}
+                        \includegraphics[width=\textwidth]{../figs/literature_review/currentMethods/BioZorb_physically.png}
                         \caption{BioZorb physically (top).}
                         \label{fig:literatureReview:biozorb_physically}
                 \end{subfigure}
@@ -43,7 +45,7 @@ Lastly, implantable devices can be used to mark the tumor bed. One example is Bi
 
                 \begin{subfigure}[b]{0.9\textwidth}
                         \centering
-                        \includegraphics[width=\textwidth]{../figs/literature_review/BioZorb_in_imaging.png}
+                        \includegraphics[width=\textwidth]{../figs/literature_review/currentMethods/BioZorb_in_imaging.png}
                         \caption{BioZorb in imaging.}
                         \label{fig:literatureReview:biozorb_in_imaging}
                 \end{subfigure}
@@ -56,31 +58,39 @@ Lastly, implantable devices can be used to mark the tumor bed. One example is Bi
 A newer implantable device is Veraform, a continuously radiographically opaque filament that is stitched around the tumor cavity. By being malleable and sewn in place, this device addresses space limitations and migration issues present in other devices~\cite{RefWorks:RefID:344-mitchell2019adaptable}. A simulation showing Veraform in use is shown below in Figure~\ref{fig:literatureReview:veraform_implant}.
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\textwidth]{../figs/literature_review/veraform_implant.png}
+        \includegraphics[width=0.6\textwidth]{../figs/literature_review/currentMethods/veraform_implant.png}
         \caption{Veraform, an implantable device to assist with TB delineation~\cite{RefWorks:RefID:344-mitchell2019adaptable}.}
         \label{fig:literatureReview:veraform_implant}
 \end{figure}
 
 \subsection{Challenges with Current Devices and Methods\label{sec:literatureReview:currentMethods:challengeswithcurrentdevicesandmethods}}
 
-\hl{See if this could use more detail.}
 \subsubsection{Challenges with Fiducial Markers\label{sec:literatureReview:currentMethods:challengeswithcurrentdevicesandmethods:fiducialMarkers}}
 There are many challenges and inaccuracies that can result from using fiducial markers or surgical clips to create a TB volume. They provide single points of reference which can lead to inaccurate boundaries being drawn, there is no standardized recommendation of how many clips should be used, and clips can migrate over time leading to inaccurate TB localization~\cite{RefWorks:RefID:344-mitchell2019adaptable}. Migration is especially common when patients undergo oncoplastic reconstruction surgery following the lumpectomy procedure. In 2022, it was found the 30,000 breast-conserving therapy patients annually undergo oncoplastic reconstruction surgery~\cite{RefWorks:RefID:25-acree2022review}.
 
 Another concern of surgical clips or fiducial markers is if a re-excision is required. This is when a margin of tissue removed during the lumpectomy is found to contain cancerous cells. When this is the case, a large enough margin surrounding the tumor was not removed, and a re-excision has to be made to remove additional margins. When markers are placed initially, these re-excisions can impact the accuracy of the initial marker placement. It was found that 10\% to 20\% of patients undergoing breast-conserving surgery require a re-excision~\cite{RefWorks:RefID:25-acree2022review}.
 
 \subsubsection{Challenges with Seroma Formation\label{sec:literatureReview:currentMethods:challengeswithcurrentdevicesandmethods:seroma}}
-\hl{Show change in seroma over time visual.\\}
 
 Utilizing seroma formation can be unreliable, as the seroma may not always be localized to the tumor bed, relies on the excision closure method, and time elapsed after surgery\cite{RefWorks:RefID:25-acree2022review}. A seroma may represent the tumor bed, part of the tumor bed, or the entire area in which surgery was performed~\cite{RefWorks:RefID:344-mitchell2019adaptable}.
 
+Visibility of seromas are variable across patients as well. Figure~\ref{fig:literatureReview:seromaFormationStats} illustrates the difference in visibility from "High Visible" to "Not Visible" based on one study of 30 patients. A separate study of 495 patients found that seromas were only visible in 17.4\% of patients~\cite{RefWorks:RefID:319-beck2025incidence}.
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{../figs/literature_review/currentMethods/seroma_visibility_study_results.png}
+        \caption{Statistics on Seroma Formation from \cite{RefWorks:RefID:25-acree2022review}.}
+        \label{fig:literatureReview:seromaFormationStats}
+\end{figure}
+
+The visibility range of seromas is ranked on a scale from 0 (not visible) to 5 (highly visible). This is called the British Columbia Cancer Agency Seroma Clarity Score, illustrated below in Figure~\ref{fig:literatureReview:seromaVisibilityScale}. Given this substantial range of visibility, seromas alone should not be utilized to mark tumor bed margins~\cite{RefWorks:RefID:25-acree2022review}.
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/currentMethods/seroma_visibility_scale.png}
+        \caption{British Columbia Cancer Agency Seroma Clarity Score from not visible (0) to highly visible (5)~\cite{RefWorks:RefID:191-kader2008ctbased}.}
+        \label{fig:literatureReview:seromaVisibilityScale}
+\end{figure}
+
 \subsubsection{Challenges with Biozorb\label{sec:literatureReview:currentMethods:challengeswithcurrentdevicesandmethods:biozorb}}
 Biozorb was found to provide limited value to patients relative to its high cost~\cite{RefWorks:RefID:344-mitchell2019adaptable}. Additionally, Biozorb was also recalled due to patient discomfort, seroma formation, device migration, and failures to resorb into the body in the designated timeframe~\cite{RefWorks:RefID:296-2024hologic},~\cite{RefWorks:RefID:28-nudelunited}.
-% \section{Current Tumor Bed Localization Devices and Methods\label{sec:literatureReview:currentMethods}}
-% Summarize current clinical methods for localizing the tumor bed post-lumpectomy.
-% Include fiducial markers, seroma tracking, and implantable devices (e.g., VeraForm).
-% Discuss key limitations such as migration, resorption, visibility on imaging, and biocompatibility issues.
-
-% \subsection{Challenges with Current Devices\label{sec:literatureReview:currentMethods:challenges}}
-% Highlight why new localization methods are being explored.
-% Cover limitations in accuracy, ease of placement, imaging visibility, and patient comfort.
