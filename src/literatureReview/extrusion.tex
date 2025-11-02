@@ -1,15 +1,47 @@
 \section{Extrusion Processes and Parameters\label{sec:literatureReview:extrusion}}
 % Introduce extrusion in polymer processing and its relevance to filament production.
+Extrusion is a form of additive manufacturing (AM) in which material is melted and dispensed through a nozzle or orifice. It is commonly used to create a filament for Fused Filament Fabrication (FFF) or Fused Deposition Modeling (FDM) 3D printing~\cite{RefWorks:RefID:266-leary2020material}. The general process of extrusion for research or commercial use is shown below in Figure~\ref{fig:literatureReview:generalExtrusionProcess}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/extrusion/general_extrusion_process.png}
+        \caption{Overview of extrusion process~\cite{RefWorks:RefID:266-leary2020material}.}
+        \label{fig:literatureReview:generalExtrusionProcess}
+\end{figure}
 
 \subsection{Tabletop Extrusion Mechanics\label{sec:literatureReview:extrusion:mechanics}}
-% Describe barrel, screw, hopper, nozzle, and drive systems.
-% Discuss typical lab-scale extruders such as 3Devo or Filabot.
+
+The extrusion process is divided into multiple stages including: loading the extrusion material into a hopper, a screw pushing the material through a barrel heated to a specific temperature, the melted material being pushed through a nozzle, and the new filament being cooled and collected. This general process is visualized below in Figure~\ref{fig:literatureReview:extrusionParameters}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/extrusion/extrusion_parameters_overview.png}
+        \caption{Visualization of extrusion parameters~\cite{RefWorks:RefID:309-3devo20253devo}.}
+        \label{fig:literatureReview:extrusionParameters}
+\end{figure}
+
+Not shown in Figure~\ref{fig:literatureReview:extrusionParameters} is the cooling and collecting process of the extruded filament. The cooling process can be done via forced air convection such as fans pointed at the filament or through a quencing~\cite{RefWorks:RefID:266-leary2020material}.
+
+Extruders for research range in size and price, with the smallest being tabletop extruders. Popular examples of these (from least to most expensive) include the Felfil Evo, Filabot EX6, or 3Devo Filament Maker~\cite{RefWorks:RefID:371-bakhtardesign}. Figure~\ref{fig:literatureReview:tabletopExtruders} shows the extrusion and spooling setup for these various systems.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/extrusion/tabletop_extruders.png}
+        \caption{Various Lab-Scale Tabletop Extruders. (a) Felfil Evo and Spooler+~\cite{RefWorks:RefID:391-felfil}, (b) Filabot EX6~\cite{RefWorks:RefID:390-filabot}, (c) 3Devo Filament Maker~\cite{RefWorks:RefID:392-3devo}.}
+        \label{fig:literatureReview:tabletopExtruders}
+\end{figure}
 
 \subsubsection{Important Parameters\label{sec:literatureReview:extrusion:mechanics:parameters}}
+There are many parameters that need to be optimized for each material when extruding filament.
+
+The barrel temperature, crucial for properly melting the extrusion material, can be divided into a single or multiple heat zones. These zone(s) must be optimized to avoid any complications with the extrusion~\cite{RefWorks:RefID:269-2018set}. The melt temperature zone(s) should be adjusted when there are changes to the raw material, excessive moisture, clogging, or changes to the screw speed~\cite{RefWorks:RefID:269-2018set}.
 % Detail process parameters:
 % heat zones, material size/uniformity, screw RPM, cooling rate, pre-drying requirements, and melt flow index.
 
 \subsection{Possible Issues with Extruding\label{sec:literatureReview:extrusion:issues}}
+
+If the temperature zone(s) of the extruder are not optimal for a given material, resulting problems include inhomogeneities in the melt, distortion, issues cooling the filament, low throughput, black spots and specs in the filament, and deterioriation of mechanical properties~\cite{RefWorks:RefID:269-2018set}.
+
 % Detail potential issues: clumping at hopper, clogging during extrusion, or inconsistent extrusion.
 
 \subsection{Extruding Regrind\label{sec:literatureReview:extrusion:regrind}}
