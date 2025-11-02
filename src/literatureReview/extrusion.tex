@@ -88,21 +88,51 @@ In extreme cases, the barrel can clog with material when it has not melted thoro
 \subsection{Extruding Regrind\label{sec:literatureReview:extrusion:regrind}}
 % Discuss reprocessing of polymer waste or failed prints.
 
+Significant research has been conducted on the shredding and recycling of 3D printed filament and parts. Predominantly, cost and sustainability are factors that drive these efforts. Different parameters need to be accounted for when extruding recycled/shredded material compared to virgin (unused) material~\cite{RefWorks:RefID:60-ailenei2025study}.
+
 \subsubsection{Machines for Creating Regrind\label{sec:literatureReview:extrusion:regrind:machines}}
 % Mention industrial grinders, the Felfil Shredder, and similar tabletop systems.
+Dedicated shredders are  required to create regrind from plastic parts or scraps. Like tabletop extruders, these range in functionality and cost~\cite{RefWorks:RefID:218-lee2018development}. These machines can be standalone shredders such as the Felfil Shredder~\cite{RefWorks:RefID:391-felfil} or machines like the 3Devo SHR3D IT that combine other functions like pelletizing or extruding~\cite{RefWorks:RefID:218-lee2018development,RefWorks:RefID:396-3devotroubleshooting}.
+
 
 \subsubsection{Challenges Extruding Regrind\label{sec:literatureReview:extrusion:regrind:challenges}}
-% Problems include variable shape:
-% 3Devo feeder or other vibration motors can help with these issues
-% Felfil Shredder created a sieve to only use <=5x5mm pieces
-% Find the one paper that analyzed different sizes to use
+As mentioned in Section~\ref{sec:literatureReview:extrusion:issues}, extruding regrind can lead to inconsistent flow rates and clumping at the hopper. To address this, specific devices have been developed such as the 3Devo Feeder. These are comprised of vibration motors to shake the material and help force it from the hopper into the extrusion barrel. The feeder is shown below in Figure~\ref{fig:literatureReview:3devo_feeder}
+
+\begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.48\linewidth}
+                \centering
+                \includegraphics[width=\textwidth]{../figs/literature_review/extrusion/3devo_feeder_standalone.png}
+                \caption{3Devo Feeder (standalone).}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.48\linewidth}
+                \centering
+                \includegraphics[width=\textwidth]{../figs/literature_review/extrusion/3devo_feeder_in_use.png}
+                \caption{3Devo Feeder in use.}
+        \end{subfigure}
+        \caption{3Devo Feeder for regrind or powders~\cite{RefWorks:RefID:396-3devotroubleshooting}.}
+        \label{fig:literatureReview:3devo_feeder}
+\end{figure}
+
+Size selection of regrind is also important, because size homogeneity when extruding influences the quality of the extruded filaments~\cite{RefWorks:RefID:60-ailenei2025study}. It was also found that regrinded filament often exhibited a rough and easily curved surface~\cite{RefWorks:RefID:216-herianto2020recycled}.
 
 \subsubsection{Effects of Re-Extruding Materials\label{sec:literatureReview:extrusion:regrind:effects}}
 % Discuss degradation, viscosity changes, and mechanical property shifts.
+Using recycled filament can lead to a decrease in mechanical properties such as tensile strength or strain at break~\cite{RefWorks:RefID:218-lee2018development,RefWorks:RefID:64-10}. The results of one study illustrating the changes in mechanical properties of regrind are shown below in Figure~\ref{fig:literatureReview:regrind_changes_in_mechanical_properties}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/extrusion/regrind_changes_in_mechanical_properties.png}
+        \caption{The stress-strain curves of tensile testing for (a) virgin PLA and (b) recycled PLA~\cite{RefWorks:RefID:218-lee2018development}.}
+        \label{fig:literatureReview:regrind_changes_in_mechanical_properties}
+\end{figure}
 
 \subsection{Powder Extrusions\label{sec:literatureReview:extrusion:powder}}
-% Discuss issues with powder extrusion: clumping, inconsistent back pressure, and variable flow rate.
-% 3Devo feeder or other vibration motors can help with these issues
+
+Powder extrusions are often grouped with regrind as they can cause similar challenges and inconsistencies when extruding~\cite{RefWorks:RefID:396-3devotroubleshooting}. For this reason, devices like the 3Devo Feeder are often used for powder extrusions.
+
+When extruding powders, drying materials before extruding is extremely important. Additionally, extra attention must be dedicated to the cooling process to prevent the extruded filament from being too brittle~\cite{RefWorks:RefID:399-2024transforming}.
 
 \subsection{Purging an Extruder\label{sec:literatureReview:extrusion:purging}}
 % Explain the importance of regular purging to maintain extrusion quality and prevent contamination.
