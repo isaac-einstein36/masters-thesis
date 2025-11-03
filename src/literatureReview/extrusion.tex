@@ -138,23 +138,47 @@ Overall, limited research and resources exist regarding filament creation by ext
 
 \subsection{Purging an Extruder\label{sec:literatureReview:extrusion:purging}}
 % Explain the importance of regular purging to maintain extrusion quality and prevent contamination.
+Purging an extruder is an essential part of the extrusion process. It is done to maintain machine health, remove contaminants, and improve the overall extrusion of your materials. A mechanical purge, the most common type of purge, is performed by sending a purging compound through the barrel of the extruder. This often high-viscosity and abrasive polymer pushes remaining material and contaminants out of the barrel~\cite{RefWorks:RefID:405-purging,RefWorks:RefID:407-carrasco2023evaluation}.
 
 \subsubsection{Importance of Regular Purging\label{sec:literatureReview:extrusion:purging:importance}}
 % Note 3Devo’s recommendation to purge monthly or whenever powder is used.
 % Emphasize cleaning the barrel, removing contaminants, and ensuring uniform extrusion.
+Purging an extruder is a crucial and highly recommended part of efficient extruder usage. It is recommended to purge an extruder after every extrusion~\cite{RefWorks:RefID:401-dynapurge,RefWorks:RefID:405-purging}.
+
+This process pushes the remaining residues of polymer that was being extruded and cleans the inside of the extruder to prepare it for subsequent extrusions. This process helps avoid polymer degradation, resin accumulation, and damage to the extruder~\cite{RefWorks:RefID:405-purging}.
+
+Polymer degradation is when the properties of a polymer change due to environmental factors such as heat. If the polymer is left inside the extruder, given its slow cooldown timeline after shutoff, the polymer will be subject to high heat for extended periods of time. This can cause the polymer to break down leading to variable mechanical and rheological properties. Additionally, this broken down material may not flow smoothly when the extruder is powered back on which could lead to clogs inside the barrel~\cite{RefWorks:RefID:405-purging}.
+
+Resin accumulation can occur when material is left inside the barrel. This old material often sticks to the extruder screw, blocking the flow of new material. As a result, resin accumulation can lead to poor extrusions and contamination in subsequent extrusions~\cite{RefWorks:RefID:405-purging}.
+
+Lastly, failing to purge the extruder can damage the equipment over time. Build up of old material can cause extra stress and pressure on the machine's parts~\cite{RefWorks:RefID:405-purging}.
 
 \subsubsection{Purging Procedures\label{sec:literatureReview:extrusion:purging:procedures}}
-% Summarize cleaning methods:
-% - Devoclean MT
-% - Dyna-Purge series (L, K, D2)
-% Include stepwise details from manufacturer documentation.
+
+Purging procedures vary across manufacturers~\cite{RefWorks:RefID:401-dynapurge,RefWorks:RefID:405-purging}, although the general guidelines are outlined in the following steps:
+
+\begin{enumerate}
+        \item Transition from current material to purging compound.
+        \item When purging compound has fully transitioned, raise temperature above prior material's extrusion range.
+        \item Extrude the purging compound at this higher temperature until it is extruding cleaning.
+        \item Lower temperature to normal operating range.
+        \item Transition back to normal extrusion material.
+        \item Shutoff the machine in preparation for the next extrusion.
+              \begin{enumerate}
+                      \item Some manufacturers recommend shutting down the extruder with purging compound in the barrel. This allows the compound to gather any remaining contaminants as it cools and contracts, then removes these contaminants when the machine is re-run~\cite{RefWorks:RefID:401-dynapurge}.
+              \end{enumerate}
+\end{enumerate}
 
 \subsubsection{Purging Compounds\label{sec:literatureReview:extrusion:purging:compounds}}
 % Compare compound types, composition, and use cases.
-
-\paragraph*{Vendors}
-% Devoclean MT, Dyna-Purge L (soft), K (soft but abrasive), D2 (hard and abrasive).
+Selecting the proper purging compound based on the materials it will be cleaning is an important part of the purging process.
 
 \paragraph*{Material Compatibility}
 % Discuss melt flow index and temperature matching to extruded materials.
 % Note when harder materials (e.g., HDPE) are required to flush the purging compound.
+The type of polymer to be purged, process temperature rang and polarity of materials must be evaluated when selecting a purging compound~\cite{RefWorks:RefID:407-carrasco2023evaluation}. The melt flow index (MFI) of a material is often used to ensure a purging compound will react well with the material to be purged~\cite{RefWorks:RefID:401-dynapurge} (See Section~\ref{sec:literatureReview:extrusion:mechanics:parameters} for more information on MFI).
+
+In some cases, selected purging compounds poorly match the properties of the extrusion material, but are used for increased strength or other features. In this case, there may be an intermediate material such as HDPE used to transition from the purging compound to the extrusion material~\cite{RefWorks:RefID:401-dynapurge,RefWorks:RefID:405-purging}.
+
+\paragraph*{Vendors}
+There are many vendors that specialize in development of purging compounds, whereas other manufacturers use generic purging compounds. Often, vendors will create a large range of products to account for various use cases~\cite{RefWorks:RefID:407-carrasco2023evaluation}. For example, Dyna-Purge, a purging compound manufacturer, offers at least three compounds that all can purge the same material but offer different levels of abrasiveness~\cite{RefWorks:RefID:400-dynapurge,RefWorks:RefID:403-dynapurge,RefWorks:RefID:404-dynapurge}.
