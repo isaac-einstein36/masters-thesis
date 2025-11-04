@@ -1,6 +1,6 @@
 \section{3D Printing Processes\label{sec:literatureReview:printing}}
 % Introduce additive manufacturing context for polymer device fabrication.
-Three-dimensional (3D) printing is a growing form of additive manufacturing. There are 3 general forms of manufacturing: additive such as 3D printing, subtractive such as milling, and formative such as injection molding~\cite{RefWorks:RefID:411-3d}. These three forms are illustrated below in Figure~\ref{fig:literatureReview:formsOfManufacturing}.
+Three-dimensional (3D) printing is a growing form of additive manufacturing. There are three general forms of manufacturing: additive such as 3D printing, subtractive such as milling, and formative such as injection molding~\cite{RefWorks:RefID:411-3d}. These three forms are illustrated below in Figure~\ref{fig:literatureReview:formsOfManufacturing}.
 
 \begin{figure}[h!]
         \centering
@@ -9,7 +9,7 @@ Three-dimensional (3D) printing is a growing form of additive manufacturing. The
         \label{fig:literatureReview:formsOfManufacturing}
 \end{figure}
 
-3D printing has become increasingly popular due to its ability to create complex shapes and results in less waste than conventional manufacturing~\cite{RefWorks:RefID:409-kristiawan2021review}. 3D printing was initially only used for rapid prototyping but is now suitable for production of parts~\cite{RefWorks:RefID:411-3d}.
+3D printing has become increasingly popular due to its ability to create complex shapes and with less waste than conventional manufacturing~\cite{RefWorks:RefID:409-kristiawan2021review}. 3D printing was initially only used for rapid prototyping but is now suitable for production of parts~\cite{RefWorks:RefID:411-3d}.
 
 \subsection{Fused Deposition Modeling (FDM)\label{sec:literatureReview:printing:FDM}}
 % Describe the principle of FDM, typical materials, and its advantages over other AM methods.
@@ -42,7 +42,7 @@ Machine parameters include bed temperature, nozzle temperature, and nozzle diame
 
 Bed temperature and nozzle temperature often fall under wide ranges and are dependent on the material being printed~\cite{RefWorks:RefID:307-cano-vicent2021fused}.
 
-Nozzle diameter needs to be decided before printing a material. This parameter, based solely on the nozzle size installed, affects the detail of a print, the speed of the print, strength of the print, and risks of clogging. Smaller nozzles have better detail or resolution but slower print speeds while larger nozzles print quickly and provide increase part strength. Common nozzle diameters in millimeters are 0.2, 0.4, 0.6, and 0.8~\cite{RefWorks:RefID:413-20253d}.
+Nozzle diameter needs to be decided before printing a material. This parameter, based solely on the nozzle size installed, affects the detail of a print, the speed of the print, strength of the print, and risks of clogging. Smaller nozzles have better detail or resolution but slower print speeds while larger nozzles print quickly, help reduce clogging, and provide increased part strength. Common nozzle diameters in millimeters are 0.2, 0.4, 0.6, and 0.8~\cite{RefWorks:RefID:413-20253d}.
 
 \paragraph*{Working Parameters}
 
@@ -59,7 +59,7 @@ Working parameters include factors such as raster angle, raster width, and build
 
 Printing parameters need to be optimized for each material used. Well-researched materials have pre-established parameters that can act as guidelines~\cite{RefWorks:RefID:307-cano-vicent2021fused}.
 
-Optimal printing parameters for materials used in this research, PLA, PCL, and PLCL, are provided in Table~\ref{tab:literatureReview:optimal_material_printing_parameters} as a reference point, though any new vendor or custom filament requires specific calibration.
+Optimal starting printing parameters for materials used in this research, PLA, PCL, and PLCL, are provided in Table~\ref{tab:literatureReview:optimal_material_printing_parameters} as a reference point, though any new vendor or custom filament requires specific calibration.
 
 \begin{table}[h!]
         \centering
@@ -84,7 +84,7 @@ Optimal printing parameters for materials used in this research, PLA, PCL, and P
 
 For standard or custom materials, running printer calibrations for each material will ensure consistent prints. First layer metrics, motor speeds, axes, and flow dynamics are all important aspects to be calibrated~\cite{RefWorks:RefID:414-halford2024calibrate}.
 
-Most printer manufacturers have their own recommended calibration procedures, some manual and others automated~\cite{RefWorks:RefID:415-flow,RefWorks:RefID:416-flow,RefWorks:RefID:417-2025layer}.
+Most printer manufacturers have their own recommended calibration procedures, with a range of manual and automated procedures~\cite{RefWorks:RefID:415-flow,RefWorks:RefID:416-flow,RefWorks:RefID:417-2025layer}.
 
 \paragraph*{First Layer Calibration}
 The first layer calibration is used to calculate the optimal distance between the nozzle and print bed on the first layer. This ensures the material extruding from the nozzle adheres to the bed well and provides an adequate foundation for subsequent layers~\cite{RefWorks:RefID:414-halford2024calibrate,RefWorks:RefID:417-2025layer}. Figure~\ref{fig:literatureReview:effectsOfFirstLayerCalibration} shows the effects of a proper first layer calibration on the final printed part.
@@ -107,7 +107,7 @@ Flow dynamics are also an important parameter to adjust to help account for chan
 \end{figure}
 
 \paragraph*{Flow Rate Calibration}
-Flow rate is also a common 3D printing calibration factor. This determines how much filament the nozzle pushes out or extrudes while printing. A high flow rate will lead to overextrusion, seen by blobs or overlapping lines, and a low flow rate underextrusion can occur, seen by gaps in the print~\cite{RefWorks:RefID:416-flow}. Figure~\ref{fig:literatureReview:effectsOfFlowRate} shows the importance of calibrating the flow rate of a material.
+Flow rate is also a common 3D printing calibration factor. This determines how much filament the nozzle pushes out or extrudes while printing. A high flow rate will lead to overextrusion, seen by blobs or overlapping lines. With a low flow, rate underextrusion can occur, seen by gaps in the print~\cite{RefWorks:RefID:416-flow}. Figure~\ref{fig:literatureReview:effectsOfFlowRate} shows the importance of calibrating the flow rate of a material.
 
 \begin{figure}[h!]
         \centering
