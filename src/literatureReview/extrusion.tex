@@ -20,7 +20,7 @@ The extrusion process is divided into multiple stages including: loading the ext
         \label{fig:literatureReview:extrusionParameters}
 \end{figure}
 
-Not shown in Figure~\ref{fig:literatureReview:extrusionParameters} is the cooling and collecting process of the extruded filament. The cooling process can be done via forced air convection such as fans pointed at the filament or through a quencing~\cite{RefWorks:RefID:266-leary2020material}.
+Not shown in Figure~\ref{fig:literatureReview:extrusionParameters} is the cooling and collecting process of the extruded filament. The cooling process can be done via forced air convection such as fans pointed at the filament or through water quenching~\cite{RefWorks:RefID:266-leary2020material}.
 
 Extruders for research range in size and price, with the smallest being tabletop extruders. Popular examples of these (from least to most expensive) include the Felfil Evo, Filabot EX6, or 3Devo Filament Maker~\cite{RefWorks:RefID:371-bakhtardesign}. Figure~\ref{fig:literatureReview:tabletopExtruders} shows the extrusion and spooling setup for these various systems.
 
@@ -38,7 +38,7 @@ There are many parameters that need to be optimized for each material when extru
 
 Before performing the extrusion, the material preparation and selection are important. Most materials require drying before the extrusion. Materials are either hygroscopic or non-hygroscopic. If a material is hygroscopic, that means it absorbs moisture from the air and thus requires drying to eliminate this moisture. If a material is non-hygroscopic, it does not absorb moisture, but moisture can still accumulate on its surface through condensation. As a result, it is helpful when extruding to dry all materials beforehand~\cite{RefWorks:RefID:395-plastic}.
 
-Additionally, a material's melt flow index (MFI) is a crucial parameter to indicate how well it can be extruded. This property indicates a polymer's flow characteristics or Rheological properties in molten state. The MFI is a measure of the extrusion flow in grams per 10 minutes ($\frac{gram}{10 min}$)~\cite{RefWorks:RefID:312-melt}. Using materials with an MFI less than ten is ideal for extrusion~\cite{RefWorks:RefID:309-3devo20253devo}. Additionally, if mixing materials or transitioning from one material to another, it is important to ensure the materials have compatible MFIs, or they likely will not extrude smoothly. A material's MFI can be measured using ASTM standard D1238-23a~\cite{RefWorks:RefID:55-test}.
+Additionally, a material's melt flow index (MFI) is a crucial parameter to indicate how well it can be extruded. This property indicates a polymer's flow characteristics or rheological properties in molten state. The MFI is a measure of the extrusion flow in grams per 10 minutes ($\frac{gram}{10 min}$)~\cite{RefWorks:RefID:312-melt}. Using materials with an MFI less than ten is ideal for extrusion~\cite{RefWorks:RefID:309-3devo20253devo}. Additionally, if mixing materials or transitioning from one material to another, it is important to ensure the materials have compatible MFIs, or they likely will not extrude smoothly. A material's MFI can be measured using ASTM standard D1238-23a~\cite{RefWorks:RefID:55-test}.
 
 \paragraph*{While Extruding}
 The barrel temperature, crucial for properly melting the extrusion material, can be divided into a single or multiple heat zones. These zone(s) must be optimized to avoid any complications with the extrusion~\cite{RefWorks:RefID:269-2018set}. The melt temperature zone(s) should be adjusted when there are changes to the raw material, excessive moisture, clogging, or changes to the screw speed~\cite{RefWorks:RefID:269-2018set}.
@@ -72,7 +72,7 @@ It's possible to experience a loud grinding or squeaking noise when extruding, r
 
 \paragraph*{Clumping at Hopper}
 
-A common issue when extruding is clumping at the hopper, the area where the material enters the extruder. This often occurs when using regrind and variable size materials, or with early melting if a material has a low melt point. As materials clump together, cohesive structures, ratholing or bridging, in the hopper can form that in turn limit flow rate~\cite{RefWorks:RefID:393-3devo}. This clumping process is shown in Figure~\ref{fig:literatureReview:hopper_clumping}
+A common issue when extruding is clumping at the hopper, the area where the material enters the extruder. This often occurs when using regrind and variable size materials, or with premature melting if a material has a low melt point. As materials clump together, cohesive structures, ratholing or bridging, in the hopper can form that in turn limit flow rate~\cite{RefWorks:RefID:393-3devo}. This clumping process is shown in Figure~\ref{fig:literatureReview:hopper_clumping}
 
 \begin{figure}[h!]
         \centering
@@ -160,7 +160,7 @@ Purging procedures vary across manufacturers~\cite{RefWorks:RefID:401-dynapurge,
 \begin{enumerate}
         \item Transition from current material to purging compound.
         \item When purging compound has fully transitioned, raise temperature above prior material's extrusion range.
-        \item Extrude the purging compound at this higher temperature until it is extruding cleaning.
+        \item Extrude the purging compound at this higher temperature until it is extruding cleanly.
         \item Lower temperature to normal operating range.
         \item Transition back to normal extrusion material.
         \item Shutoff the machine in preparation for the next extrusion.
@@ -176,7 +176,7 @@ Selecting the proper purging compound based on the materials it will be cleaning
 \paragraph*{Material Compatibility}
 % Discuss melt flow index and temperature matching to extruded materials.
 % Note when harder materials (e.g., HDPE) are required to flush the purging compound.
-The type of polymer to be purged, process temperature rang and polarity of materials must be evaluated when selecting a purging compound~\cite{RefWorks:RefID:407-carrasco2023evaluation}. The melt flow index (MFI) of a material is often used to ensure a purging compound will react well with the material to be purged~\cite{RefWorks:RefID:401-dynapurge} (See Section~\ref{sec:literatureReview:extrusion:mechanics:parameters} for more information on MFI).
+The type of polymer to be purged, process temperature range and polarity of materials must be evaluated when selecting a purging compound~\cite{RefWorks:RefID:407-carrasco2023evaluation}. The melt flow index (MFI) of a material is often used to ensure a purging compound will react well with the material to be purged~\cite{RefWorks:RefID:401-dynapurge} (See Section~\ref{sec:literatureReview:extrusion:mechanics:parameters} for more information on MFI).
 
 In some cases, selected purging compounds poorly match the properties of the extrusion material, but are used for increased strength or other features. In this case, there may be an intermediate material such as HDPE used to transition from the purging compound to the extrusion material~\cite{RefWorks:RefID:401-dynapurge,RefWorks:RefID:405-purging}.
 
