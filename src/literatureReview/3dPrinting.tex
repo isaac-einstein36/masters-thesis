@@ -1,21 +1,117 @@
 \section{3D Printing Processes\label{sec:literatureReview:printing}}
 % Introduce additive manufacturing context for polymer device fabrication.
+Three-dimensional (3D) printing is a growing form of additive manufacturing. There are 3 general forms of manufacturing: additive such as 3D printing, subtractive such as milling, and formative such as injection molding~\cite{RefWorks:RefID:411-3d}. These three forms are illustrated below in Figure~\ref{fig:literatureReview:formsOfManufacturing}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/3dPrinting/general_forms_of_manufacturing.png}
+        \caption{Three general forms of manufacturing~\cite{RefWorks:RefID:411-3d}.}
+        \label{fig:literatureReview:formsOfManufacturing}
+\end{figure}
+
+3D printing has become increasingly popular due to its ability to create complex shapes and results in less waste than conventional manufacturing~\cite{RefWorks:RefID:409-kristiawan2021review}. 3D printing was initially only used for rapid prototyping but is now suitable for production of parts~\cite{RefWorks:RefID:411-3d}.
 
 \subsection{Fused Deposition Modeling (FDM)\label{sec:literatureReview:printing:FDM}}
 % Describe the principle of FDM, typical materials, and its advantages over other AM methods.
 
-\subsubsection{Important Parameters\label{sec:literatureReview:printing:FDM:parameters}}
+There are numerous forms of 3D printing processes including: vat polymerization, material extrusion, powder bed fusion, material jetting, binder jetting, direct energy deposition, and sheet lamination~\cite{RefWorks:RefID:411-3d}.
+
+Fused Deposition Modeling (FDM), a form of material extrusion, is the most widely used 3D printing technology~\cite{RefWorks:RefID:411-3d}. FDM is fast, inexpensive, and can utilize common thermoplastics. However, FDM leaves a rough surface finish, often requires supports, and is difficult to scale~\cite{RefWorks:RefID:411-3d}.
+
+FDM is performed by pulling a raw material, filament, through drive wheels and into a nozzle. This filament is then melted within the nozzle and deposited on a print bed as a semiliquid in ultrathin layers. The contours of this layer-by-layer structure are created by Computer Aided Design (CAD) modeling software~\cite{RefWorks:RefID:409-kristiawan2021review,RefWorks:RefID:411-3d}. A visualization of FDM printing is shown below in Figure~\ref{fig:literatureReview:fdmPrintingOverview}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/3dPrinting/fdm_printing_overview.png}
+        \caption{Visualization of Fused Deposition Modeling (FDM) printing~\cite{RefWorks:RefID:307-cano-vicent2021fused}.}
+        \label{fig:literatureReview:fdmPrintingOverview}
+\end{figure}
+
+Typical materials used in FDM printing are filaments composed of polylactic acid (PLA), acrylonitrile blends and acrylonitrile butadiene styrene (ABS), Nylon 12, and polypropylene (PP)~\cite{RefWorks:RefID:409-kristiawan2021review,RefWorks:RefID:411-3d}.
+
+\subsection{Important Parameters\label{sec:literatureReview:printing:parameters}}
 % Discuss bed temperature, nozzle temperature, print speeds, and nozzle size/material.
 
-\subsubsection{Optimal Printing Parameters\label{sec:literatureReview:printing:FDM:optimalParameters}}
+FDM printing involves multiple parameters that all need to be optimized for a specific filament type and filament size. These parameters are linked to one another and collectively affect the quality of the printed part~\cite{RefWorks:RefID:409-kristiawan2021review}.
 
-\paragraph*{Calibrating Materials}
+These parameters can be divided into FDM machine parameters and working parameters~\cite{RefWorks:RefID:409-kristiawan2021review}.
+
+\paragraph*{Machine Parameters}
+
+Machine parameters include bed temperature, nozzle temperature, and nozzle diameter.
+
+Bed temperature and nozzle temperature often fall under wide ranges and are dependent on the material being printed~\cite{RefWorks:RefID:307-cano-vicent2021fused}.
+
+Nozzle diameter needs to be decided before printing a material. This parameter, based solely on the nozzle size installed, affects the detail of a print, the speed of the print, strength of the print, and risks of clogging. Smaller nozzles have better detail or resolution but slower print speeds while larger nozzles print quickly and provide increase part strength. Common nozzle diameters in millimeters are 0.2, 0.4, 0.6, and 0.8~\cite{RefWorks:RefID:413-20253d}.
+
+\paragraph*{Working Parameters}
+
+Working parameters include factors such as raster angle, raster width, and build orientation. These are usually set internally in the slicing software when creating the printable file~\cite{RefWorks:RefID:409-kristiawan2021review}. Some of these working parameters are illustrated in Figure~\ref{fig:literatureReview:printingWorkingParamaters}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/3dPrinting/printing_working_parameters.png}
+        \caption{Printing Working Parameters. (a) Build orientation, (b) layer thickness, and (c) tool path parameters~\cite{RefWorks:RefID:409-kristiawan2021review}.}
+        \label{fig:literatureReview:printingWorkingParamaters}
+\end{figure}
+
+\subsection{Optimal Printing Parameters\label{sec:literatureReview:printing:optimalParameters}}
+
+Printing parameters need to be optimized for each material used. Well-researched materials have pre-established parameters that can act as guidelines~\cite{RefWorks:RefID:307-cano-vicent2021fused}.
+
+Optimal printing parameters for materials used in this research, PLA, PCL, and PLCL, are provided in Table~\ref{tab:literatureReview:optimal_material_printing_parameters} as a reference point, though any new vendor or custom filament requires specific calibration.
+
+\begin{table}[h!]
+        \centering
+        \caption{Extrusion and thermal properties of relevant polymer materials.}
+        \label{tab:literatureReview:optimal_material_printing_parameters}
+        \resizebox{\textwidth}{!}{%
+                \begin{tabular}{lccc}
+                        \hline
+                        \textbf{Material}                                                  & \textbf{Extrusion Temperature (ºC)} & \textbf{Bed Temperature (ºC)} & \textbf{Glass Transition Temperature (ºC)} \\
+                        \hline
+                        PLA~\cite{RefWorks:RefID:307-cano-vicent2021fused}                 & 160–230                             & 20–60                         & 60–65                                      \\
+                        PCL~\cite{RefWorks:RefID:408-tack20163dprinting}                   & 115–145                             & 30–45                         & -60                                        \\
+                        PLCL~\cite{RefWorks:RefID:18-v2022assessing,RefWorks:RefID:204-70} & 180–230                             & 18–30                         & 35–40                                      \\
+                        \hline
+                \end{tabular}%
+        }
+\end{table}
+
+\subsection{Calibrating Materials\label{sec:literatureReview:printing:calibratingMaterials}}
 % Discuss calibration approaches such as for Prusa or Bambu to determine optimal print parameters
 % Line test, calibration cube, temp tower, Bambu inherent calibrations
 
-% Include recommended printing parameters for PLA, PCL, and PLCL.
-\paragraph*{PLA Optimal Printing Parameters}
+For standard or custom materials, running printer calibrations for each material will ensure consistent prints. First layer metrics, motor speeds, axes, and flow dynamics are all important aspects to be calibrated~\cite{RefWorks:RefID:414-halford2024calibrate}.
 
-\paragraph*{PCL Optimal Printing Parameters}
+Most printer manufacturers have their own recommended calibration procedures, some manual and others automated~\cite{RefWorks:RefID:415-flow,RefWorks:RefID:416-flow,RefWorks:RefID:417-2025layer}.
 
-\paragraph*{PLCL Optimal Printing Parameters}
+\paragraph*{First Layer Calibration}
+The first layer calibration is used to calculate the optimal distance between the nozzle and print bed on the first layer. This ensures the material extruding from the nozzle adheres to the bed well and provides an adequate foundation for subsequent layers~\cite{RefWorks:RefID:414-halford2024calibrate,RefWorks:RefID:417-2025layer}. Figure~\ref{fig:literatureReview:effectsOfFirstLayerCalibration} shows the effects of a proper first layer calibration on the final printed part.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/3dPrinting/effects_of_first_layer_calibration.png}
+        \caption{Effects of proper first layer calibration~\cite{RefWorks:RefID:417-2025layer}.}
+        \label{fig:literatureReview:effectsOfFirstLayerCalibration}
+\end{figure}
+
+\paragraph*{Flow Dynamics Calibration}
+Flow dynamics are also an important parameter to adjust to help account for changes and lag in extrusion pressure from the nozzle~\cite{RefWorks:RefID:415-flow}. Some printers, such as Bambu A1 Series, can perform this calibration entirely automatically. Figure~\ref{fig:literatureReview:effectsOfFlowDynamics} highlights the importance of calibrating flow dynamics.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\linewidth]{../figs/literature_review/3dPrinting/effects_of_flow_dynamics_calibration.png}
+        \caption{Effects of proper flow dynamics calibration~\cite{RefWorks:RefID:415-flow}.}
+        \label{fig:literatureReview:effectsOfFlowDynamics}
+\end{figure}
+
+\paragraph*{Flow Rate Calibration}
+Flow rate is also a common 3D printing calibration factor. This determines how much filament the nozzle pushes out or extrudes while printing. A high flow rate will lead to overextrusion, seen by blobs or overlapping lines, and a low flow rate underextrusion can occur, seen by gaps in the print~\cite{RefWorks:RefID:416-flow}. Figure~\ref{fig:literatureReview:effectsOfFlowRate} shows the importance of calibrating the flow rate of a material.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.9\linewidth]{../figs/literature_review/3dPrinting/effects_of_flow_rate_calibration.png}
+        \caption{Effects of proper flow rate calibration~\cite{RefWorks:RefID:416-flow}.}
+        \label{fig:literatureReview:effectsOfFlowRate}
+\end{figure}
