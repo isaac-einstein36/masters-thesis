@@ -6,14 +6,76 @@ PLCL (poly(l-lactide-co-$\epsilon$-caprolactone)) is a copolymer of poly(lactide
 \subsection{Effects of Co-Polymer Composition\label{sec:literatureReview:PLCL:composition}}
 % Detail the effects of different PLA/PCL compositions to help show why 70/30 is the best choice
 
-\subsection{Synthesis Methods\label{sec:literatureReview:PLCL:synthesis}}
+The composition of PLCL, specifically the ratio of PLA and PCL significantly affect the overall properties of the copolymer~\cite{RefWorks:RefID:303-luo2023fabrication,RefWorks:RefID:19-zhang2021synthesis}.
+
+\subsubsection{Mechanical Properties\label{sec:literatureReview:PLCL:composition:mechanicalProperties}}
+
+PLA exhibits high strength but uncontrollable biodegradability and excessive brittleness. PCL, alternatively, is a softer material that exhibits low strength but high toughness. When combined to create PLCL, PCL incorporation can counteract the brittleness of PLA but decreases overall strength~\cite{RefWorks:RefID:19-zhang2021synthesis,RefWorks:RefID:303-luo2023fabrication}.
+
+Research has been conducted to evaluate the changes in properties based on various PLA/PCL ratios. These studies conclude that elongation at break generally increases with a higher percentage of PCL, and tensile strength and Young's modulus decrease with an increase in PCL~\cite{RefWorks:RefID:31-fernández2012synthesis,RefWorks:RefID:303-luo2023fabrication,RefWorks:RefID:18-v2022assessing}. Some of these results are shown below in Figure~\ref{fig:literatureReview:copolymerRatioProperties}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/plclSynthesis/copolymer_ratio_mechanical_properties.png}
+        \caption{Changes in mechanical properties as PLA/PCL ratios are adjusted. (A,D) Elongation at break, (B,E) Tensile Strength, (C,F) Young's Modulus~\cite{RefWorks:RefID:303-luo2023fabrication}.}
+        \label{fig:literatureReview:copolymerRatioProperties}
+\end{figure}
+
+Additionally, elastic behavior was only exhibited when PCL composition was high enough such as at least 30\% as illustrated in Figure~\ref{fig:literatureReview:pclForElasticBehavior}~\cite{RefWorks:RefID:18-v2022assessing}.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/plclSynthesis/pcl_for_elastic_behavior.png}
+        \caption{Changes in elastic behavior with increased PCL percentage~\cite{RefWorks:RefID:18-v2022assessing}.}
+        \label{fig:literatureReview:pclForElasticBehavior}
+\end{figure}
+
+\subsubsection{Printability\label{sec:literatureReview:PLCL:composition:Printability}}
+
+The ability to 3D print PLCL is also affected by the copolymer makeup. One study compared the printability of 70/30 and 65/35 PLA/PCL. Through various calibration testing, it was found that 70/30 PLA/PCL was the most printable PLCL copolymer~\cite{RefWorks:RefID:18-v2022assessing}. Figure~\ref{fig:literatureReview:copolymerGridTest} helps illustrate these differences in printability.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/plclSynthesis/copolymer_printability_grid_test.png}
+        \caption{Evaulating printability of 65/35 (left) and 70/30 (right) PLCL through a grid test~\cite{RefWorks:RefID:18-v2022assessing}.}
+        \label{fig:literatureReview:copolymerGridTest}
+\end{figure}
+
+\subsection{Lab Synthesis Methods\label{sec:literatureReview:PLCL:labSynthesis}}
+In a laboratory setting, PLCL can be formed using ring-opening polymerization (ROP) or combining PLA and PCL with a dissolving agent. (\hl{Add citations for ROP and DCM synthesis})
+
+\subsubsection{Ring-Opening Polymerization (ROP) Synthesis\label{sec:literatureReview:PLCL:labSynthesis:ropSynthesis}}
 % Compare ring-opening polymerization (ROP) and block synthesis routes.
+In a laboratory setting, PLCL can be combined through ring-opening polymerization (ROP) to create random or block structure PLCL. Both of these synthesis methods require a dedicated laboratory setup and expertise~\cite{RefWorks:RefID:303-luo2023fabrication}.
+
+\paragraph*{Random vs Block PLCL}
+
+While both random PLCL (rPLCL) and block PLCL (bPLCL) require ROP synthesis, bPLCL can be made by incorporating a pre-polymerization step of just poly($\epsilon$-caprolactone). Compared to rPLCL, bPLCL preserves the unique crystalline structure of the soft and hard blocks and also allows for fine-tuning of the mechanical and biodegradability properties of the PLCL copolymer~\cite{RefWorks:RefID:303-luo2023fabrication}. The different processes to synthesise rPLCL and bPLCL are shown below in Figure~\ref{fig:literatureReview:randomVsBlockPLCL}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/plclSynthesis/random_vs_block_synthesis.png}
+        \caption{Random (A) vs Block (B) PLCL Synthesis~\cite{RefWorks:RefID:303-luo2023fabrication}.}
+        \label{fig:literatureReview:randomVsBlockPLCL}
+\end{figure}
+
+\subsubsection{Dissolving Copolymers\label{sec:literatureReview:PLCL:labSynthesis:dissolving}}
+% dissolving/solvent-based blending (chloroform or DCM).
+% RefID 304, 253
 
 \subsection{Blending Techniques\label{sec:literatureReview:PLCL:blending}}
-% Discuss melting methods (thermal) and solvent-based blending (chloroform or DCM).
+% Combining PLA and PCL through melting, injection molding, or extrusion
+% The carbon fiber article (RefID 62) combines ABS and powder just through extrusion though there's nothing on mixing PLA and PCL solely in an extruder
+
+\subsubsection{Thermal Combination\label{sec:literatureReview:PLCL:blending:thermalCombination}}
+% Melting the materials together and pelletizing
+% RefID 302 (melted before injection molding)
 
 \subsubsection{Injection Molding\label{sec:literatureReview:PLCL:blending:injectionMolding}}
 % Explain how injection molding can melt the materials together but doesn't mix them well (maybe the lack of mixing will go in discussion if I can't find papers and am only basing that off of Rachmat's opinion).
+% RefID 302, 251
 
 \subsubsection{Extruding Raw Materials Together\label{sec:literatureReview:PLCL:blending:coextrusion}}
 % Differentiate between single-screw and twin-screw extruders in blend formation.
+% Single Screw:RefID 62 combined ABS and powder via an extruder and re-extruded to blend better
+% Dual Screw: RefID 254, 251
