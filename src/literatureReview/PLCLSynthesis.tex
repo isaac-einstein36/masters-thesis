@@ -42,11 +42,11 @@ The ability to 3D print PLCL is also affected by the copolymer makeup. One study
 \end{figure}
 
 \subsection{Lab Synthesis Methods\label{sec:literatureReview:PLCL:labSynthesis}}
-In a laboratory setting, PLCL can be formed using ring-opening polymerization (ROP) or combining PLA and PCL with a dissolving agent. (\hl{Add citations for ROP and DCM synthesis})
+In a laboratory setting, PLCL can be formed using ring-opening polymerization (ROP) or combining PLA and PCL with a dissolving agent~\cite{RefWorks:RefID:303-luo2023fabrication,RefWorks:RefID:304-jeong2018mechanical,RefWorks:RefID:253-åkerlund2022effect}. Figure~\ref{fig:literatureReview:plclSynthesisMethods} illustrates common various PLCL synthesis methods.
 
 \subsubsection{Ring-Opening Polymerization (ROP) Synthesis\label{sec:literatureReview:PLCL:labSynthesis:ropSynthesis}}
 % Compare ring-opening polymerization (ROP) and block synthesis routes.
-In a laboratory setting, PLCL can be combined through ring-opening polymerization (ROP) to create random or block structure PLCL. Both of these synthesis methods require a dedicated laboratory setup and expertise~\cite{RefWorks:RefID:303-luo2023fabrication}.
+In a laboratory setting, PLCL can be combined through ring-opening polymerization (ROP) to create random or block structure PLCL. Both of these synthesis methods require a dedicated laboratory setup and specific expertise~\cite{RefWorks:RefID:303-luo2023fabrication}.
 
 \paragraph*{Random vs Block PLCL}
 
@@ -61,21 +61,44 @@ While both random PLCL (rPLCL) and block PLCL (bPLCL) require ROP synthesis, bPL
 
 \subsubsection{Dissolving Copolymers\label{sec:literatureReview:PLCL:labSynthesis:dissolving}}
 % dissolving/solvent-based blending (chloroform or DCM).
-% RefID 304, 253
+
+Another option for combining PLA and PCL into a PLCL copolymer is by chemically dissolving the materials together. Common solvents used for this are chloroform or dichloromethane (DCM).
+
+To perform this, PLA and PCL are dissolved in DCM or chloroform under agitation for three to four hours~\cite{RefWorks:RefID:304-jeong2018mechanical,RefWorks:RefID:253-åkerlund2022effect}.
 
 \subsection{Blending Techniques\label{sec:literatureReview:PLCL:blending}}
-% Combining PLA and PCL through melting, injection molding, or extrusion
-% The carbon fiber article (RefID 62) combines ABS and powder just through extrusion though there's nothing on mixing PLA and PCL solely in an extruder
+
+PLCL can also be synthesized by using heat to melt PLA and PCL together. This has been done via specialized equipment for melting, injection molding, or extrusions~\cite{RefWorks:RefID:62-ning2015additive,RefWorks:RefID:302-chen2025structure,RefWorks:RefID:251-fernández‐tena2023highimpact,RefWorks:RefID:254-navarro-baena2016design}. Figure~\ref{fig:literatureReview:plclSynthesisMethods} illustrates common various PLCL synthesis methods.
 
 \subsubsection{Thermal Combination\label{sec:literatureReview:PLCL:blending:thermalCombination}}
 % Melting the materials together and pelletizing
 % RefID 302 (melted before injection molding)
 
+PLA and PCL can be melt-compounded through equipment such as an RM-200C torque internal mixer. This combines the materials into a PLCL "cake" that can be pelletized~\cite{RefWorks:RefID:302-chen2025structure}.
+
 \subsubsection{Injection Molding\label{sec:literatureReview:PLCL:blending:injectionMolding}}
-% Explain how injection molding can melt the materials together but doesn't mix them well (maybe the lack of mixing will go in discussion if I can't find papers and am only basing that off of Rachmat's opinion).
-% RefID 302, 251
+
+Injection molding is also a viable method to combine PLA and PCL into PLCL. Some literature employing injection molding have used this technology to fabricate tensile testing specimen~\cite{RefWorks:RefID:302-chen2025structure,RefWorks:RefID:251-fernández‐tena2023highimpact}.
+
+Injection molding alone has been found to poorly mix materials, however, causing some studies to combine PLA and PCL into a mixture before injection molding~\cite{RefWorks:RefID:302-chen2025structure}.
 
 \subsubsection{Extruding Raw Materials Together\label{sec:literatureReview:PLCL:blending:coextrusion}}
-% Differentiate between single-screw and twin-screw extruders in blend formation.
-% Single Screw:RefID 62 combined ABS and powder via an extruder and re-extruded to blend better
-% Dual Screw: RefID 254, 251
+
+PLA and PCL can be combined thermally via an extruder. Either single or twin screw extruders can be used for this operation, although literature gravitates towards using a twin screw extruder for more accurate mixing~\cite{RefWorks:RefID:62-ning2015additive,RefWorks:RefID:254-navarro-baena2016design,RefWorks:RefID:251-fernández‐tena2023highimpact}.
+
+\paragraph*{Single Screw Extruder}
+
+While limited research exists regarding creating PLCL through a single screw extruder, one study did use a single screw extruder to combine a base material (ABS) with a powder filler (carbon fiber)~\cite{RefWorks:RefID:62-ning2015additive}.
+
+This study re-extruded the material to ensure adequate mixing and increase the bulk density, which in turn led to more consistent flow rate when 3D printing. ~\cite{RefWorks:RefID:62-ning2015additive}.
+
+\paragraph*{Twin Screw Extruder}
+
+Multiple studies utilize a twin screw extruder to combine PLA and PCL in synthesizing PLCL~\cite{RefWorks:RefID:254-navarro-baena2016design,RefWorks:RefID:251-fernández‐tena2023highimpact}. Twin screw extruders, specifically co-rotating extruders, are ideal for mixing multiple materials compared to single screw extruders~\cite{RefWorks:RefID:419-twin}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/plclSynthesis/plcl_synthesis_options.png}
+        \caption{Overview of PLCL synthesis options. (A) laboratory synthesis, (B) Melt-compounding, (C) Injection molding, (D) Extrusion.}
+        \label{fig:literatureReview:plclSynthesisMethods}
+\end{figure}
