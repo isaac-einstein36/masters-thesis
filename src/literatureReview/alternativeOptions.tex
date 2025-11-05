@@ -1,14 +1,67 @@
 \section{Alternative Device Fabrication Approaches\label{sec:literatureReview:alternativeDevices}}
-% Review non-traditional or hybrid manufacturing strategies.
-% Explored to see if there were better options than extruding a custom composite filament
+
+Alternative approaches to developing a custom composite filament to create a biodegradable continuously radiopaque implant include using existing composite filaments, embedded printing, and multi-material printing.
 
 \subsection{Composite Filaments\label{sec:literatureReview:alternativeDevices:compositeFilaments}}
 % Summarize existing composite filaments, filler materials, and performance characteristics.
+Multiple composite filaments have been created for various applications such as drug delivery and improving material strength~\cite{RefWorks:RefID:62-ning2015additive,RefWorks:RefID:307-cano-vicent2021fused}.
+
+Composite filaments can be used for drug delivery by printing with filament that has active pharmaceutical ingredients (API) embedded~\cite{RefWorks:RefID:307-cano-vicent2021fused}.
+
+One example of how composite filaments can increase material strength is through a study that embedded carbon fibers in ABS filament to create carbon fiber reinforced plastics (CFRP)~\cite{RefWorks:RefID:62-ning2015additive}.
+
+Other studies and companies have embedded radiopaque agents such as barium sulfate or hydroxyapatite to increase the radiopacity of a 3D printed part~\cite{RefWorks:RefID:77-hamedani2018threedimensional,RefWorks:RefID:331-februarylattice}.
+
+Additionally, companies have embedded metal into 3D printable filament, such as Proto-Pasta Stainless Steel PLA, although these filaments are not always approved for human implant~\cite{RefWorks:RefID:420-steelfilled}.
+
+There are also existing composite filaments that mimic bone in appearance and physical properties~\cite{RefWorks:RefID:331-februarylattice,RefWorks:RefID:78-bonlecule,RefWorks:RefID:76-3d}.
 
 \subsection{Embedded Printing\label{sec:literatureReview:alternativeDevices:embeddedPrinting}}
 % Discuss embedded printing (dropping clips inside print)
 
+Embedded printing is the process of embedding a component inside a 3D printed object. This process can securely combine objects without an additional bonding or sealing step~\cite{RefWorks:RefID:214-po2015embedding}.
+
+Embedded printing is commonly done by inserting a separate part within the layers of a currently printing piece~\cite{RefWorks:RefID:214-po2015embedding}. It has been used to embed magnets and various sensors or circuits within 3D printed parts~\cite{RefWorks:RefID:421-downunder35membedded,RefWorks:RefID:214-po2015embedding,RefWorks:RefID:69-2020smarter,RefWorks:RefID:68-sbriglia2016embedding,RefWorks:RefID:67-rosa2019sensor,RefWorks:RefID:65-wasserfallembedding}.
+
+While this is usually performed manually by pausing the print, research has also been conducted on creating a system to automatically embed components while printing as shown in Figure~\ref{fig:literatureReview:embeddedPrinting}~\cite{RefWorks:RefID:65-wasserfallembedding,RefWorks:RefID:421-downunder35membedded}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/alternativeOptions/embeddedPrinting.png}
+        \caption{Manual embedded printing (top) vs automatic embedded printing (bottom)~\cite{RefWorks:RefID:65-wasserfallembedding,RefWorks:RefID:421-downunder35membedded}.}
+        \label{fig:literatureReview:embeddedPrinting}
+\end{figure}
+
 \subsection{Multi-Material Printing\label{sec:literaturereview:alternativeDevices:multiMaterialPrinting}}
-% Discuss multi-material printing
-% Show AMS (Bambu) and MMU (Prusa)
-% Reference: \url{https://www.sciencedirect.com/science/article/pii/S1120179722020518}
+
+Another method of incorporating multiple materials cohesively into a 3D printed part is through multi-material printing.
+
+Multi-material printing allows for the combination of multiple materials into a single 3D printed part which can add features such as color changes or improved mechanical properties~\cite{RefWorks:RefID:228-youssef2024printing,RefWorks:RefID:73-quero2022multimaterial,RefWorks:RefID:70-uysal2019method,RefWorks:RefID:71-yadav2019optimization}.
+
+\paragraph*{Dual Extruder Printing}
+
+A common process for multi-material printing is to use two extruders and have one material fed through each. This can be done by retrofitting existing printers or purchasing 3D printers that are designed with two extruders~\cite{RefWorks:RefID:228-youssef2024printing,RefWorks:RefID:73-quero2022multimaterial,RefWorks:RefID:70-uysal2019method}. Examples of dual extruder multi-material printing are shown in Figure~\ref{fig:literatureReview:multiMaterialPrintingDualExtruder}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/alternativeOptions/multi_material_printing_dual_extruder.png}
+        \caption{Manual embedded printing (top) vs automatic embedded printing (bottom)~\cite{RefWorks:RefID:65-wasserfallembedding,RefWorks:RefID:421-downunder35membedded}.}
+        \label{fig:literatureReview:multiMaterialPrintingDualExtruder}
+\end{figure}
+
+\paragraph*{Single Extruder Printing}
+
+Alternatively, multi-material printing can be achieved through a single extruder. This is done by replacing the filament or material being printed at designated times throughout the printing process~\cite{RefWorks:RefID:71-yadav2019optimization}.
+
+Custom systems have been developed to achieve multi-material printing with a single extruder~\cite{RefWorks:RefID:71-yadav2019optimization}. While most single extruder multi-material printing systems can only extrude one material at a time, one study has explored adding additional stepper motors to allow two materials to print simultaneously~\cite{RefWorks:RefID:424-okkalidis2022filament}.
+
+3D printer manufacturers have also developed proprietary closed system devices to interact with their specific printers. This includes the Bambu AMS and Prusa MMU3~\cite{RefWorks:RefID:422-bambu,RefWorks:RefID:423-original}. Examples of single extruder multi-material systems are shown in Figure~\ref{fig:literatureReview:multiMaterialPrintingSingleExtruder}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/alternativeOptions/multi_material_printing_single_extruder.png}
+        \caption{Multi-material printing with a single extruder. (A) Custom system, (B) Prusa MMU3 AMS, (C) Bambu AMS~\cite{RefWorks:RefID:424-okkalidis2022filament,RefWorks:RefID:422-bambu,RefWorks:RefID:423-original}.}
+        \label{fig:literatureReview:multiMaterialPrintingSingleExtruder}
+\end{figure}
+
+\subsection{Hydrogels\label{sec:literaturereview:alternativeDevices:hydrogels}}
