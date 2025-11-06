@@ -57,9 +57,11 @@ Working parameters include factors such as raster angle, raster width, and build
 
 \subsection{Optimal Printing Parameters\label{sec:literatureReview:printing:optimalParameters}}
 
+\subsubsection{Printing Temperature\label{sec:literatureReview:printing:optimalParameters:temperature}}
+
 Printing parameters need to be optimized for each material used. Well-researched materials have pre-established parameters that can act as guidelines~\cite{RefWorks:RefID:307-cano-vicent2021fused}.
 
-Optimal starting printing parameters for materials used in this research, PLA, PCL, and PLCL, are provided in Table~\ref{tab:literatureReview:optimal_material_printing_parameters} as a reference point, though any new vendor or custom filament requires specific calibration.
+Optimal starting printing temperatures for materials used in this research, PLA, PCL, and PLCL, are provided in Table~\ref{tab:literatureReview:optimal_material_printing_parameters} as a reference point, though any new vendor or custom filament requires specific calibration.
 
 \begin{table}[h!]
         \centering
@@ -77,6 +79,34 @@ Optimal starting printing parameters for materials used in this research, PLA, P
                 \end{tabular}%
         }
 \end{table}
+
+\subsubsection{Printing Infill Density\label{sec:literatureReview:printing:optimalParameters:infillDensity}}
+
+Infill density is the percentage of filament compared to empty space within a 3D printed part. As infill percentage, also referred to as infill density or occupancy rate, increases, internal air gaps decrease. This is illustrated below in Figure~\ref{fig:literatureReview:infillDensityExplained} helps illustrate what occurs internally as infill density changes.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/3dPrinting/infill_density_explained.png}
+        \caption{Visualization of changes in infill density~\cite{RefWorks:RefID:33-johnson2018evaluation}.}
+        \label{fig:literatureReview:infillDensityExplained}
+\end{figure}
+
+Multiple studies have been conducted evaluating the effects of infill density on part strength. Overall, tensile strength increases as infill density increases, and many studies recommended a rectilinear infill with at least 50\% infill density for optimal strength~\cite{RefWorks:RefID:425-atakok2022tensile,RefWorks:RefID:426-kam2023investigation,RefWorks:RefID:429-rismalia2019infill,RefWorks:RefID:430-2016effect}.
+
+However, studies found marginal returns printing above 75\% infill given the significantly increased time and materials to print at 100\% infill density~\cite{RefWorks:RefID:33-johnson2018evaluation,RefWorks:RefID:429-rismalia2019infill}. Tensile strength increased more substantially between 20 and 50\%~\cite{RefWorks:RefID:430-2016effect}.
+
+\subsubsection{Build Plate Orientation\label{sec:literatureReview:printing:optimalParameters:orientation}}
+
+Print orientation or how a part is positioned on the print bed plays an important role in the overall mechanical properties of the 3D printed part. Individual print layers are held together by interlocking print lines, but the layers themselves are only connected by adhesion among layers. As a result, individual layers provide strength but it takes less force to separate entire layers from one another~\cite{RefWorks:RefID:432-hanon2020effect}.
+
+Because of this weakness between layer lines, the direction layers are placed with respect to the direction of force the part will experience should be considered. For example, for a uniaxial tensile test, it was found that printing a part on its edge rather than flat on the bed provided optimal strength due to the orientation of the print layers~\cite{RefWorks:RefID:432-hanon2020effect,RefWorks:RefID:427-karad2023experimental}. Figure~\ref{fig:literatureReview:printOrientation} illustrates the effect of print orientation relative to the forces a part may experience.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/3dPrinting/print_orientation.png}
+        \caption{Effects of print orientation on layer adhesion~\cite{RefWorks:RefID:432-hanon2020effect}.}
+        \label{fig:literatureReview:infillDensitprintOrientationyExplained}
+\end{figure}
 
 \subsection{Calibrating Materials\label{sec:literatureReview:printing:calibratingMaterials}}
 % Discuss calibration approaches such as for Prusa or Bambu to determine optimal print parameters
@@ -115,8 +145,3 @@ Flow rate is also a common 3D printing calibration factor. This determines how m
         \caption{Effects of proper flow rate calibration~\cite{RefWorks:RefID:416-flow}.}
         \label{fig:literatureReview:effectsOfFlowRate}
 \end{figure}
-
-\hl{Add section on optimal infill percentage}.
-% Strength tradeoff with infill
-% For tensile testing, 100% is closest to raw material as possible even though it uses a lot of material
-% Look at undergrad thesis
