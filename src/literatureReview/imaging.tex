@@ -7,19 +7,28 @@ Hounsfield units (HU) are a universally used unit in Computer Tomography (CT) im
 
 HU are based on a scale with distilled water being at 0, less dense objects being more negative, and more radiodense objects being more positive. HU imaging is grayscale, and the more positive an object is on the HU scale, the brighter it appears.
 
-% A material's HU is calculated using the linear attenuation coefficients of distilled water (0) and air (-1000) as well as the material's attenuation using the following Equation~\eqref{eq:calculating_HU} below~\cite{RefWorks:RefID:332-emonde2024radiopacity}.
+A material's HU is calculated using the linear attenuation coefficients of distilled water (0) and air (-1000) as well as the material's attenuation using the following Equation~\eqref{eq:calculating_HU} below~\cite{RefWorks:RefID:332-emonde2024radiopacity,RefWorks:RefID:363-savidevelopment}.
 
-% \begin{equation}
-%         HU = 1000 * \frac{\mu}{2}
-%         \label{eq:calculating_HU}
-% \end{equation}
+\begin{equation}
+        HU = 1000 \times \frac{\mu-\mu_{water}}{\mu_{air}-\mu_{water}}
+        \label{eq:calculating_HU}
+\end{equation}
 
-% Explain how HU correlates to material density and imaging contrast.
-% RefID 332 (In Radiopacity, introduction talks about HU)
-% RefID 363 Equation 2
+Figure~\ref{fig:literatureReview:HU_scale} illustrates where various hard and soft tissues in the human body fall on the HU scale~\cite{RefWorks:RefID:332-emonde2024radiopacity}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[height=0.5\linewidth]{../figs/literature_review/imaging/hu_scale.png}
+        \caption{Various soft and hard tissues in the human body on the HU scale~\cite{RefWorks:RefID:332-emonde2024radiopacity}.}
+        \label{fig:literatureReview:HU_scale}
+\end{figure}
 
 \subsection{Test Standards\label{sec:literatureReview:imaging:standards}}
-% Mention ASTM F640-20 and similar standards for CT evaluation (Ref ID 342)
-% ASTM 5640-20 standard to test radiopacity (332).
+
+Radiopacity is measured both quantitatively and qualitatively through analyzing shape and texture~\cite{RefWorks:RefID:271-banookhu}.
+
+Quantitatively, ASTM F640-20, Test Method for Determining Radiopacity for Medical Use, is often followed~\cite{RefWorks:RefID:342-test}.
+
 \subsection{Prior Studies\label{sec:literatureReview:imaging:priorStudies}}
-% Include references such as Ref ID 77 for comparable imaging validation studies.
+
+Multiple papers and studies exist that perform similar radiopacity testing to that in this thesis~\cite{RefWorks:RefID:77-hamedani2018threedimensional,RefWorks:RefID:363-savidevelopment,RefWorks:RefID:346-özmenradiopaque}.
