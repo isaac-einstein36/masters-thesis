@@ -12,3 +12,4 @@ underextrusion
 overextrusion
 printability
 Printability
+bioresorbable
