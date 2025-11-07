@@ -13,3 +13,5 @@ overextrusion
 printability
 Printability
 bioresorbable
+Hounsfield
+radiodense
