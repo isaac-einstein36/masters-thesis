@@ -1,11 +1,74 @@
 \section{Material Properties\label{sec:literatureReview:materials}}
 % Review mechanical and physical properties of both biological and polymeric materials.
+This section will review existing literature regarding mechanical properties of the biological and polymeric materials evaluated in this thesis.
 
 \subsection{Breast Tissue Properties\label{sec:literatureReview:materials:breast}}
 % Summarize adipose and glandular tissue properties relevant to implant design.
+Breast tissue is a combination of predominantly adipose and glandular tissue which sits over the pectoralis major muscle as shown below in Figure~\ref{fig:literatureReview:breast_anatomy}~\cite{RefWorks:RefID:231-gefenmechanics}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[height=0.7\linewidth]{../figs/literature_review/mechanicalProperties/breast_anatomy.png}
+        \caption{Anatomical schematic of a human breast~\cite{RefWorks:RefID:231-gefenmechanics}.}
+        \label{fig:literatureReview:breast_anatomy}
+\end{figure}
+
+An overview of the mechanical properties of the tissue types that comprise breast tissue are shown below in Table~\ref{tab:literatureReview:breast_mechanical_properties}.
+
+\begin{table}[h!]
+        \centering
+        \caption{Mechanical properties of tissue components of the breast~\cite{RefWorks:RefID:231-gefenmechanics}.}
+        \begin{adjustbox}{max width=\textwidth}
+
+                \begin{tabular}{lcc}
+                        \hline
+                        \textbf{Tissue Type}                           & \textbf{Elastic Modulus [kPa]} & \textbf{Ultimate Strength [MPa]} \\
+                        \hline
+                        Ribs                                           & 2,000,000--14,000,000          & 100                              \\
+                        Pectoralis major/minor (longitudinal, dynamic) & $\sim$30                       & 0.4--0.7                         \\
+                        Pectoralis major/minor (transverse, dynamic)   & 1.5--6                         & 0.4--0.7                         \\
+                        Pectoralis major/minor (transverse, static)    & 0.75--3.6                      & 0.4--0.7                         \\
+                        Pectoralis fascia                              & 100--2000                      & 20--100                          \\
+                        Suspensory ligaments                           & 80,000--400,000                & 40                               \\
+                        Glandular tissue                               & 7.5--66                        & No data available                \\
+                        Adipose                                        & 0.5--25                        & No data available                \\
+                        Skin                                           & 200--3000                      & 20                               \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+        \label{tab:literatureReview:breast_mechanical_properties}
+\end{table}
+
+Additionally, during a mammography, the right and left breast can experience anywhere from 50 to 200 N of compressive force~\cite{RefWorks:RefID:230-poulosbreast}.
+
+Lastly, it was found over 99 studies that the calculated mass-density of the breast is on average 945 $kg/m^3$~\cite{RefWorks:RefID:174-sanchez2016estimating}.
 
 \subsection{Polymer Properties\label{sec:literatureReview:materials:polymers}}
 % Compare PLA, PCL, and PLCL mechanical and thermal characteristics.
+Mechanical properties for the main polymers used in this thesis, PLA, PCL, and 70/30 PLCL are shown below in Table~\ref{tab:literatureReview:polymer_material_properties}.
+
+\hl{[Finish Table]}
+\begin{table}[h!]
+        \centering
+        \caption{Material Mechanical Properties for PLA, PCL, and PLCL (70/30)}
+        \label{tab:literatureReview:polymer_material_properties}
+        \begin{adjustbox}{max width=\textwidth}
+
+                \begin{tabular}{p{2cm} | p{3.5cm} | p{3cm} | p{3cm} | p{3.5cm}}
+                        \toprule
+                        \textbf{Material} & \textbf{Tensile Modulus ($\mathbf{E_t}$)}                                & \textbf{Compressive Modulus ($\mathbf{E_{comp}}$)} & \textbf{Flexural Modulus ($\mathbf{E_{flex}}$)} & \textbf{Tensile Yield Strength}                                                 \\
+                        \midrule
+                        PCL               & $440 \pm 3 \text{ MPa (ID46)}$ \newline $417 \pm 25 \text{ MPa (ID133)}$ & $455 \pm 2 \text{ MPa (ID46)}$                     & $414 \pm 10 \text{ MPa (ID46)}$                 & $17.82 \pm 0.47 \text{ MPa (ID46)}$ \newline $14.7 \pm 1.3 \text{ MPa (ID133)}$ \\
+                        \midrule
+                        PLA               & $3015 \pm 86 \text{ MPa (ID133)}$ \newline $3600 \text{ MPa (ID343)}$    &                                                    & $3800 \text{ MPa (ID343)}$                      & $55.9 \pm 6.5 \text{ MPa (ID133)}$ \newline $50 \text{ MPa (ID434)}$            \\
+                        \midrule
+                        PLCL (70/30)      & $12 \pm 1.2 \text{ MPa (Secant Modulus at 0.2\% strain) (ID31)}$         &                                                    &                                                 & $17.2 \pm 0.7 \text{ MPa (ID31)}$ \newline $16.1 \pm 3.2 \text{ MPa (ID19)}$    \\
+                        \bottomrule
+                \end{tabular}
+        \end{adjustbox}
+\end{table}
+
+
 
 \subsection{Effects of BaSO\textsubscript{4} Additives\label{sec:literatureReview:materials:BaSO4}}
 % Discuss how radiopaque fillers influence modulus, brittleness, and imaging response.
