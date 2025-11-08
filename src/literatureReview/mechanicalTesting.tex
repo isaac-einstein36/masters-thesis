@@ -1,12 +1,71 @@
 \section{Mechanical Testing\label{sec:literatureReview:testing}}
 % Explain standards, specimen design, and relevance to material characterization.
+Mechanical testing are the various procedures used to assess the mechanical properties of a material. This testing determines how a material will respond under certain conditions and whether it can be used for specific applications. Mechanical testing can evaluate several properties such as strength, ductility, and toughness~\cite{RefWorks:RefID:436-ye2025mechanical,RefWorks:RefID:438-muruganmechanical}.
+
+Various relevant mechanical properties are defined below in Table~\ref{tab:literatureReview:mechanical_properties_definitions}.
+
+\begin{table}[h!]
+        \centering
+        \caption{Definitions of relevant mechanical property terms~\cite{RefWorks:RefID:438-muruganmechanical}.}
+        \begin{adjustbox}{max width=\textwidth}
+                \begin{tabular}{l p{10cm}}
+                        \hline
+                        \textbf{Term} & \textbf{Definition}                                                                    \\
+                        \hline
+                        Strength      & Ability of a material to resist externally applied forces without breaking or yielding \\[4pt]
+                        Stiffness     & Ability of a material to resist deformation under stress                               \\[4pt]
+                        Elasticity    & Ability of a material to regain its original shape after deformation                   \\[4pt]
+                        Plasticity    & Ability of a material to undergo some degree of permanent deformation without failure  \\[4pt]
+                        Brittleness   & Ability of a material to fracture or break with minimal elongation                     \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+        \label{tab:literatureReview:mechanical_properties_definitions}
+\end{table}
+
 
 \subsection{Testing Standards\label{sec:literatureReview:testing:standards}}
 % Include ASTM D638 (tensile) and D790 (flexural).
+Various testing standards are utilized based on the mechanical property of interest. Testing standards help ensure the safety, reliability, and quality of products. The American Society for Testing and Materials (ASTM) and the International Organization for Standardization/Technical Specification (ISO/TS) have developed common-used testing standards~\cite{RefWorks:RefID:439-iso,RefWorks:RefID:440-astm}.
+
+Various relevant testing standards are outlined below in Table~\ref{tab:literatureReview:testing_standards_examples}
+
+\begin{table}[h]
+        \centering
+        \caption{ASTM Standards Referenced in This Work.}
+        \label{tab:literatureReview:testing_standards_examples}
+        \begin{adjustbox}{max width=\textwidth}
+
+                \begin{tabular}{l p{10cm}}
+                        \hline
+                        \textbf{Standard}                             & \textbf{Title}                                                                                                            \\
+                        \hline
+                        ASTM D5947-24~\cite{RefWorks:RefID:388-test}  & Standard Test Methods for Physical Dimensions of Solid Plastics Specimens                                                 \\[4pt]
+                        ASTM F640-20~\cite{RefWorks:RefID:342-test}   & Standard Test Methods for Determining Radiopacity for Medical Use                                                         \\[4pt]
+                        ASTM D1238-23a~\cite{RefWorks:RefID:55-test}  & Standard Test Method for Melt Flow Rates of Thermoplastics by Extrusion Plastometer                                       \\[4pt]
+                        ASTM D790-17~\cite{RefWorks:RefID:5-standard} & Standard Test Methods for Flexural Properties of Unreinforced and Reinforced Plastics and Electrical Insulation Materials \\[4pt]
+                        ASTM D638-14~\cite{RefWorks:RefID:4-test}     & Standard Test Method for Tensile Properties of Plastics                                                                   \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+\end{table}
 
 \subsection{Specimen Development\label{sec:literatureReview:testing:specimens}}
-% Note using Type-V tensile bars (ASTM D638) due to limited material.
-% Discuss 100\% infill rationale to eliminate void-based variability and effects of infill % on strength of material.
+
+\paragraph*{Test Specimen Geometry}
+Based on the testing standard used, there may be options when choosing a testing specimen. For example, ASTM D638 allows the use of Type I-V test specimens. While Type I is the preferred test specimen, Type IV and V are suggested if materials are limited~\cite{RefWorks:RefID:4-test}.
+
+Type I-V test specimen geometries are shown below in Figure~\ref{fig:literatureReview:astmD638_test_specimen_geometries}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/3dPrinting/infill_density_explained.png}
+        \caption{Type I-V test specimen geometry for ASTM D638.ype}
+        \label{fig:literatureReview:astmD638_test_specimen_geometries}
+\end{figure}
+
+\paragraph*{Test Specimen 3D Printing Parameters}
+When 3D printing test specimen, a 100\% infill is recommended. This parameter choice can increase part strength, but more importantly a 100\% infill has been shown to most closely resemble the properties of the raw material itself~\cite{RefWorks:RefID:430-2016effect}. See Section~\ref{sec:literatureReview:printing:optimalParameters:infillDensity} for more information on 3D printing infill density.
 
 \subsection{Importance of Mechanical Testing\label{sec:literatureReview:testing:importance}}
 % Explain what tensile strength, elastic modulus, and flexural modulus indicate about structure–property relationships.
