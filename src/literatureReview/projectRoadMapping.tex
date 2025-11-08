@@ -1,8 +1,79 @@
 \section{Project Road Mapping\label{sec:literatureReview:roadmap}}
 % Explore literature on project visualization and management tools in research.
+Various tools exist for visual project road mapping and planning such as Gantt charts, Kanban, and network maps.
 
-\subsection{Effects of Gantt Charts\label{sec:literatureReview:roadmap:gantt}}
+\subsection{Gantt Charts\label{sec:literatureReview:roadmap:gantt}}
 % Discuss visualization, planning, and coordination benefits of Gantt charting.
+\subsubsection{Gantt Chart Overview\label{sec:literatureReview:roadmap:gantt:overview}}
+
+A Gantt chart, or harmonogram, is a popular visual project mapping tool used to illustrate start and end dates of various tasks in a project. It is made up of horizontal bar charts as shown below in Figure~\ref{fig:literatureReview:ganttChart}~\cite{RefWorks:RefID:476-gantt,RefWorks:RefID:473-hopeeffects}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/projectMapping/gantt_chart.png}
+        \caption{Example Gantt chart~\cite{RefWorks:RefID:476-gantt}.}
+        \label{fig:literatureReview:ganttChart}
+\end{figure}
+
+\paragraph*{Advantages}
+
+Some advantages of a Gantt chart are that it is useful in evaluating the whole project from a broad perspective. It also allows stakeholders to clearly monitor milestones and track progress~\cite{RefWorks:RefID:476-gantt}.
+
+\paragraph*{Disadvantages}
+
+A Gantt chart does not inherently account for scheduling risk. If a task finishes before or after the initially estimated window, the entire chart needs to be updated~\cite{RefWorks:RefID:473-hopeeffects,RefWorks:RefID:476-gantt}. Additionally, while the bars indicate time required to perform a task, they do not convey the level of work or resources required for that task. Lastly, it can be difficult to view an entire project's Gantt chart on one page~\cite{RefWorks:RefID:476-gantt}.
+
+\subsubsection{Various Gantt Chart Resources\label{literatureReview:roadmap:gantt:variousTools}}
+
+Numerous tools and resources exist for using Gantt charts for both personal and professional projects. These tools can range in functionality and price. Newer premium features of Gantt charts include AI-driven scheduling, enhanced visual customization, dynamic workflows, and risk-based scheduling~\cite{RefWorks:RefID:477-aston202523}.
+
+Table~\ref{tab:gantt_chart_price_plans} summarizes various price plans of Gantt charts across 23 different platforms.
+
+\begin{table}[h!]
+        \centering
+        \caption{Comparison of Plan Types and Features~\cite{RefWorks:RefID:477-aston202523}.}
+        \begin{tabular}{l c p{9cm}}
+                \hline
+                \textbf{Plan Type} & \textbf{Average Price} & \textbf{Common Features}                                                                                     \\
+                \hline
+                Free Plan          & \$0                    & Basic Gantt chart creation, limited projects, limited user seats, and no advanced reporting or integrations. \\
+                \hline
+                Personal Plan      & \$5--\$25/user/month   & Unlimited tasks, color-coded timelines, export options, and simple integrations like Google Calendar.        \\
+                \hline
+                Business Plan      & \$25--\$50/user/month  & Advanced project tracking, resource management tools, real-time collaboration, and custom reporting.         \\
+                \hline
+                Enterprise Plan    & \$50--\$100/user/month & Customizable workflows, dedicated account support, enhanced security features, and advanced analytics.       \\
+                \hline
+        \end{tabular}
+        \label{tab:gantt_chart_price_plans}
+\end{table}
 
 \subsection{Other Visual Road Mapping Tools\label{sec:literatureReview:roadmap:otherTools}}
 % Mention software and visual approaches beyond Gantt (Kanban, network maps, etc.).
+In addition to Gantt charts, other project visualization tools and platforms can be utilized. The scrum process and Kanban process are common project planning methodologies~\cite{RefWorks:RefID:478-2023choosing}. Examples of these frameworks are shown below in Figure~\ref{fig:literatureReview:scrumAndKanban}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/literature_review/projectMapping/scrum_and_kanban.png}
+        \caption{Examples of various project mapping platforms. Scrum framework (left) and Kanban (right)~\cite{RefWorks:RefID:478-2023choosing}.}
+        \label{fig:literatureReview:scrumAndKanban}
+\end{figure}
+
+Table~\ref{tab:literatureReview:otherProjectMappingTools} summarizes selection criteria of other project visualization platforms and tools.
+
+\begin{table}[h!]
+        \centering
+        \caption{Overview of Various Project Mapping and Roadmapping Tools~\cite{RefWorks:RefID:475-komandlaglobal}.}
+        \begin{tabular}{l p{3cm} p{3cm} p{3cm} p{3cm}}
+                \hline
+                \textbf{Tool} & \textbf{Key Features}                          & \textbf{Pros}                                        & \textbf{Cons}                                        & \textbf{Best For}                                \\
+                \hline
+                Trello        & Boards and cards for task organization         & User-friendly, highly customizable, free version     & Lacks advanced roadmap features, limited scalability & Small teams needing simple project organization  \\
+                Aha!          & Customizable roadmaps, analytics, integrations & Tailored for product management, strong analytics    & Steeper learning curve, higher cost                  & Product managers requiring detailed roadmaps     \\
+                Jira          & Agile roadmaps, customizable workflows         & Excellent for software projects, strong integrations & Complex interface, steep learning curve              & Agile software development teams                 \\
+                Roadmunk      & Drag-and-drop roadmaps, timeline views         & Intuitive interface, easy to share                   & Limited beyond roadmapping, higher pricing           & Teams focused on visual roadmapping              \\
+                ProductPlan   & Visual builder, collaboration tools            & Easy to use, multiple roadmap views                  & Limited customization, can become costly             & Teams prioritizing collaboration and ease of use \\
+                \hline
+        \end{tabular}
+        \label{tab:literatureReview:otherProjectMappingTools}
+\end{table}
