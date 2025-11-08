@@ -8,25 +8,138 @@ There are various methods of characterizing polymer blends including: electron m
 % Discuss NMR for quantifying PLA/PCL ratio and copolymer composition.
 Nuclear Magnetic Resonance (NMR) testing can be useful in determining the percent composition of a polymer blend. This is done by evaluating the integrals of unique peaks on a H NMR spectrum~\cite{RefWorks:RefID:453-jordicase,RefWorks:RefID:454-paulsendetermination,RefWorks:RefID:455-mauricio2020determination,RefWorks:RefID:456-chakrapani2019lowfield}. An example of this spectrum is shown below in Figure~\ref{fig:literatureReview:nmrSpectrum}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\linewidth]{../figs/literature_review/polymerCharacterization/nmr_spectrum_example.png}
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/polymerCharacterization/nmr_spectrum_example.png}
         \caption{Example of H NMR spectrum for composition analysis~\cite{RefWorks:RefID:455-mauricio2020determination}.}
         \label{fig:literatureReview:nmrSpectrum}
 \end{figure}
 
-\subsubsection{Powder Preparation\label{sec:literatureReview:characterization:NMR:powderPrep}}
+\subsubsection{Solution-State vs Solid-State NMR}
+Solution-state and solid-state are the two types of NMR testing. These differ in sample preparation, as solution-state NMR is performed with the sample dissolved in a deuterated solvent while solid-state uses a solid sample~\cite{RefWorks:RefID:458-solid}.
+
+A majority of NMR testing is conducted via solution-state NMR, but if samples are insoluble in common solvents or their structure changes when dissolved, solid-state NMR is preferred~\cite{RefWorks:RefID:458-solid}.
+
+Compared to solid-state NMR, solution-state NMR testing has superior resolution and sensitivity as well as better defined spectra~\cite{RefWorks:RefID:458-solid}.
+
+\subsubsection{Solution-State NMR Specimen Preparation\label{sec:literatureReview:characterization:NMR:powderPrep}}
+
+\paragraph*{Effect of Specimen Size}
+When dissolving a sample, particle size and surface area affect the dissolution rate. This is approximated by the Noyes-Whitney equation (Equation~\eqref{eq:noyes_whitney}) where D is the diffusion coefficient of the material, h\textsubscript{HDL} is the thickness of the diffusion layer, A is the surface area of the solid-liquid interface, C\textsubscript{s} is the solubility and C is the bulk concentration of the drug~\cite{RefWorks:RefID:459-van2023modelling}.
+
+\begin{equation}
+        \frac{dM}{dt} = -\frac{D}{h_{HDL}}A(C_S-C)
+        \label{eq:noyes_whitney}
+\end{equation}
+
+Based on Equation~\eqref{eq:noyes_whitney}, the surface area and dissolution rate have a directly proportional relationship. Thus, increasing surface area increases the dissolution rate.
+
+One way to increase the surface area of the solid-liquid interface is to decrease the size of the solid. Smaller samples have a larger surface area for their volume compared to larger samples and the solvent has more area to react with~\cite{RefWorks:RefID:461-surface}.
+
+Research has proven that decreasing specimen particle size results in a faster dissolution~\cite{RefWorks:RefID:462-javadzadehnanosizing,RefWorks:RefID:460-csicsák2023effect}.
+
+\paragraph*{Methods for Pulverizing Filament}
 % Compare mortar and pestle, ball milling, and 3D printed filament grinding.
-\hl{(Finish this - grinding filament into powder)}
+There are various methods of pulverizing 3D printed filament to decrease particle size and aid in dissolution. This includes manual grinding and machine-based grinding such as with a ball mill~\cite{RefWorks:RefID:464-ostapowicz2023comparison}.
+
+Manual grinding of filament is commonly performed with a mortar and pestle as shown below in Figure~\ref{fig:literatureReview:mortarAndPestle}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/literature_review/polymerCharacterization/mortar_and_pestle.png}
+        \caption{Mortar and pestle for manual pulverization~\cite{RefWorks:RefID:468-mortar}.}
+        \label{fig:literatureReview:mortarAndPestle}
+\end{figure}
+
+One machine that can be used to effectively pulverize filament is a ball mill grinder. This machine consists of a hollow cylindrical shell that roates around a horizontal axis. Inside the cylinder are grinding media such as stainless steel or ceramic balls as well as the material to be ground. These machines grind samples into a fine powder via the impact of the grinding media on the sample as the machine rotates~\cite{RefWorks:RefID:465-2024ball}. Ball mill grinding has also been researched as a sustainable grinding method for polymer pulverization compared to other techniques~\cite{RefWorks:RefID:466-rizzo2024progress}. It is also possible to 3D printing a ball mill grinder as shown below in Figure~\ref{fig:literatureReview:3dPrintedBallMill}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/polymerCharacterization/3d_printed_ball_mill.png}
+        \caption{Example of 3D printed ball mill grinder~\cite{RefWorks:RefID:467-pario20183d}.}
+        \label{fig:literatureReview:3dPrintedBallMill}
+\end{figure}
+
+Research has shown that manual and ball mill grinding result in comparable end-product~\cite{RefWorks:RefID:464-ostapowicz2023comparison}. Table~\ref{tab:manual_vs_machine_grinding} highlights key differences between manual and ball mill grinding.
+
+\begin{table}[h!]
+        \centering
+        \caption{Comparison of grinding methods.}
+        \label{tab:manual_vs_machine_grinding}
+        \begin{tabular}{l c c}
+                \hline
+                \textbf{Characteristic} & \textbf{Mortar and Pestle} & \textbf{Ball Mill} \\
+                \hline
+                Special equipment       & not needed                 & needed             \\
+                Price                   & low                        & high               \\
+                Time of grinding        & 5--10 minutes              & 1--2 minutes       \\
+                \hline
+        \end{tabular}
+\end{table}
 
 \subsection{FT-IR\label{sec:literatureReview:characterization:ftir}}
 % Using FT-IR in polymer chractertization and why it's not as helpful for % composition
 
+Fourier Transform Infrared Spectroscopy (FT-IR) is a useful tool in characterizing polymer blends~\cite{RefWorks:RefID:447-haq2017characterization,RefWorks:RefID:449-grande-tovar2022polycaprolactone,RefWorks:RefID:452-eidelman2004characterization}. This technology can be used to measure the distribution of different chemical components in a blend and has also been used to characterize the homogeneity of a blend~\cite{RefWorks:RefID:452-eidelman2004characterization}.
+
+FT-IR is commonly used to determine the materials within a blend rather than their percent composition. This is done by mapping the FT-IR spectra of a blend to spectra of single polymers or elements as shown in Figure~\ref{fig:literatureReview:usingFTIR}~\cite{RefWorks:RefID:449-grande-tovar2022polycaprolactone,RefWorks:RefID:452-eidelman2004characterization}. Gas chromatography is also a method used to determine the residual monomers in a blend~\cite{RefWorks:RefID:448-feng2021determination}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/polymerCharacterization/ftir_example.png}
+        \caption{Using FT-IR to determine the components within ZnO-NPs~\cite{RefWorks:RefID:449-grande-tovar2022polycaprolactone}.}
+        \label{fig:literatureReview:usingFTIR}
+\end{figure}
+
+While FT-IR is commonly not used to determine percent composition of polymers in a blend, research has been conducted to use this technology in combination with composition gradient film technology to achieve this~\cite{RefWorks:RefID:452-eidelman2004characterization}.
+
 \subsection{Microscopy\label{sec:literatureReview:characterization:microscopy}}
-% Include optical and scanning electron microscopy for morphological analysis.
+
+\paragraph*{Scanning Electron Microscopy (SEM)}
+
+Scanning Electron Microscopy (SEM) can be used to evaluate the surface and internal structures of a polymer blend. It can also show how additives and fillers are distributed and arranged within polymers~\cite{RefWorks:RefID:442-molineux2023polymers,RefWorks:RefID:444-hassanderelectron,RefWorks:RefID:451-negaresh2024polylactic}. Figure~\ref{fig:literatureReview:sem_homogeneity} shows how homogeneity of a blend can be evaluated through SEM.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/polymerCharacterization/sem_homogeneity.png}
+        \caption{Polymer blends with different degrees of miscibility. Homogenous (A and B) and heterophasic morphology (C and D)~\cite{RefWorks:RefID:442-molineux2023polymers}.}
+        \label{fig:literatureReview:sem_homogeneity}
+\end{figure}
+
+\paragraph*{Transmission Electron Microscopy (TEM)}
+Transmission Electron Microscopy can also be used for morphology characterization. It was found that SEM is superior for large areas at low magnification while TEM is necessary for the resolution of finer details~\cite{RefWorks:RefID:444-hassanderelectron}.
+
+\subsection{Differential Scanning Calorimetry\label{sec:literatureReview:characterization:dsc}}
+
+Differential Scanning Calorimetry (DSC) testing can be used to calculate thermal properties of a polymer blend~\cite{RefWorks:RefID:450-matta2014preparation}.
+
+A DSC thermograph, as shown in Figure~\ref{fig:literatureReview:dsc_thermograph}, is uses to calculate the glass transition temperature of a material or blend. As comparison, the blend glass transition temperature can be estimated using Equation~\eqref{eq:glass_transition_temp}~\cite{RefWorks:RefID:450-matta2014preparation}. In Equation~\eqref{eq:glass_transition_temp}, T\textsubscript{g} is the glass transition temperature of the blend, T\textsubscript{g1} and T\textsubscript{g2} are the glass transition temperatures of the blend components, and w\textsubscript{1} and w\textsubscript{2} are the weight fractions of the blend components~\cite{RefWorks:RefID:450-matta2014preparation}.
+
+\begin{equation}
+        \frac{1}{T_g} = \frac{w_1}{T_(g1)} + \frac{w_2}{T_(g2)}
+        \label{eq:glass_transition_temp}
+\end{equation}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/polymerCharacterization/reading_dsc_thermograph.png}
+        \caption{Interpreting results from DSC testing~\cite{RefWorks:RefID:457-dsc}.}
+        \label{fig:literatureReview:dsc_thermograph}
+\end{figure}
 
 \subsection{Gel Permeation Chromatography (GPC)\label{sec:literatureReview:characterization:GPC}}
 % Review methods for determining molecular weight distribution and polymer degradation.
+Gel Permeation Chromatography (GPC) testing is a form of size-exclusion chromatography. Based on various funneling pore diameters, molecules of certain sizes can pass through forming a size distribution. GPC testing is commonly used for characterizing molecular weight and molecular weight distribution of polymers~\cite{RefWorks:RefID:471-gel}.
+
+An example of a GPC output for measuring molecular weight is shown below in Figure~\ref{fig:literatureReview:gpcOutput}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/literature_review/polymerCharacterization/gpc_output.png}
+        \caption{Example GPC testing output~\cite{RefWorks:RefID:471-gel}.}
+        \label{fig:literatureReview:gpcOutput}
+\end{figure}
 
 \subsection{Characterizing PLA/PCL Blends\label{sec:literatureReview:characterization:pla_pcl}}
 % Show papers specifically citing characterization of PLCL or PLA/PCL blends
+While polymer blend characterization is broad, various research has characterized specifically PLA/PCL blends using the various techniques described throughout Section~\ref{sec:literatureReview:characterization}~\cite{RefWorks:RefID:447-haq2017characterization,RefWorks:RefID:448-feng2021determination,RefWorks:RefID:449-grande-tovar2022polycaprolactone,RefWorks:RefID:450-matta2014preparation,RefWorks:RefID:451-negaresh2024polylactic}.
