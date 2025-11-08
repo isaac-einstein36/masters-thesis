@@ -47,28 +47,55 @@ Lastly, it was found over 99 studies that the calculated mass-density of the bre
 % Compare PLA, PCL, and PLCL mechanical and thermal characteristics.
 Mechanical properties for the main polymers used in this thesis, PLA, PCL, and 70/30 PLCL are shown below in Table~\ref{tab:literatureReview:polymer_material_properties}.
 
-\hl{[Finish Table]}
-\begin{table}[h!]
+\begin{table}[H]
         \centering
-        \caption{Material Mechanical Properties for PLA, PCL, and PLCL (70/30)}
+        \caption{Mechanical properties of PCL, PLA, and PLCL materials.}
         \label{tab:literatureReview:polymer_material_properties}
         \begin{adjustbox}{max width=\textwidth}
+                \begin{threeparttable}
+                        \begin{tabular}{l c c c c}
+                                \hline
+                                \textbf{Material}                                                                                                                                      & \textbf{Tensile Modulus (E\textsubscript{t})} & \textbf{Compressive Modulus (E\textsubscript{comp})} & \textbf{Flexural Modulus (E\textsubscript{flex})} & \textbf{Tensile Yield Strength} \\
+                                \hline
 
-                \begin{tabular}{p{2cm} | p{3.5cm} | p{3cm} | p{3cm} | p{3.5cm}}
-                        \toprule
-                        \textbf{Material} & \textbf{Tensile Modulus ($\mathbf{E_t}$)}                                & \textbf{Compressive Modulus ($\mathbf{E_{comp}}$)} & \textbf{Flexural Modulus ($\mathbf{E_{flex}}$)} & \textbf{Tensile Yield Strength}                                                 \\
-                        \midrule
-                        PCL               & $440 \pm 3 \text{ MPa (ID46)}$ \newline $417 \pm 25 \text{ MPa (ID133)}$ & $455 \pm 2 \text{ MPa (ID46)}$                     & $414 \pm 10 \text{ MPa (ID46)}$                 & $17.82 \pm 0.47 \text{ MPa (ID46)}$ \newline $14.7 \pm 1.3 \text{ MPa (ID133)}$ \\
-                        \midrule
-                        PLA               & $3015 \pm 86 \text{ MPa (ID133)}$ \newline $3600 \text{ MPa (ID343)}$    &                                                    & $3800 \text{ MPa (ID343)}$                      & $55.9 \pm 6.5 \text{ MPa (ID133)}$ \newline $50 \text{ MPa (ID434)}$            \\
-                        \midrule
-                        PLCL (70/30)      & $12 \pm 1.2 \text{ MPa (Secant Modulus at 0.2\% strain) (ID31)}$         &                                                    &                                                 & $17.2 \pm 0.7 \text{ MPa (ID31)}$ \newline $16.1 \pm 3.2 \text{ MPa (ID19)}$    \\
-                        \bottomrule
-                \end{tabular}
+                                PCL                                                                                                                                                    &
+                                \begin{tabular}{@{}c@{}}440 ± 3 MPa~\cite{RefWorks:RefID:46-ragaert2014bulk}\\417 ± 25 MPa~\cite{RefWorks:RefID:133-staffa2022mechanical}\end{tabular} &
+                                455 ± 2 MPa~\cite{RefWorks:RefID:46-ragaert2014bulk}                                                                                                   &
+                                414 ± 10 MPa~\cite{RefWorks:RefID:46-ragaert2014bulk}                                                                                                  &
+                                \begin{tabular}{@{}c@{}}17.82 ± 0.47 MPa~\cite{RefWorks:RefID:46-ragaert2014bulk}\\14.7 ± 1.3 MPa~\cite{RefWorks:RefID:133-staffa2022mechanical}\end{tabular}                                                                                                                                                                                       \\
+                                \hline
+
+                                PLA                                                                                                                                                    &
+                                \begin{tabular}{@{}c@{}}3015 ± 86 MPa~\cite{RefWorks:RefID:133-staffa2022mechanical}\\3600 MPa~\cite{RefWorks:RefID:343-development}\end{tabular}      &
+                                --                                                                                                                                                     &
+                                3800 MPa (ID343)                                                                                                                                       &
+                                \begin{tabular}{@{}c@{}}55.9 ± 6.5 MPa~\cite{RefWorks:RefID:133-staffa2022mechanical}\\50 MPa~\cite{RefWorks:RefID:343-development}\end{tabular}                                                                                                                                                                                                    \\
+                                \hline
+
+                                PLCL (70/30)                                                                                                                                           &
+                                12 ± 1.2 MPa\tnote{1} ~\cite{RefWorks:RefID:31-fernández2012synthesis}                                                                                 &
+                                --                                                                                                                                                     & --                                            &
+                                \begin{tabular}{@{}c@{}}17.2 ± 0.7 MPa~\cite{RefWorks:RefID:31-fernández2012synthesis}\\16.1 ± 3.2 MPa~\cite{RefWorks:RefID:19-zhang2021synthesis}\end{tabular}                                                                                                                                                                                     \\
+                                \hline
+                        \end{tabular}
+
+                        \begin{tablenotes}
+                                \item[1] Secant modulus measured at 0.2\% strain.
+                        \end{tablenotes}
+                \end{threeparttable}
         \end{adjustbox}
+
 \end{table}
-
-
 
 \subsection{Effects of BaSO\textsubscript{4} Additives\label{sec:literatureReview:materials:BaSO4}}
 % Discuss how radiopaque fillers influence modulus, brittleness, and imaging response.
+Research has found that increasing BaSO\textsubscript{4} weight percentage in polymers such as PCL can statistically significantly increase the stiffness while decreasing the tensile yield strength. Incorporating BaSO\textsubscript{4} into polymers was found to toughen and reinforce the material simultaneously~\cite{RefWorks:RefID:32-amestoy2021crystallization,RefWorks:RefID:435-yang2015morphologies}.
+
+Figure~\ref{fig:literatureReview:effectsOfBariumSulfate} highlights the effects of incorporating BaSO\textsubscript{4}~\cite{RefWorks:RefID:435-yang2015morphologies}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[height=0.5\linewidth]{../figs/literature_review/mechanicalProperties/effects_of_barium_sulfate.png}
+        \caption{Effects on Elastic Modulus and Tensile Strength of incorporating barium sulfate (BaSO\textsubscript{4})~\cite{RefWorks:RefID:435-yang2015morphologies}.}
+        \label{fig:literatureReview:effectsOfBariumSulfate}
+\end{figure}
