@@ -79,29 +79,7 @@
 
 \usepackage{etoolbox} % You might need this package for robust definitions
 
-% This command combines \Cref* (type and number) and \nameref* (name/caption)
-% inside a single \hyperref link.
-\makeatletter
-\newcommand*{\fullref}[1]{%
-        \hyperref[{#1}]{\Cref*{#1}: \nameref*{#1}}%
-}
-\makeatother
-
-% \makeatletter
-% % 1. For Tables and Figures (uses the Caption, includes a colon)
-% \newcommand*{\tabfigref}[1]{%
-%         \hyperref[{#1}]{\Cref*{#1}: \nameref*{#1}}%
-% }
-
-% % 2. For Sections, Chapters, etc. (uses the Title, omits the colon for cleaner spacing)
-% \newcommand*{\sectchapref}[1]{%
-%   \hyperref[{#1}]{\Cref*{#1} \nameref*{#1}}%
-% }
-
-% \newcommand*{\sectchapref}[1]{%
-%         \hyperref[{#1}]{\Cref*{#1} \getrefbykeydefault{#1}{name}{\@firstofone}}%
-% }
-% \makeatother
+\newcommand*{\fullref}[1]{\Cref{#1}: \nameref{#1}}
 
 %%% Local Variables:
 %%% mode: latex
