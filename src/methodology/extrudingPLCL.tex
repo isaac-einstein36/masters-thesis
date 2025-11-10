@@ -43,38 +43,64 @@ To achieve these temperatures, the extruder was first run at PLA presets (H4-H1:
 
 The results and discussion for this experiment can be found in~\fullref{results:extrudingPLCL:powderExtrusion} and~\fullref{discussion:extrudingPLCL:powderExtrusion} respectively.
 
-\subsection{Combining Raw Materials\label{sec:methodology:extrudingPLCL:combiningMaterials}}
+\subsection{Pellet Extrusions\label{sec:methodology:extrudingPLCL:pelletExtrusions}}
+% Pivoted to pellets based on powder struggles and lit review
+Based on the  difficulties and inherent brittleness of powder-based extrusions, the team explored relevant literature and decided to combine the copolymers of PLCL, PLA and PCL, in pellet form. This allows the extrusion to be completed with pellets rather than powder(s).
 
-\subsubsection{College of Pharmacy\label{sec:methodology:extrudingPLCL:combiningMaterials:pharmacy}}
+\subsubsection{Combining Raw Materials\label{sec:methodology:extrudingPLCL:pelletExtrusions:combiningMaterials}}
+After deciding to explore pellet-based extrusions using PLA and PCL pellets, the team investigated how to best combine the two materials into a semi-homogenous mixture for extruding. Various methods the team explored were utilizing equipment with the College of Pharmacy, injection molding, chemically combining the two materials, mixing the materials in a tumbler, and discussing mixing concerns with extrusion subject-matter experts (SMEs) in the Department of Industrial Systems and Engineering at Ohio State University.~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:combiningMaterials} explains the findings of this investigation.
 
-\subsubsection{Injection Molding\label{sec:methodology:extrudingPLCL:combiningMaterials:injectionMolding}}
+See~\fullref{sec:literatureReview:PLCL} for relevant literature on synthesizing PLCL.
 
-\subsubsection{Chemically Combining Materials\label{sec:methodology:extrudingPLCL:combiningMaterials:chemicallyCombining}}
-% Requires toxic chemicals (MDF or chloroform)
-% Tried melting materials together using hotplate
-% Difficult to get shape that is easily shred able
+\paragraph*{College of Pharmacy}
+The team contacted the college of pharmacy at The Ohio State University due to the substantial mixing that occurs in pharmaceutical research. The team also toured the college of pharmacy's research facilities to better understand their equipment capabilities.
 
-\subsubsection{3D Printable Mixing Systems\label{sec:methodology:extrudingPLCL:combiningMaterials:3dPrintedMixers}}
+\paragraph*{Injection Molding}
+The team also explored injection molding as a means of combining the PLA and PCL pellets.
 
-\subsubsection{Discussion with ISE Department\label{sec:methodology:extrudingPLCL:combiningMaterials:iseDiscussion}}
-% Met with Dr. Mulyana at ISE
-% We can just combine in a bag
+\paragraph*{Chemically Combining Materials}
+Following existing literature, the team explored chemically combining PLA and PCL such as by dissolving the materials in dichloromethane (DCM) or chloroform.
 
-% iii.	Purging Compounds
-% 1.	Found initial supplier of 3Devo DevoClean Mid-Temp
-% 2.	Worked with supplier (Dyna-Purge) to find ideal purging material
-% a.	Tried L then D2 (needs HDPE) then K
+The team also evaluated melting the pellets together on a hotplate with a magnetic and manual stirrer as shown below in~\autoref{fig:methodology:extrudingPLCL:meltingOnHotplate}
 
-\subsection{Purging Compounds\label{sec:methodology:extrudingPLCL:purgingCompounds}}
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/combining_on_hotplate.png}
+        \caption{Melting PLA and PCL using a hotplate with mixing (left) and final output (right).}
+        \label{fig:methodology:extrudingPLCL:meltingOnHotplate}
+\end{figure}
 
-\subsubsection{Initial Purging Process\label{sec:methodology:extrudingPLCL:purgingCompounds:initialProcess}}
+\paragraph*{3D Printable Mixing Systems}
 
-\subsubsection{Supplier Discovery\label{sec:methodology:extrudingPLCL:purgingCompounds:supplierDiscovery}}
+Mixing the pellets in a tumbler styler mixer was also explored. To lower the cost and development time, 3D printing a mixing system was explored. Various premade models of rotary tumbler mixers were found through online CAD repositories such as Thingiverse. Examples of 3D printable mixers are shown in Figure~\ref{fig:methodology:extrudingPLCL:3dPrintableMixers}
 
-\subsubsection{Dyna-Purge Collaboration\label{sec:methodology:extrudingPLCL:purgingCompounds:dynaPurgeCollaboration}}
-% Tried L then D2 (needs HDPE) then K
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/3d_printed_mixers.png}
+        \caption{Various 3D printable tumbler mixers~\cite{RefWorks:RefID:482-lucasfrit2021ball,RefWorks:RefID:483-bluepop42017rock,RefWorks:RefID:484-dariocarioli2018rotary,RefWorks:RefID:485-jonathanlundstrom2018simple,RefWorks:RefID:486-perinski2018rotary}.}
+        \label{fig:methodology:extrudingPLCL:3dPrintableMixers}
+\end{figure}
 
-\hl{[Add more about successful PLCL extrusions, too thin on 3Devo so I went to Felfil now that we're using pellets instead of powders.]}
+\paragraph*{Discussions with ISE Department}
+The team also met with extrusion subject-matter experts in the Industrial and Systems Engineering (ISE) department at The Ohio State University. This included Dr. Rachmat Mulyana.
+
+\subsection{Initial Pellet Extrusion\label{sec:methodology:extrudingPLCL:pelletExtrusions:initialExtrusion}}
+% show pictures of mixing pellets in a jar per Dr. Mulyana's suggestion.
+% Used the feeder which ended up separating materials
+% Still observed clumping which led to starve feeder development
+% 3Devo reccomendations (see 6/2 meeting notes)
+% Recommended to find extrudable temp of PCL
+% melting can be because hopper is too hot (look into insulating or other pouring designs)
+
+\subsection{PCL Temperature Study\label{sec:methodology:extrudingPLCL:pelletExtrusions:pclExtrusions}}
+% Extruded just PCL to find extrudable temp and make sure it overlapped with PLA
+% Found starve feeding helps with melting in the hopper
+% Inspired to develop automatic starve feeder
+
+\subsection{Starve Feeding Based Pellet Extrusions\label{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder}}
+% Finally successful but too thin
+% Shredding and re-extruding looked promising (using extruder to combine pellets initially) but still led to variable flow rate due to regrind
+
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 
@@ -92,7 +118,6 @@ The results and discussion for this experiment can be found in~\fullref{results:
 \paragraph*{Learnings from Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvo:learningsFromInitialTesting}}
 % a. Pellets remain the best material to extrude with
 % b. Even though we couldn't get the system to work with powders, it can likely work well with pellets
-
 \subsubsection{Felfil Evo PLCL Extrusion\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}}
 
 \paragraph*{Initial PLCL Extrusion Attempts\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL:initialAttempts}}
@@ -137,5 +162,19 @@ The results and discussion for this experiment can be found in~\fullref{results:
 % a. Started by shredding multiple times until regrind size looked uniform
 % b. Downloaded sieve from Felfil to control for size and make sure everything is ~5mm x 5mm
 % c. Discovered that medium-thick filament shreds best
+
+\subsection{Purging Compounds\label{sec:methodology:extrudingPLCL:purgingCompounds}}
+\hl{Exploration of purging compounds to find DP-K works best}
+% iii.	Purging Compounds
+% 1.	Found initial supplier of 3Devo DevoClean Mid-Temp
+% 2.	Worked with supplier (Dyna-Purge) to find ideal purging material
+% a.	Tried L then D2 (needs HDPE) then K
+
+\subsubsection{Initial Purging Process\label{sec:methodology:extrudingPLCL:purgingCompounds:initialProcess}}
+
+\subsubsection{Supplier Discovery\label{sec:methodology:extrudingPLCL:purgingCompounds:supplierDiscovery}}
+
+\subsubsection{Dyna-Purge Collaboration\label{sec:methodology:extrudingPLCL:purgingCompounds:dynaPurgeCollaboration}}
+% Tried L then D2 (needs HDPE) then K
 
 \subsection{PLA with Barium Sulfate\label{sec:methodology:extrudingPLCL:plaWithBaSO4}}
