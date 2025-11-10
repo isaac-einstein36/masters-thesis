@@ -1,6 +1,6 @@
-\section{Extruding PLCL\label{discussion:extrudingPLCL}}
+\section{Extruding PLCL Discussion\label{discussion:extrudingPLCL}}
 
-\subsection{Powder Extrusion\label{discussion:extrudingPLCL:powderExtrusion}}
+\subsection{Powder Extrusion Discussion\label{discussion:extrudingPLCL:powderExtrusion}}
 
 While this extrusion was successful in that filament was extruded, the extruded filament was unusable. When evaluating filament quality from a 3D printable perspective, there are numerous factors that must be considered (see~\fullref{sec:literatureReview:extrusion:issues} for a detailed explanation of these factors).
 
@@ -30,9 +30,9 @@ Key takeaways from this extrusion experiment are that: a 3Devo Feeder~\cite{RefW
 
 Because the Nomisma PLCL powder is expensive and has a long lead time, the team decided to pause powder extrusion research until the 3Devo Feeder arrived to avoid potentially wasting raw material.
 
-\subsection{Pellet Extrusions\label{sec:discussion:extrudingPLCL:pelletExtrusions}}
+\subsection{Pellet Extrusions Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions}}
 
-\subsubsection{Combining Materials\label{sec:discussion:extrudingPLCL:pelletExtrusions:combiningMaterials}}
+\subsubsection{Combining Materials Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:combiningMaterials}}
 
 As mentioned in ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:combiningMaterials}, various methods were explored to combine PLA and PCL pellets into a homogenous mixture.
 
@@ -56,7 +56,7 @@ The final output of thermally combining the materials on a hotplate, as shown in
 
 \paragraph*{3D Printable Mixing Systems}
 
-The research team decided that 3D printable tumbler systems were usable for mixing materials but that it may require more time than expected to fully assemble these systems. The team felt that if dedicated mixing equipment was requires this would be the fastest and cheapest approach. However, the team wanted to first see if they needed dedicated mixing equipment at all before spending time and resources in building these systems.
+The research team decided that 3D printable tumbler systems were usable for mixing materials but that it may require more time than expected to fully assemble these systems. The team felt that if dedicated mixing equipment was required, this would be the fastest and cheapest approach. However, the team wanted to first see if they needed dedicated mixing equipment at all before spending time and resources in building these systems.
 
 \paragraph*{Discussions with ISE Department}
 
@@ -71,3 +71,21 @@ To address this bottleneck, Dr. Mulyana offered the team uses a twin screw extru
 Many options were explored to combine PLA and PCL pellets into a homogenous mixture prior to extruding. Based on time, cost, safety, and anticipated limitations of equipment, injection molding, combining materials in a lab setting, and 3D printing a mixing system were no longer explored.
 
 After consulting with Dr. Mulyana, the team opted to start by mixing pellets manually in a jar, leaving other methods for later consideration.
+
+\subsubsection{Initial Pellet Extrusion Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion}}
+
+The team was surprised that this extrusion led to clumping at the hopper given the use of the Feeder and pellets rather than powders. The expected outcome of using the Feeder was that its vibrations would keep pellets from being stagnant long enough to start bridging.
+
+Conversations with 3Devo customer support following this extrusion revealed that the Feeder can not be used with more than one homogenous material. When a blend is poured into the hopper, the Feeder's vibrations will cause solid segregation, causing one material to sink to the bottom and the other to rise to the top. This was directly seen in the extrusion with PLA moving to the bottom of the hopper and PCL moving to the top.
+
+It was expected that temperatures were low enough to prevent premature melting of material. However, PCL pellets appeared to melt and bridge in the hopper. 3Devo customer support believed this is because the metal hopper is not insulated, so material sitting in the hopper for extended periods of time can be subject to additional heat. Because PCL has a lower melting point than PLA, the PLA pellets did not melt while sitting in the hopper but the PCL pellets began to.
+
+As a result, it was recommended to explore PCL's workable extrusion temperature range to determine how high temperatures could be set for this material. Ideally the upper end of the PCL extrusion temperature range would overlap with the lower end of the PLA extrusion temperature range. This overlap would be the ideal extrusion temperature for the blend of materials.
+
+Starve feeding, or pouring material directly into the barrel rather than letting it sit in the hopper, was suggested to prevent PCL from prematurely melting in the uninsulated metal hopper. It was also hypothesized that insulating the hopper could help prevent this premature melting.
+
+\paragraph*{Key Takeaways}
+
+This extrusion helped drive research forward by highlighting new concerns with multi-material pellet extrusions. It was found that the Feeder could not be used on blends of materials and PCL could not sit in the metal hopper for extended periods of time without beginning to soften and melt.
+
+Based on this extrusion, the next steps were to extrude PCL alone and determine its working extrusion temperature range.

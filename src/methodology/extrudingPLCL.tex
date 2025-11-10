@@ -15,7 +15,7 @@ Additionally,~\fullref{tab:appendix:extrusionSummary} details all extrusions per
 
 \subsection{Powder Extrusions\label{sec:methodology:extrudingPLCL:powderExtrusion}}
 
-Based on material availability, the team attempted to extrude PLCL powder to create PLCL filament. While pellets are more commonly extruded than powders(See~\fullref{sec:literatureReview:extrusion:powder}), the team was unable to source PLCL pellets at a scalable price. As a result, Nomisma PLCL powder was used~\cite{RefWorks:RefID:387-nomisma} for these initial extrusions on a 3Devo Filament Maker 1 single screw extruder.
+Based on material availability, the team attempted to extrude PLCL powder to create PLCL filament. While pellets are more commonly extruded than powders (see~\fullref{sec:literatureReview:extrusion:powder}), the team was unable to source PLCL pellets at a scalable price. As a result, Nomisma PLCL powder was used~\cite{RefWorks:RefID:387-nomisma} for these initial extrusions on a 3Devo Filament Maker 1 single screw extruder.
 
 Prior to extruding, the PLCL powder was dried in a vaccuum oven at 45\textcelsius ~overnight based on the material manufacturer's recommendations. The Polymer Synthesis Research Facility (PSRF) at Ohio State University was utilized for this task (see~\fullref{sec:methodology:externalLabs:polymersLab} for more information on research conducted with this additional lab).
 
@@ -56,7 +56,7 @@ See~\fullref{sec:literatureReview:PLCL} for relevant literature on synthesizing 
 The team contacted the college of pharmacy at The Ohio State University due to the substantial mixing that occurs in pharmaceutical research. The team also toured the college of pharmacy's research facilities to better understand their equipment capabilities.
 
 \paragraph*{Injection Molding}
-The team also explored injection molding as a means of combining the PLA and PCL pellets.
+The team also explored injection molding as a means of combining the PLA and PCL pellets. This was done by reviewing relevant literature and meeting with knowledgable professors at Ohio State University.
 
 \paragraph*{Chemically Combining Materials}
 Following existing literature, the team explored chemically combining PLA and PCL such as by dissolving the materials in dichloromethane (DCM) or chloroform.
@@ -85,12 +85,23 @@ Mixing the pellets in a tumbler styler mixer was also explored. To lower the cos
 The team also met with extrusion subject-matter experts in the Industrial and Systems Engineering (ISE) department at The Ohio State University. This included Dr. Rachmat Mulyana.
 
 \subsection{Initial Pellet Extrusion\label{sec:methodology:extrudingPLCL:pelletExtrusions:initialExtrusion}}
-% show pictures of mixing pellets in a jar per Dr. Mulyana's suggestion.
-% Used the feeder which ended up separating materials
-% Still observed clumping which led to starve feeder development
-% 3Devo reccomendations (see 6/2 meeting notes)
-% Recommended to find extrudable temp of PCL
-% melting can be because hopper is too hot (look into insulating or other pouring designs)
+
+PLA pellets were purchased from 3DXTECH and PCL pellets were ordered from Sigma Aldrich~\cite{RefWorks:RefID:487-ecomax,RefWorks:RefID:488-polycaprolactone}. Following manufacturer recommendations, PLA and PCL pellets were dried overnight in a vacuum oven at 55\textcelsius and 40\textcelsius respectively prior to extruding.
+
+After deciding to combine PLA and PCL pellets manually in a jar (see~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:combiningMaterials}), an initial pellet extrusion was performed.
+
+Figure~\ref{fig:methodology:extrudingPLCL:mixingPellets} shows the pellet mixture before and after mixing. The white colored pellets are PCL and the tan colored pellets are PLA. A 70/30 mixture of PLA/PCL was created by weight with roughly 70g of PLA and 30g of PCL.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/mixing_pellets_manually.png}
+        \caption{Mixing pellets manually. Unmixed (left), mixed (middle and right).}
+        \label{fig:methodology:extrudingPLCL:mixingPellets}
+\end{figure}
+
+In this extrusion, the 3Devo Feeder was used for the first time. The temperature profile was started at PLA presets. All pellets were poured into the hopper with the Feeder running and the extrusion began.
+
+Results and discussion of this extrusion can be found in ~\fullref{results:extrudingPLCL:pelletExtrusions:initialPelletExtrusion} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion} respectively.
 
 \subsection{PCL Temperature Study\label{sec:methodology:extrudingPLCL:pelletExtrusions:pclExtrusions}}
 % Extruded just PCL to find extrudable temp and make sure it overlapped with PLA
