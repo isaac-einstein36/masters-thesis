@@ -1,23 +1,91 @@
 
 \section{Starve Feeder Development\label{sec:methodology:starveFeeder}}
 
+To automate standardize the starve feeding process, an automatic pellet dispensing starve feeder was developed. This was adapted from an online model and went through various hardware and user interface (UI) iterations.
+
 \subsection{Online Models\label{sec:methodology:starveFeeder:onlineModels}}
+
+It was hypothesized that 3D printing a pellet dispenser would be the ideal development method from a cost and time perspective. Rather than reinventing the wheel, a review of existing 3D printable pellet dispensers was conducted. This was done through online CAD libraries such as Thingiverse and Makerworld with search phrases such as "automatic pellet dispenser" and "automatic fish feeder." Various models were found and one was selected based on applicability, robustness, and ease of implementation. This model is shown in Figure~\ref{fig:methodology:starveFeeder:initialPelletDispenserModel}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/initial_starve_feeder_design.png}
+        \caption{Initial online design of automatic pellet dispenser~\cite{RefWorks:RefID:490-remi-rafael2024pellet}.}
+        \label{fig:methodology:starveFeeder:initialPelletDispenserModel}
+\end{figure}
 
 \subsection{Finding Materials\label{sec:methodology:starveFeeder:findingMaterials}}
 
-\subsubsection{Materials List\label{sec:methodology:starveFeeder:findingMaterials:materialsList}}
+Various materials were needed to create this pellet dispenser. Most of these could be 3D printed, but some had to be either bought or sourced through various engineering labs throughout campus. Table~\ref{tab:methodology:starveFeeder:materialsNeeded} details the required materials.
+
+\begin{table}[h!]
+        \centering
+        \caption{Summary of material sourcing for starve feeder device components.}
+        \label{tab:methodology:starveFeeder:materialsNeeded}
+        \begin{tabular}{l l}
+                \hline
+                \textbf{Material}     & \textbf{Sourcing}        \\
+                \hline
+                Device Body           & 3D Printed (PLA)         \\
+                Auger Screw           & 3D Printed (PLA Tough)   \\
+                Ball Bearings         & Labs or 3D Printed (PLA) \\
+                Gearbox               & Labs or 3D Printed (PLA) \\
+                Drive Belt            & 3D Printed (TPU)         \\
+                Ring Stand            & Labs                     \\
+                Nema 23 Stepper Motor & Labs                     \\
+                UI Components         & Labs                     \\
+                \hline
+        \end{tabular}
+\end{table}
 
 \subsubsection{3D Printed Bearings\label{sec:methodology:starveFeeder:findingMaterials:3dPrintedBearings}}
 
+608 ball bearings were required to ensure smooth rotation of the internal auger screw. While these are relatively inexpensive, the lead time required to order materials through the department was high. As a result, existing 3D printable models of ball bearings were explored. Multiple were printed with the best based on smoothness of rotation and print quality shown below in Figure~\ref{fig:methodology:starveFeeder:printedBallBearings}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/3D_printed_ball_bearing.png}
+        \caption{3D printed ball bearings~\cite{RefWorks:RefID:491-filou3d2023608}.}
+        \label{fig:methodology:starveFeeder:printedBallBearings}
+\end{figure}
+
+\subsubsection{3D Printed Drive Belt\label{sec:methodology:starveFeeder:findingMaterials:3dPrintedDriveBelt}}
+
+Based on the model designer's recommendation, the drive belt was initially printed with TPU filament. This allowed the belt to be 3D printed while still being flexible like a rubber belt.
+
 \subsection{Auger Screw Optimization\label{sec:methodology:starveFeeder:augerScrewOptimization}}
+
+The auger screw, while printed with PLA Tough filament, was still prone to breaking. The design and printing parameters had to be optimized to strengthen this load-bearing component.
 
 \subsubsection{3D Printing Orientation\label{sec:methodology:starveFeeder:augerScrewOptimization:3dPrintingOrientation}}
 
+The print orientation of this component directly impacted the overall strength of the device (see ~\fullref{sec:literatureReview:printing:optimalParameters:orientation} for an explanation of this concept).
+Because a component experiencing torque will fail first due to shear forces, the print layer direction must be considered. If print layer direction is parallel to the direction of torque force, the part will likely fail in shear. As a result, the strongest screw was printed vertically so that the print layer direction is perpendicular to the direction of force. This is illustrated in Figure~\ref{fig:methodology:starveFeeder:augerScrewPrintOrientation}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/methodology/starveFeeder/auger_screw_print_orientation.png}
+        \caption{Optimal auger screw print orientation based on layer direction. Force explanation created by ChatGPT (left), BambuStudio print setup with force explanation (right). Adapted from~\cite{RefWorks:RefID:432-hanon2020effect}.}
+        \label{fig:methodology:starveFeeder:augerScrewPrintOrientation}
+\end{figure}
+
 \subsubsection{Infill Percentage\label{sec:methodology:starveFeeder:augerScrewOptimization:infillPercentage}}
 
-\subsubsection{Final Design\label{sec:methodology:starveFeeder:augerScrewOptimization:finalDesign}}
+The infill percentage of a 3D printed part can also impact its overall strength (see~\fullref{sec:literatureReview:printing:optimalParameters:infillDensity}).
+
+Due to limited material, the entire screw could not be printed at 100\% infill. As a result, the majority of the screw was printed at 50\% infill and the bottom portion that was prone to snapping was printed at 100\% infill.
 
 \subsection{Gear Selection\label{sec:methodology:starveFeeder:gearSelection}}
+
+While the pellet dispensing CAD file included a large gear, it did not include a gear to attach to the stepper motor. Any stepper motors available across Ohio State University labs did not have a gear attached. As a result, a gear had to either be sourced or 3D printed to connect the drive belt to the stepper motor. The gear of interest is highlighted in Figure~\ref{fig:methodology:starveFeeder:stepperMotorGear}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/starveFeeder/stepper_motor_gear.png}
+        \caption{Required stepper motor gear~\cite{RefWorks:RefID:490-remi-rafael2024pellet}.}
+        \label{fig:methodology:starveFeeder:stepperMotorGear}
+\end{figure}
+
 
 \subsubsection{Initial Guess and Check Approach\label{sec:methodology:starveFeeder:gearSelection:initialGuessAndCheck}}
 % a.	Tried lots of gears to see what fit on the stepper motor best
