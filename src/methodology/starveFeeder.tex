@@ -89,8 +89,74 @@ While the pellet dispensing CAD file included a large gear, it did not include a
 
 \subsubsection{Initial Guess and Check Approach\label{sec:methodology:starveFeeder:gearSelection:initialGuessAndCheck}}
 % a.	Tried lots of gears to see what fit on the stepper motor best
+While a properly sized metal gear could be ordered, the lead time of placing an order through the proper departmental channels was high. As a result, an attempt was made to 3D print a stepper motor gear.
+
+Multiple gear models were found online through CAD libraries like Thingiverse or Makerworld. It was unclear from these models what belt dimensions they were designed for, which led to many models being printed in a "guess and check" approach. Metal gears across various labs at Ohio State University were also trialed throughout this process. Some of these tested gears are shown below in Figure~\ref{fig:methodology:starveFeeder:guessAndCheckGears}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/starveFeeder/stepper_motor_gear_attempts.png}
+        \caption{Multiple 3D printed gear attempts to interface with stepper motor.}
+        \label{fig:methodology:starveFeeder:guessAndCheckGears}
+\end{figure}
+
+None of these models fit well enough on the stepper motor to support belt movement. Set screws and model adjustments were also used to try and make these gears more usable.
 
 \subsubsection{Parametric Gear Model\label{sec:methodology:starveFeeder:gearSelection:parametricGearModel}}
+
+A parametric gear modeling tool was found to create gears to exactly match desired sizes and specifications~\cite{RefWorks:RefID:492-koolmgear}. This model allowed for the generation of a usable gear that fit the stepper motor and drive system properly. The specifications for this model are detailed in~\autoref{tab:methodology:starveFeeder:gearSpecs}.
+
+\begin{table}[h]
+        \centering
+        \caption{Complete Parametric Gear Specifications}
+        \label{tab:methodology:starveFeeder:gearSpecs}
+
+        \begin{subtable}{\textwidth}
+                \centering
+                \caption{Basic Parameters}
+                \label{tab:gear_basic}
+                \begin{tabular}{cccccc}
+                        \hline
+                        \textbf{Print Number} & \textbf{Type} & \textbf{Teeth} & \textbf{Width (mm)} & \textbf{Pitch} & \textbf{Bore Type} \\
+                        \hline
+                        3                     & T5            & 16             & 10                  & 0              & D                  \\
+                        \hline
+                \end{tabular}
+        \end{subtable}
+
+        \vspace{1em}
+
+        \begin{subtable}{\textwidth}
+                \centering
+                \caption{Dimensional Parameters}
+                \label{tab:gear_dimensions}
+                \begin{tabular}{cccccc}
+                        \hline
+                        \textbf{Bore Size} & \textbf{Bore Chamfer} & \textbf{Hub Diameter} & \textbf{Hub Height} & \textbf{Hub Chamfer} & \textbf{Screw Count} \\
+                        \hline
+                        7.5                & 0.6                   & 20                    & 10                  & 0.6                  & 1                    \\
+                        \hline
+                \end{tabular}
+        \end{subtable}
+
+        \vspace{1em}
+
+        \begin{subtable}{\textwidth}
+                \centering
+                \caption{Screw Parameters}
+                \label{tab:gear_screws}
+                \begin{tabular}{ccc}
+                        \hline
+                        \textbf{Screw Count} & \textbf{Screw Threads} & \textbf{Screw Type} \\
+                        \hline
+                        1                    & No                     & M4                  \\
+                        \hline
+                \end{tabular}
+        \end{subtable}
+
+\end{table}
+
+
 
 \subsubsection{Metal vs. Plastic Gears\label{sec:methodology:starveFeeder:gearSelection:metalVsPlasticGears}}
 % Metal gears worked better than 3D printed but I couldn't find many of the right size/gear type
