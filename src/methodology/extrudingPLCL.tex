@@ -41,7 +41,7 @@ This extruder has four heat zones with heater 4 (H4) being closest to the hopper
 
 To achieve these temperatures, the extruder was first run at PLA presets (H4-H1: 170, 185, 190, 170 (all in \textcelsius)). Temperatures were raised to HDPE presets (190\textcelsius ~across all heat zones) and HDPE was introduced into the extruder. Finally, temperatures were raised to the PLCL extruding temperatures and the PLCL powder was introduced into the extruder. DevoVision was used to monitor extruder parameters and variables such as current and heater temperatures.
 
-The results and discussion for this experiment can be found in~\fullref{results:extrudingPLCL:powderExtrusion} and~\fullref{discussion:extrudingPLCL:powderExtrusion} respectively.
+The results and discussion for this experiment can be found in~\fullref{sec:results:extrudingPLCL:powderExtrusion} and~\fullref{sec:discussion:extrudingPLCL:powderExtrusion} respectively.
 
 \subsection{Pellet Extrusions\label{sec:methodology:extrudingPLCL:pelletExtrusions}}
 % Pivoted to pellets based on powder struggles and lit review
@@ -99,19 +99,53 @@ Figure~\ref{fig:methodology:extrudingPLCL:mixingPellets} shows the pellet mixtur
         \label{fig:methodology:extrudingPLCL:mixingPellets}
 \end{figure}
 
-In this extrusion, the 3Devo Feeder was used for the first time. The temperature profile was started at PLA presets. All pellets were poured into the hopper with the Feeder running and the extrusion began.
+In this extrusion, the 3Devo Feeder was used for the first time. The temperature profile was is shown below in Table~\ref{tab:methodology:extrudingPLCL:initialPelletExtrusion:tempPresets} based on existing literature~\cite{RefWorks:RefID:253-åkerlund2022effect}. All pellets were poured into the hopper with the Feeder running and the extrusion began.
 
-Results and discussion of this extrusion can be found in ~\fullref{results:extrudingPLCL:pelletExtrusions:initialPelletExtrusion} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion} respectively.
+\begin{table}[h!]
+        \centering
+        \caption{Initial pellet extrusion temperature presets\label{tab:methodology:extrudingPLCL:initialPelletExtrusion:tempPresets}}
+        \begin{tabular}{l c}
+                \hline
+                \textbf{Heater} & \textbf{Temperature (\textcelsius)} \\
+                \hline
+                H4              & 140                                 \\
+                H3              & 155                                 \\
+                H2              & 160                                 \\
+                H1              & 160                                 \\
+                \hline
+        \end{tabular}
+\end{table}
+
+Results and discussion of this extrusion can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:initialPelletExtrusion} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion} respectively.
 
 \subsection{PCL Temperature Study\label{sec:methodology:extrudingPLCL:pelletExtrusions:pclExtrusions}}
 % Extruded just PCL to find extrudable temp and make sure it overlapped with PLA
 % Found starve feeding helps with melting in the hopper
 % Inspired to develop automatic starve feeder
 
+Based on findings from the initial pellet extrusion (see~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion}), a study was performed to determine the working extrusion temperature of PCL pellets. A PCL extrusion process developed by 3Devo was followed which first involved  extruding PLA pellets at normal presets. All heaters were then set to 170\textcelsius ~and PCL was introduced. Once the filament output had shifted from PLA to PCL, which is apparent based on the filament color being white rather than clear, the temperature of all heaters was lowered to 60\textcelsius. From here, the temperature was raised in increments of 10\textcelsius ~to determine how high of a temperature PCL could be easily extruded at~\cite{RefWorks:RefID:489-3devo2024extrusion}.
+
+Based on time available, this extrusion was divided into two sequential extrusions. The first tested PCL between 60\textcelsius ~and 110\textcelsius ~while the second extrusion tested PCL between 120\textcelsius ~and 180\textcelsius.
+
+Starve feeding was also explored during these extrusions. Extrusion 1 (60-110\textcelsius) employed manual starve feeding. An Excel spreadsheet was used to track the amount of PCL poured and the time between pours. A section of that spreadsheet is shown below in Figure~\ref{fig:methodology:extrudingPLCL:manualStarveFeedingLog}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/manual_starve_feeding_log.png}
+        \caption{Section of manual starve feeding Excel spreadsheet.}
+        \label{fig:methodology:extrudingPLCL:manualStarveFeedingLog}
+\end{figure}
+
+Results and discussion of the PCL temperature study can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:pclTempStudy} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:pclTempStudy} respectively. Results and discussion of the manual starve feeding can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:manualStarveFeeding} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:manualStarveFeeding} respectively.
+
 \subsection{Starve Feeding Based Pellet Extrusions\label{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder}}
 % Finally successful but too thin
 % Shredding and re-extruding looked promising (using extruder to combine pellets initially) but still led to variable flow rate due to regrind
+Based on the repetitive and exact nature of the manual starve feeding, an automatic starve feeder was developed (see ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:manualStarveFeeding} for more details on this decision). This development is detailed in ~\fullref{sec:methodology:starveFeeder}.
 
+The starve feeder was first tested on PCL during the second temperature test extrusion from 120\textcelsius ~to 180\textcelsius. Once it was proven to work, the starve feeder was used on a PLCL extrusion.
+
+\subsubsection{PLCL Extrusion with Starve Feeder\label{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:PLCLExtrusion}}
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 

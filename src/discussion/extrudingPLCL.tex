@@ -1,6 +1,6 @@
 \section{Extruding PLCL Discussion\label{discussion:extrudingPLCL}}
 
-\subsection{Powder Extrusion Discussion\label{discussion:extrudingPLCL:powderExtrusion}}
+\subsection{Powder Extrusion Discussion\label{sec:discussion:extrudingPLCL:powderExtrusion}}
 
 While this extrusion was successful in that filament was extruded, the extruded filament was unusable. When evaluating filament quality from a 3D printable perspective, there are numerous factors that must be considered (see~\fullref{sec:literatureReview:extrusion:issues} for a detailed explanation of these factors).
 
@@ -89,3 +89,26 @@ Starve feeding, or pouring material directly into the barrel rather than letting
 This extrusion helped drive research forward by highlighting new concerns with multi-material pellet extrusions. It was found that the Feeder could not be used on blends of materials and PCL could not sit in the metal hopper for extended periods of time without beginning to soften and melt.
 
 Based on this extrusion, the next steps were to extrude PCL alone and determine its working extrusion temperature range.
+
+\subsubsection{PCL Temperature Study Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:pclTempStudy}}
+
+Based on the rise in current at 60-80\textcelsius, ~3Devo customer support hypothesized that the PCL was too solid and forming a clog inside the barrel. As a result, PCL should not be extruded below 80\textcelsius.
+
+No issues were seen with feeding or filament output between 80\textcelsius ~and 150\textcelsius. Premature melting began at 160\textcelsius. Filament output was still consistent at these higher temperatures, but starve feeding had to be more closely monitored to prevent bridging at the hopper.
+
+Figure~\ref{fig:discussion:extrudingPLCL:pelletExtrusions:pclTempRange} illustrates the working temperature range for PCL pellets based on this temperature study.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/discussion/plclExtrusions/pelletExtrusions/pcl_extrusion_temperature_range.png}
+        \caption{PCL working extrusion temperature range.}
+        \label{fig:discussion:extrudingPLCL:pelletExtrusions:pclTempRange}
+\end{figure}
+
+Based on this extrusion study, PCL should ideally be extruded between 80 and 150\textcelsius, ~but can be extruded as high as 180\textcelsius ~as long as starve feeding is closely monitored.
+
+\subsubsection{Manual Starve Feeding Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:manualStarveFeeding}}
+
+Given the susceptibility of PCL to clog at temperatures above 160\textcelsius, ~starve feeding must be closely monitored when extruding at these temperatures.  When performing all starve feeding manually, the researcher is unable to move away from the extruder due to the short time between starve feeding sessions. It was found that starve feeding was required roughly every two minutes or less and at precise amounts. Because extrusions often last multiple hours, manual starve feeding is not an efficient or sustainable process.
+
+As a result, an automatic starve feeding system should be developed to assist with starve feeding.

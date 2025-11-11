@@ -1,6 +1,6 @@
 \section{Extruding PLCL Results\label{results:extrudingPLCL}}
 
-\subsection{Powder Extrusion Results\label{results:extrudingPLCL:powderExtrusion}}
+\subsection{Powder Extrusion Results\label{sec:results:extrudingPLCL:powderExtrusion}}
 The output of the PLCL extrusion is shown below in~\autoref{fig:results:extrudingPLCL:powderExtrusion:filamentOutput}.
 
 \begin{figure}[h!]
@@ -19,12 +19,50 @@ The current output in $mA$ throughout this extrusion is shown below in~\autoref{
         \label{fig:results:extrudingPLCL:powderExtrusion:currentOutput}
 \end{figure}
 
-Discussion of these results can be found in~\fullref{discussion:extrudingPLCL:powderExtrusion}.
+Discussion of these results can be found in~\fullref{sec:discussion:extrudingPLCL:powderExtrusion}.
 
 \subsection{Pellet Extrusions Results\label{results:extrudingPLCL:pelletExtrusions}}
 
-\subsubsection{Initial Pellet Extrusion Results\label{results:extrudingPLCL:pelletExtrusions:initialPelletExtrusion}}
+\subsubsection{Initial Pellet Extrusion Results\label{sec:results:extrudingPLCL:pelletExtrusions:initialPelletExtrusion}}
 
 No quantitative results of this extrusion were collected due to issues using DevoVision. Qualitatively, this extrusion resulted in variable output, clumping at the hopper, and an apparent separation of PLA and PCL pellets with PCL moving to the top of the hopper and PLA moving to the bottom.
 
 Discussion of this extrusion can be found in~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion}.
+
+\subsubsection{PCL Temperature Study Results\label{sec:results:extrudingPLCL:pelletExtrusions:pclTempStudy}}
+
+Output from DevoVision is limited for this study because the version of DevoVision being used was outdated and did not support file downloading.
+
+Qualitatively, the current began to rise above 6000 mA at roughly 70\textcelsius ~while lowering to 60\textcelsius. At 80\textcelsius ~the current began to lower and stabilize. This is shown below in Figure~\ref{fig:results:extrudingPLCL:pelletExtrusions:pclTempCurrentRise}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/results/plclExtrusions/pelletExtrusions/pcl_temp_study_devovision_current_rise.png}
+        \caption{Rise in current as heaters approached 60\textcelsius.}
+        \label{fig:results:extrudingPLCL:pelletExtrusions:pclTempCurrentRise}
+\end{figure}
+
+Filament output was steady and of proper quality between 80\textcelsius ~and 150\textcelsius. Between 160\textcelsius ~and 180\textcelsius ~the PCL pellets were extrudable but began clogging more easily.
+
+Discussion of these results can be found in ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:pclTempStudy}.
+
+\subsubsection{Manual Starve Feeding Results\label{sec:results:extrudingPLCL:pelletExtrusions:manualStarveFeeding}}
+
+The results of the manual starve feeding from 80\textcelsius ~to 110\textcelsius ~are shown below in~\autoref{tab:results:extrudingPLCL:pelletExtrusions:manualStarveFeedingSummary}.
+
+\begin{table}[h!]
+        \centering
+        \caption{Pouring statistics by temperature.}
+        \label{tab:results:extrudingPLCL:pelletExtrusions:manualStarveFeedingSummary}
+        \begin{tabular}{c c c c c}
+                \hline
+                \textbf{Temperature (°C)} & \textbf{Avg Time Between Pours} & \textbf{Std Dev} & \textbf{Avg Amount Poured (mL)} & \textbf{Std Dev} \\
+                \hline
+                90                        & 0:01:59                         & 0:00:15          & 9.174                           & 3.421            \\
+                100                       & 0:02:24                         & 0:00:26          & 9.978                           & 2.345            \\
+                110                       & 0:02:24                         & 0:00:10          & 9.635                           & 1.237            \\
+                \hline
+                \textbf{Total}            & \textbf{0:02:16}                & \textbf{0:00:17} & \textbf{9.595}                  & \textbf{2.335}   \\
+                \hline
+        \end{tabular}
+\end{table}
