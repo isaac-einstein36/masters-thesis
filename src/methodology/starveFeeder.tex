@@ -82,10 +82,9 @@ While the pellet dispensing CAD file included a large gear, it did not include a
 \begin{figure}[h!]
         \centering
         \includegraphics[width=0.5\linewidth]{../figs/methodology/starveFeeder/stepper_motor_gear.png}
-        \caption{Required stepper motor gear~\cite{RefWorks:RefID:490-remi-rafael2024pellet}.}
+        \caption{Required stepper motor gear (circled in yellow and red)~\cite{RefWorks:RefID:490-remi-rafael2024pellet}.}
         \label{fig:methodology:starveFeeder:stepperMotorGear}
 \end{figure}
-
 
 \subsubsection{Initial Guess and Check Approach\label{sec:methodology:starveFeeder:gearSelection:initialGuessAndCheck}}
 % a.	Tried lots of gears to see what fit on the stepper motor best
@@ -156,28 +155,62 @@ A parametric gear modeling tool was found to create gears to exactly match desir
 
 \end{table}
 
-
-
-\subsubsection{Metal vs. Plastic Gears\label{sec:methodology:starveFeeder:gearSelection:metalVsPlasticGears}}
-% Metal gears worked better than 3D printed but I couldn't find many of the right size/gear type
-% Tried drilling a hole in an existing pulley so it would fit on my stepper motor
-
 \subsection{Initial Slippage Issues\label{sec:methodology:starveFeeder:initialSlippageIssues}}
+
+The custom-designed 3D printed gear attached to the stepper motor and was able to drive the pellet dispensing system. However, when there was resistance in the system, such as due to a slight clog at the dispensing output, the belt began slipping. Either the 3D printed belt or pulley was unable to handle the spikes in torque that the system would experience.
 
 \subsection{Collaboration with Gear Lab\label{sec:methodology:starveFeeder:gearLabCollaboration}}
 
+As a result of the inherent slippage from a fully 3D printed system, the Gear Lab at The Ohio State University was consulted. The team met with Dr. Isaac Hong, a Research Assistant Professor in the Department of Mechanical and Aerospace Engineering. Since this group's research revolves around gear-driven systems, it was believed that they may have suggestions on how to make the pellet dispensing system more robust.
+
 \subsubsection{Belt Tensioning Options\label{sec:methodology:starveFeeder:gearLabCollaboration:beltTensioningOptions}}
+
+The first suggestion proposed for improving the existing system was to add a belt tensioning component. It was hypothesized that adequately tensioning the belt would resolve the belt slippage issues.
+
+Based on belt tensioning design best practices (see~\fullref{sec:literatureReview:beltTension}), multiple concepts were brainstormed including both inside and outside idler pulleys. Some of this brainstorming is shown below in Figure~\ref{fig:methodology:starveFeeder:beltTensioningBrainstorming}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/starveFeeder/belt_tensioning_brainstorming.png}
+        \caption{Various brainstorming concepts for a belt tensioning component.}
+        \label{fig:methodology:starveFeeder:beltTensioningBrainstorming}
+\end{figure}
+
+Based on space limitations and predicted force/stability requirements, the belt tensioning system selected would be an inside idler pulley that could move in the x and y directions. A high-level version of this is shown below in Figure~\ref{fig:methodology:starveFeeder:beltTensioningWinner}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/starveFeeder/belt_tensioning_winner_high_level.png}
+        \caption{High level representation of selected belt tensioning concept.}
+        \label{fig:methodology:starveFeeder:beltTensioningWinner}
+\end{figure}
 
 \subsubsection{Gear System Acquisition\label{sec:methodology:starveFeeder:gearLabCollaboration:gearSystemAcquisition}}
 
+In addition to belt tensioning, the Dr. Hong was able to find an old drivetrain system that was powered by a Nema 23 stepper motor. This system was disassembled and the stepper motor pulley, large gear, and rubber belt was used. These metal, plastic, and rubber components replaced the 3D printed counterparts.
+
+The metal stepper motor pulley and rubber drive belt were able to seamlessly replace the existing components in the system. The large gear that drives the auger screw, however, required modifications to the pellet dispenser (see~\fullref{sec:methodology:starveFeeder:systemReDesign:augerScrewReDesign}).
+
 \subsection{Physical System Re-Design\label{sec:methodology:starveFeeder:physicalSystemReDesign}}
 
+Based on the discussions with Dr. Hong at the Gear Lab, the pellet dispenser system was redesigned to include a belt tensioning component and utilize stronger gear and belt components.
+
 \subsubsection{Belt Tensioning Prototyping\label{sec:methodology:starveFeeder:systemReDesign:beltTensioningPrototyping}}
-% a0. Researched and drew options of belt tensioning approaches and picked the best one
-% a.	Put all parts in SolidWorks assembly to design around
-% b.	A few iterations to fit the pulley easily in the system
-% i.	Added then removed slots
-% ii.	Improved connection points by making the slots longer
+
+To begin designing the belt tensioning component, a full SolidWorks assembly was created based on the .STL files provided from the online pellet dispenser model.
+
+An assembly was created to ensure that when designing the belt tensioning part, dimensions would line up well with the existing components.
+
+Small edits were made to the frame mount including adding an extra slot for an additional mounting screw and making the attachment holes to the rest of the dispenser larger. Drawings of the final belt tensioning components can be found in  ~\autoref{chap:appendix:solidworksDrawings}:~\nameref{chap:appendix:solidworksDrawings}.
+
+The final SolidWorks assembly including the belt tensioning components is shown below in Figure~\ref{fig:methodology:starveFeeder:beltTensionerAssembly}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/pellet_dispenser_assembly_with_belt_tensioner.png}
+        \caption{SolidWorks assembly of pellet dispenser with belt tensioning component. Frame mount in red and idler pulley adjuster in blue.}
+        \label{fig:methodology:starveFeeder:beltTensionerAssembly}
+\end{figure}
 
 \subsubsection{Auger Screw Re-Design\label{sec:methodology:starveFeeder:systemReDesign:augerScrewReDesign}}
 % a.	Created connection interface for plastic drive gear from gear lab
@@ -186,20 +219,102 @@ A parametric gear modeling tool was found to create gears to exactly match desir
 % c.	Added connection to end of screw in SolidWorks
 % i.	Re-printed auger screw with new end connection
 
+The auger screw end was re-designed to attach to a stronger large gear provided by the Gear Lab. This gear had a Double D shaft whereas the initial model was designed for a square interface between the screw and the large gear.
+
+To create this design in a way that properly fits the existing gear, an initial image of the gear with a measurement reference was taken as shown in Figure~\ref{fig:methodology:starveFeeder:largeGearUndimensioned}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/auger_screw_end_redesign_undimensioned.png}
+        \caption{Initial image of large gear with calipers for measurement reference.}
+        \label{fig:methodology:starveFeeder:largeGearUndimensioned}
+\end{figure}
+
+With this initial image, a software called ImageJ was used to measure the slot dimensions. ImageJ works by marking a reference distance, mapping that to a pixel conversion, and then estimating measurements of lines drawn on a photo. The calipers in the initial photo were used for a reference measurement.
+
+Figure~\ref{fig:methodology:starveFeeder:augerScrewMeasuringAndDesign} shows the measurement process and initial design of the attachment piece.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/auger_screw_end_redesign_planning.png}
+        \caption{Measurement of large gear using ImageJ (left) and initial design of attachment piece (right).}
+        \label{fig:methodology:starveFeeder:augerScrewMeasuringAndDesign}
+\end{figure}
+
+Based on these measurements, an attachment piece was created in SolidWorks. This was first printed alone to ensure the estimated dimensions properly aligned with the physical gear. Once it was confirmed that the attachment piece was properly dimensioned, it was attached to the end of the auger screw through a SolidWorks assembly. This combined part was then printed so the auger screw could smoothly attach to the new large gear. The printing modeling of these components is shown below in Figure~\ref{fig:methodology:starveFeeder:augerScrewFinalAttachment}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/auger_screw_end_redesign_final.png}
+        \caption{Auger screw attachment piece (left) and combined screw with attachment (right).}
+        \label{fig:methodology:starveFeeder:augerScrewFinalAttachment}
+\end{figure}
+
 \subsection{Logic Controls\label{sec:methodology:starveFeeder:logicControls}}
+
+Various Arduino-controlled systems were developed to control the pellet dispenser. Initial iterations used physical components such as a keypad and LCD whereas updated designs relied on a Graphical User Interface (GUI).
 
 \subsubsection{Calibration Method\label{sec:methodology:starveFeeder:logicControls:calibrationMethod}}
 
-\subsubsection{Calibration Conversion\label{sec:methodology:starveFeeder:logicControls:calibrationConversion}}
+To determine how many pellets to pour at a given time, a calibration method was developed. This turned the motor a set number of steps. The user then input how much material in grams this output, and the system would perform a conversion from steps to grams as shown in Equation~\eqref{eq:starveFeederCalibration}.
+
+\begin{equation}
+        Pour Steps = \frac{Calibration Steps}{Calibration Weight (g)} * Pour Weight (g)
+        \label{eq:starveFeederCalibration}
+\end{equation}
 
 \subsection{User Interface\label{sec:methodology:starveFeeder:userInterface}}
 
+The user interface for this device began as a rudimentary component-based control system and advanced to serial-monitor and eventually GUI-based controls.
+
 \subsubsection{LCD and Keypad Control\label{sec:methodology:starveFeeder:userInterface:lcdAndKeypadControl}}
+
+The first iteration of user interface with this device was controlled by an Arduino Uno with a keypad and 16x2 LCD screen connected. Although this design is not space-efficient or sleek, it was chosen to be able to quickly develop and iterate on the functionality of the system.
+
+Instructions on the LCD screen would guide the user through entering and measuring all parameters. This also had failsafes built in to allow the user to go back or re-enter/re-measure values. A home/menu screen with custom icons was made as a central point once the system was running.
+
+Figure~\ref{fig:methodology:starveFeeder:keypadGUI} shows some of the screens and steps for running this keypad-based system. Figure~\ref{fig:methodology:starveFeeder:keypadVersionAssembled} illustrates how the assembled system looks from the outside.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/methodology/starveFeeder/pellet_dispenser_keypad_gui.png}
+        \caption{GUI for keypad and LCD based pellet dispenser (V1).}
+        \label{fig:methodology:starveFeeder:keypadGUI}
+\end{figure}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/pellet_dispenser_keypad_interface_assembled.png}
+        \caption{Assembled keypad-based pellet dispenser.}
+        \label{fig:methodology:starveFeeder:keypadVersionAssembled}
+\end{figure}
 
 \subsubsection{Conversion to Serial Input\label{sec:methodology:starveFeeder:userInterface:conversionToSerialInput}}
 
+Once the system was operating smoothly, the design and usability were addressed. While the LCD/keypad-based interactions accounted for all steps and failsafes, it was a slow process to enter each number and response on a keypad.
+
+As a result, the Arduino code was adjusted to allow for serial monitor input. With this functionality, users could enter variables and fully control the system directly through the serial monitor.
+
+This code was adjusted with the assistance of ChatGPT and Claude.ai to more quickly implement this functionality.
+
 \subsubsection{Graphical User Interface\label{sec:methodology:starveFeeder:userInterface:graphicalUserInterface}}
 % a.	Requires a virtual environment and installing pyserial
+
+Once the system was runnable solely via the serial monitor, the research team decided it would be a straightforward transition to control the entire system through a GUI rather than Arduino IDE. With a GUI, visual elements could be implemented to improve usability of the device. These digital buttons would be directly tied to variable entries making the transition from serial monitor-based control to GUI-based control relatively simple.
+
+To design the GUI, ChatGPT and Claude.ai were utilized. This GUI was run in VSCode on the same computer used to connect to the extruder via DevoVision. Installation of pyserial was required to interact with the Arduino-based code. With this setup, one designated computer could be used for all aspects of extruding -- monitoring the extruder functionality and controlling the pellet dispensing into the extruder.
+
+Additionally, the keypad and LCD could be removed from the system which substantially reduced clutter.
+\hl{[Some of the above should go in discussion of the overall design of the starve feeder]}.
+
+Figure~\ref{fig:methodology:starveFeeder:pythonGUI} shows the python-based GUI.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/starveFeeder/pellet_dispenser_python_gui.png}
+        \caption{Python-based GUI for pellet dispenser.}
+        \label{fig:methodology:starveFeeder:pythonGUI}
+\end{figure}
 
 \subsection{Final System Features\label{sec:methodology:starveFeeder:finalSystemFeatures}}
 
@@ -210,3 +325,7 @@ A parametric gear modeling tool was found to create gears to exactly match desir
 \subsubsection{Calibration and Manual Pour Options\label{sec:methodology:starveFeeder:finalSystemFeatures:calibrationAndManualPourOptions}}
 
 \subsubsection{Hopper Empty Alarm\label{sec:methodology:starveFeeder:finalSystemFeatures:hopperEmptyAlarm}}
+
+\subsection{Testing Accuracy of Pellet Dispenser\label{sec:methodology:starveFeeder:testingAccuracy}}
+
+\hl{Section to explain how accuracy testing was performed (measuring Xg and weighing how close it was)}.
