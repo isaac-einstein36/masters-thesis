@@ -1,0 +1,36 @@
+\section{Starve Feeder Results\label{sec:results:starveFeeder}}
+
+\subsection{Starve Feeder Accuracy Testing Results\label{sec:results:starveFeeder:accuracyTesting}}
+
+A summary of the results for the starve feeder accuracy testing (described in ~\fullref{sec:methodology:starveFeeder:testingAccuracy}) is shown below in Table~\ref{tab:results:starveFeeder:accuracyTesting}.
+
+All trials are considered in the first four columns. For the 0.5g measurements, four pours resulted in no output. These weights of 0 can skew the overall results, so an adjusted value was also calculated (final two columns) which ignores these four zero-values.
+
+\begin{table}[h!]
+        \centering
+        \caption{Summary of Pour Weights and Errors}
+        \label{tab:results:starveFeeder:accuracyTesting}
+        \begin{adjustbox}{width=\textwidth}
+
+                \begin{tabular}{cccccccc}
+                        \hline
+                        \textbf{Ideal Pour Weight} & \textbf{Average Pour Weight} & \textbf{Pour Weight Std. Dev.} & \textbf{Average \% Error} & \textbf{\% Error Std. Dev.} & \textbf{Failed Pours} & \textbf{Adjusted Avg. Pour Weight} & \textbf{Adjusted Avg. \% Error} \\
+                        \hline
+                        0.5                        & 0.4985                       & 0.3761                         & 0.6794                    & 0.2825                      & 4                     & 0.4985                             & 0.6794                          \\
+                        1                          & 1.0308                       & 0.1318                         & 0.0955                    & 0.0937                      & 0                     & 1.0308                             & 0.0955                          \\
+                        2                          & 2.1003                       & 0.1854                         & 0.08365                   & 0.06224                     & 0                     & 2.1003                             & 0.08365                         \\
+                        5                          & 5.1356                       & 0.3068                         & 0.05442                   & 0.03771                     & 0                     & 5.1356                             & 0.05442                         \\
+                        \hline
+                \end{tabular}
+
+        \end{adjustbox}
+\end{table}
+
+Visuals and distributions of the accuracy testing results are shown below in Figure~\ref{fig:results:starveFeeder:accuracyTesting}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/results/starveFeeder/pellet_dispenser_accuracy_testing_results.png}
+        \caption{Results of starve feeder accuracy testing.}
+        \label{fig:results:starveFeeder:accuracyTesting}
+\end{figure}

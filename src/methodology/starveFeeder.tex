@@ -302,10 +302,9 @@ This code was adjusted with the assistance of ChatGPT and Claude.ai to more quic
 
 Once the system was runnable solely via the serial monitor, the research team decided it would be a straightforward transition to control the entire system through a GUI rather than Arduino IDE. With a GUI, visual elements could be implemented to improve usability of the device. These digital buttons would be directly tied to variable entries making the transition from serial monitor-based control to GUI-based control relatively simple.
 
-To design the GUI, ChatGPT and Claude.ai were utilized. This GUI was run in VSCode on the same computer used to connect to the extruder via DevoVision. Installation of pyserial was required to interact with the Arduino-based code. With this setup, one designated computer could be used for all aspects of extruding -- monitoring the extruder functionality and controlling the pellet dispensing into the extruder.
+To design the GUI, ChatGPT and Claude.ai were utilized. This GUI was run in VSCode on the same computer used to connect to the extruder via DevoVision. Installation of pyserial was required to interact with the Arduino-based code.
 
-Additionally, the keypad and LCD could be removed from the system which substantially reduced clutter.
-\hl{[Some of the above should go in discussion of the overall design of the starve feeder]}.
+With the GUI in place, the keypad was removed from the system.
 
 Figure~\ref{fig:methodology:starveFeeder:pythonGUI} shows the python-based GUI.
 
@@ -318,14 +317,41 @@ Figure~\ref{fig:methodology:starveFeeder:pythonGUI} shows the python-based GUI.
 
 \subsection{Final System Features\label{sec:methodology:starveFeeder:finalSystemFeatures}}
 
+Various features were designed to make this pellet dispenser user-friendly and portable. These include a simple graphical user interface, countdown timer, multiple pour options, an alarm system, and an adjustable vertical stand.
+
 \subsubsection{Graphical User Interface\label{sec:methodology:starveFeeder:finalSystemFeatures:graphicalUserInterface}}
+
+As mentioned in ~\fullref{sec:methodology:starveFeeder:userInterface:graphicalUserInterface}, a graphical user interface or GUI was developed to make interacting with this system straightforward and efficient.
 
 \subsubsection{LCD Time Display\label{sec:methodology:starveFeeder:finalSystemFeatures:lcdTimeDisplay}}
 
-\subsubsection{Calibration and Manual Pour Options\label{sec:methodology:starveFeeder:finalSystemFeatures:calibrationAndManualPourOptions}}
+Although the instructions and interaction are conducted through a GUI rather than an LCD screen in the final design, the LCD screen was kept as a secondary output. Now, the LCD displays a simple countdown until the next pour in case the user can see that more easily than the computer screen.
+
+\subsubsection{Manual Pour Option\label{sec:methodology:starveFeeder:finalSystemFeatures:ManualPourOption}}
+
+A manual pour option was included in the final design. This option can be selected to pour the pre-set pellet weight regardless of whether the automated system is running. This feature was helpful in troubleshooting and also for dispersing pellets immediately if needed.
 
 \subsubsection{Hopper Empty Alarm\label{sec:methodology:starveFeeder:finalSystemFeatures:hopperEmptyAlarm}}
 
+A crucial safety component included in the final design is the "Hopper Empty" alarm. This sounds when the hopper is empty or close to empty. The 3Devo extruder should never be run without steady feed into the barrel, so this alarm ensures pellets are added when necessary. Without this alarm, there is more of a chance that the dispenser will run out of pellets and no material will be fed into the extruder.
+
+The alarm is triggered by logic that subtracts how much material was initially loaded into the hopper from the running total amount of material dispensed through calibrations and pours.
+
+\subsubsection{Adjustable Vertical Stand\label{sec:methodology:starveFeeder:finalSystemFeatures:adjustableStand}}
+
+A vertical adjustable stand was created to maneuver and adjust the pellet dispenser as necessary. The online CAD model of this device utilized a ring stand to hold the pellet dispenser. After searching through various engineering labs, the research team was unable to locate a ring stand. As a result, this structure was created, as shown below in Figure~\ref{fig:methodology:starveFeeder:verticalStand}. Using this stand, the pellet dispenser can be placed on a table or the top of the extruder depending on the experimental setup.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\linewidth]{../figs/methodology/starveFeeder/pellet_dispenser_using_vertical_stand.png}
+        \caption{Pellet dispenser atop extruder connected to adjustable vertical stand.}
+        \label{fig:methodology:starveFeeder:verticalStand}
+\end{figure}
+
 \subsection{Testing Accuracy of Pellet Dispenser\label{sec:methodology:starveFeeder:testingAccuracy}}
+
+Once the starve feeder was operational, testing was conducted to measure the accuracy of the pouring. A desired pour weight of 0.5g, 1.0g, 2.0g, and 5.0g were selected. 20 measurements were taken at each pour level, and each output was weighed to compare the output to the desired weight.
+
+Results and discussion of this testing can be found in ~\fullref{sec:results:starveFeeder} and ~\fullref{sec:discussion:starveFeeder} respectively.
 
 \hl{Section to explain how accuracy testing was performed (measuring Xg and weighing how close it was)}.
