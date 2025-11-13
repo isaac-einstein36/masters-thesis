@@ -1,9 +1,45 @@
 \section{Starve Feeder Discussion\label{sec:discussion:starveFeeder}}
 
-\hl{Discussion: With this setup, one designated computer could be used for all aspects of extruding -- monitoring the extruder functionality and controlling the pellet dispensing into the extruder. Additionally, the keypad and LCD could be removed from the system which substantially reduced clutter.}
+\subsection{Benefits of Starve Feeder\label{sec:discussion:starveFeeder:benefits}}
+
+The starve feeder greatly improved the simplicity and reliability of starve feeding during an extrusion. With this automatic pellet dispenser, a researcher no longer has to constantly monitor the hopper/barrel material level. Extrusions often last multiple hours which makes this constant monitoring burdensome.
+
+It is also more reliable as a researcher may miss a one to two minute interval when the barrel needs to be refilled. Since problems can arise mechanically by running the extruder without material and clumping can arise when there's too much material sitting in the hopper, the use of this starve feeder addresses many concerns that can arise from human error.
+
+The final design is relatively sleek as wiring was minimized with the use of a GUI. Since the keypad was taken out and replaced by a GUI, the only wiring consists of connections for the optional LCD screen and bridging the motor and driver board.
+
+When extruding using a 3Devo extruder, a computer is often required to monitor internal parameters using DevoVision. As a result, relying on a computer for the GUI aspect of this system is simple to incorporate.
+
+3Devo, the manufacturer of the extruder used, had never employed a system like this. Thus, this solution is novel and can benefit tabletop extruding with any materials that are prone to melting prematurely or require starve feeding.
+
+\subsection{Future Work\label{sec:discussion:starveFeeder:futureWork}}
+
+\paragraph*{Physical Design Robustness}
+
+The overall design profile was reduced to minimize clutter and more importantly minimize failure points where wiring could come undone. However, there are still individual wires connected to a breadboard, Arduino, and motor driver. This makes moving the device burdensome and risk disconnecting components or high voltage sources.
+
+To address this, a future design iteration would benefit from enclosing all the circuitry of the device within one movable box. This would make transporting the device more seamless. This design was not currently employed because ease of troubleshooting and debugging was prioritized over ease of transport.
+
+Soldering all components would also improve the strength of the connections and decrease the chance of wiring becoming undone.
+
+The adjustable vertical stand (see~\fullref{sec:methodology:starveFeeder:finalSystemFeatures:adjustableStand}) is also relatively stable and easy to rearrange. A final design, hwoever, could create a stronger foundation to minimize chances of the device tipping over. It could also be more easily adjustable by using snap connectors or pegs rather than a screw-based adjusting system.
+
+\paragraph*{GUI Redesign}
+
+The GUI is a significant improvement from the initial LCD-based instructions. But, it still requires loading the GUI through an IDE such as VSCode, being in a virtual environment, and using a relatively slower pythonGUI library.
+
+To improve the speed, usability, and design of the overall GUI, generative AI could be used to redesign this in a browser-based HTML format such as with a Flask template.
+
+This has not been fully tested, but by putting the GUI code into Claud.ai with the prompt "Please redesign this python-based GUI to be browser based using Flask but still interact with the Arduino smoothly", a browser-based interface was generated. This is shown below in Figure~\ref{fig:discussion:starveFeeder:claudeGUIRedesign}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/discussion/starveFeeder/claude_gui_redesign.png}
+        \caption{Initial browser-based GUI redesign by Claude.ai.}
+        \label{fig:discussion:starveFeeder:claudeGUIRedesign}
+\end{figure}
+
 
 1. Accuracy is bad at low outputs (0.5g) but comparable and fine at higher outputs
 2. Accuracy/tolerance doesn't have to be too tight since it's just filling the barrel opening and the amount and time between pours can be adjusted in real time. The amount needed is qualitative based on the extruder feed rate rather than quantitative.
 3. The belt tensioner in combination with the rubber belt and stronger gears works well and resolved all belt slipping issues. These changes were made simultaneously, so it's unclear if one fixed the slippage more than the other.
-4. The feeder as a whole makes the process more reliable and easier. A researcher no longer has to monitor the hopper constantly over the course of a multi-hour extrusion. It's also more reliable to provide a constant repeated output so that the hopper never gets too full or too empty.
-5. This kind of system should be employed in tabletop extrusion for materials with low melt temperatures that are prone to melting prematurely.
