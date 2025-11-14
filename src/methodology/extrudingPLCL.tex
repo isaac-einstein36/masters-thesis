@@ -155,20 +155,44 @@ The filament output was then spooled by feeding the output through the filament 
 
 The highlights of this extrusion can be found below in Table.
 
-\hl{MAKE THE TABLE}
-% Seconds	Time (HH:MM:SS)	Heater Temperature (˚C) 	Pellet Dispenser Rate (g/s)	Material Extruded	Quality of Output	Notes
-% 22	0:0:22	180	N/A	PLA	Good	Extruding PLA
-% 1600	0:26:40	180	2/80	PLA/PCL	Good	Started Extruding PLA/PCL Blend
-% 3600	1:0:0	170	2/80	PLA/PCL	Good
-% 4930	1:22:10	165	2/100	PLA/PCL	Good
-% 6200	1:43:20	160	2/100	PLA/PCL	Good
-% 7530	2:5:30	160	2/100	PLA/PCL	Good	Started Spooling Output
-% 8100	2:15:0	165	1/100	PLA/PCL	Thin	Filament thicknss too thin (1.4mm)
-% 9400	2:36:40	165	1/100	PLA/PCL	Thin	Tried Increasing RPM to Address Thickness
-% 10425	2:53:45	165	1/60	PLA/PCL	Thin	Tried Increasing Pour Rate to Address Thickness
-% 12600	3:30:0	170	N/A	PLA	Good	Ended Extrusion
+\begin{table}[h!]
+        \centering
+        \caption{Extrusion process conditions and observations.}
+        \label{methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}
+        \begin{adjustbox}{max width=\textwidth}
+                \begin{tabular}{l c c c c l}
+                        \hline
+                        \textbf{Time (HH:MM:SS)} & \textbf{Heater Temp (\textcelsius)} & \textbf{Pellet Rate (g/s)} & \textbf{Material} & \textbf{Quality} & \textbf{Notes}                                  \\
+                        \hline
+                        0{:}00{:}22              & 180                                 & N/A                        & PLA               & Good             & Extruding PLA                                   \\
+                        0{:}26{:}40              & 180                                 & 2/80                       & PLA/PCL           & Good             & Started Extruding PLA/PCL Blend                 \\
+                        1{:}00{:}00              & 170                                 & 2/80                       & PLA/PCL           & Good             &                                                 \\
+                        1{:}22{:}10              & 165                                 & 2/100                      & PLA/PCL           & Good             &                                                 \\
+                        1{:}43{:}20              & 160                                 & 2/100                      & PLA/PCL           & Good             &                                                 \\
+                        2{:}05{:}30              & 160                                 & 2/100                      & PLA/PCL           & Good             & Started Spooling Output                         \\
+                        2{:}15{:}00              & 165                                 & 1/100                      & PLA/PCL           & Thin             & Filament thickness too thin (1.4 mm)            \\
+                        2{:}36{:}40              & 165                                 & 1/100                      & PLA/PCL           & Thin             & Tried Increasing RPM to Address Thickness       \\
+                        2{:}53{:}45              & 165                                 & 1/60                       & PLA/PCL           & Thin             & Tried Increasing Pour Rate to Address Thickness \\
+                        3{:}30{:}00              & 170                                 & N/A                        & PLA               & Good             & Ended Extrusion                                 \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+\end{table}
 
 Results and discussion of this initial starve-feeder based PLCL extrusion can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:initialStarveFeederExtrusion} and ~\fullref{sec:discussion:extrudingPLCL:pelletEtrusions:initialStarveFeederExtrusion} respectively.
+
+\subsubsection{Addressing Filament Thickness}
+
+After performing a Devo Mid-Temp (MT) purge (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}), multiple other PLCL pellet-based extrusion were attempted as detailed in ~\autoref{tab:appendix:extrusionSummary}.
+
+
+
+
+
+% Tried adjusting H4 and RPM but thickness still too low
+% Kept clogging when going from low H4 PLA/PCL to just PLA (ran with PLA to break clog, but a purge is ideal - that note can go in the purging).
+% Tried regrinded PLCL
+
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 
@@ -231,18 +255,16 @@ Results and discussion of this initial starve-feeder based PLCL extrusion can be
 % b. Downloaded sieve from Felfil to control for size and make sure everything is ~5mm x 5mm
 % c. Discovered that medium-thick filament shreds best
 
-\subsection{Purging Compounds\label{sec:methodology:extrudingPLCL:purgingCompounds}}
+\subsection{Purging Extruder\label{sec:methodology:extrudingPLCL:purgingExtruder}}
 \hl{Exploration of purging compounds to find DP-K works best}
 % iii.	Purging Compounds
 % 1.	Found initial supplier of 3Devo DevoClean Mid-Temp
 % 2.	Worked with supplier (Dyna-Purge) to find ideal purging material
 % a.	Tried L then D2 (needs HDPE) then K
 
-\subsubsection{Initial Purging Process\label{sec:methodology:extrudingPLCL:purgingCompounds:initialProcess}}
+\subsubsection{Initial Purging Process\label{sec:methodology:extrudingPLCL:purgingExtruder:initialProcess}}
 
-\subsubsection{Supplier Discovery\label{sec:methodology:extrudingPLCL:purgingCompounds:supplierDiscovery}}
+\subsubsection{Supplier Discovery\label{sec:methodology:extrudingPLCL:purgingExtruder:supplierDiscovery}}
 
-\subsubsection{Dyna-Purge Collaboration\label{sec:methodology:extrudingPLCL:purgingCompounds:dynaPurgeCollaboration}}
+\subsubsection{Dyna-Purge Collaboration\label{sec:methodology:extrudingPLCL:purgingExtruder:dynaPurgeCollaboration}}
 % Tried L then D2 (needs HDPE) then K
-
-\subsection{PLA with Barium Sulfate\label{sec:methodology:extrudingPLCL:plaWithBaSO4}}
