@@ -1,5 +1,15 @@
 \section{Starve Feeder Discussion\label{sec:discussion:starveFeeder}}
 
+\subsection{Accuracy Testing\label{sec:discussion:starveFeeder:accuracyTesting}}
+
+The accuracy testing revealed that the pellet dispenser had a relatively high percent error and failure rate at low outputs such as 0.5g but that error drastically decreased as the output increased. With 0.5g pours, the dispenser failed, or poured no pellets, 20\% of the trials. This was the only level (0.5g, 1g, 2g, and 5g) that failures were recorded. As a result, it may be best to dispense 1g or more with each pour to avoid failures. Alternatively, a manual pour can be performed if no pellets are dispensed.
+
+The percent error decreased 5.442\% with a 5g pour. This level of tolerance is acceptable for extruding where pours do not have to be incredibly exact. Instead, pour rate is more qualitative than quantitative as the feed rate from the extruder will vary with time. Therefore, this percent error is low enough to be usable during an extrusion, and the pour amount and time in between pours may need to be adjusted as material is extruded.
+
+\subsection{Belt Slippage\label{sec:discussion:starveFeeder:beltSlippage}}
+
+The belt slippage was perfectly resolved with the use of a belt tensioner and non-3D printed drive system components. These design changes were made simultaneously, so it is unclear if one or both additions are what solved the slippage issues. Since the advent of these additions, belt slippage has not been noticed while using the pellet dispenser.
+
 \subsection{Benefits of Starve Feeder\label{sec:discussion:starveFeeder:benefits}}
 
 The starve feeder greatly improved the simplicity and reliability of starve feeding during an extrusion. With this automatic pellet dispenser, a researcher no longer has to constantly monitor the hopper/barrel material level. Extrusions often last multiple hours which makes this constant monitoring burdensome.
@@ -38,8 +48,3 @@ This has not been fully tested, but by putting the GUI code into Claud.ai with t
         \caption{Initial browser-based GUI redesign by Claude.ai.}
         \label{fig:discussion:starveFeeder:claudeGUIRedesign}
 \end{figure}
-
-
-1. Accuracy is bad at low outputs (0.5g) but comparable and fine at higher outputs
-2. Accuracy/tolerance doesn't have to be too tight since it's just filling the barrel opening and the amount and time between pours can be adjusted in real time. The amount needed is qualitative based on the extruder feed rate rather than quantitative.
-3. The belt tensioner in combination with the rubber belt and stronger gears works well and resolved all belt slipping issues. These changes were made simultaneously, so it's unclear if one fixed the slippage more than the other.

@@ -145,8 +145,30 @@ Based on the repetitive and exact nature of the manual starve feeding, an automa
 
 The starve feeder was first tested on PCL during the second temperature test extrusion from 120\textcelsius ~to 180\textcelsius. Once it was proven to work, the starve feeder was used on a PLCL extrusion.
 
-\subsubsection{PLCL Extrusion with Starve Feeder\label{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:PLCLExtrusion}}
-% Worked but too thin
+\subsubsection{Initial PLCL Extrusion with Starve Feeder\label{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}}
+
+With the new starve feeder (see ~\fullref{sec:methodology:starveFeeder}), a second pellet-based PLCL extrusion was attempted using a 70/30 blend of PLA and PCL pellets.
+
+The extrusion began with just PLA pellets at 180\textcelsius. Once this was extruding well, a 70/30 blend of PLA and PCL pellets was introduced using the starve feeder. Once the output transitioned to PLCL, the temperature was lowered from 180\textcelsius ~to 160\textcelsius ~in 5 degree increments to approach the preferred extrusion temperature for PCL (see~\fullref{sec:results:extrudingPLCL:pelletExtrusions:pclTempStudy}).
+
+The filament output was then spooled by feeding the output through the filament sensor and into the spooler on the 3Devo Filament Maker One. Filament thickness was variable and on average too low (1.4mm instead of 1.75mm). Various parameters were adjusted to try and improve the filament thickness average and consistency. Overall, the thickness was not able to be improved, and the extrusion was terminated by extruding solely PLA pellets.
+
+The highlights of this extrusion can be found below in Table.
+
+\hl{MAKE THE TABLE}
+% Seconds	Time (HH:MM:SS)	Heater Temperature (˚C) 	Pellet Dispenser Rate (g/s)	Material Extruded	Quality of Output	Notes
+% 22	0:0:22	180	N/A	PLA	Good	Extruding PLA
+% 1600	0:26:40	180	2/80	PLA/PCL	Good	Started Extruding PLA/PCL Blend
+% 3600	1:0:0	170	2/80	PLA/PCL	Good
+% 4930	1:22:10	165	2/100	PLA/PCL	Good
+% 6200	1:43:20	160	2/100	PLA/PCL	Good
+% 7530	2:5:30	160	2/100	PLA/PCL	Good	Started Spooling Output
+% 8100	2:15:0	165	1/100	PLA/PCL	Thin	Filament thicknss too thin (1.4mm)
+% 9400	2:36:40	165	1/100	PLA/PCL	Thin	Tried Increasing RPM to Address Thickness
+% 10425	2:53:45	165	1/60	PLA/PCL	Thin	Tried Increasing Pour Rate to Address Thickness
+% 12600	3:30:0	170	N/A	PLA	Good	Ended Extrusion
+
+Results and discussion of this initial starve-feeder based PLCL extrusion can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:initialStarveFeederExtrusion} and ~\fullref{sec:discussion:extrudingPLCL:pelletEtrusions:initialStarveFeederExtrusion} respectively.
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 
