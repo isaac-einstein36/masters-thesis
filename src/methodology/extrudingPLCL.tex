@@ -185,13 +185,24 @@ Results and discussion of this initial starve-feeder based PLCL extrusion can be
 
 After performing a Devo Mid-Temp (MT) purge (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}), multiple other PLCL pellet-based extrusion were attempted as detailed in ~\autoref{tab:appendix:extrusionSummary}.
 
+\paragraph*{Adjusting Heat Zones}
+Following recommendations from 3Devo customer support, the temperature of heater 4 was lowered to 100\textcelsius ~which was as low as it could get. The goal was with this lower initial heat, more solidified material would be pushing the softer material through the rest of the barrel.
 
+Eventually extrusions were attempted with heater 4 and heater 3 at 100\textcelsius. Additionally, the RPM was raised incrementally from 3.5 to 7 to see if this parameter helped address filament thickness.
 
+Results and discussion of this heat zone adjustment research can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} respectively.
 
+\paragraph*{Extruding PLCL Regrind}
 
-% Tried adjusting H4 and RPM but thickness still too low
-% Kept clogging when going from low H4 PLA/PCL to just PLA (ran with PLA to break clog, but a purge is ideal - that note can go in the purging).
-% Tried regrinded PLCL
+Many papers that successfully extruded PLCL using PLA and PCl pellets combined the material beforehand (see ~\fullref{sec:literatureReview:PLCL}). While research was conducted on combining PLA and PCL prior to extruding (see ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:combiningMaterials}), many of these options were unable to be performed by the research team.
+
+After failing to resolve the filament thickness variability, however, the idea of combinging PLA and PCL prior to extrusion was revisited. As a result, in a similar manner to injection molding, it was hypothesized that re-extruding the initial filament output (which had been thermally combined during the first pass through the extruder) may behave similar to existing literature. To test this, initial filament output, referred to as first-pass PLCL, was shredded using a Felfill Shredder+ and re-extruded through the 3Devo Filament Maker One.
+
+Results and discussion of this re-extrusion research can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} respectively.
+
+\paragraph*{Clogged Extruder}
+% Kept clogging when going from low H4 PLA/PCL to PLA. Was initially broken by running PLA. Discussion -> established need for routine purging.
+
 
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
