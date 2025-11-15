@@ -191,19 +191,28 @@ Following recommendations from 3Devo customer support, the temperature of heater
 
 Eventually extrusions were attempted with heater 4 and heater 3 at 100\textcelsius. Additionally, the RPM was raised incrementally from 3.5 to 7 to see if this parameter helped address filament thickness.
 
+A final extrusion was attempted following a published methodology that used a 3Devo Filament Maker One but pre-combined PLA/PCL pellets. This paper set heat zones to 140, 155, 160, and 160 (all \textcelsius) for heaters four through 1 respectively~\cite{RefWorks:RefID:253-åkerlund2022effect}.
+
 Results and discussion of this heat zone adjustment research can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} respectively.
 
 \paragraph*{Extruding PLCL Regrind}
 
 Many papers that successfully extruded PLCL using PLA and PCl pellets combined the material beforehand (see ~\fullref{sec:literatureReview:PLCL}). While research was conducted on combining PLA and PCL prior to extruding (see ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:combiningMaterials}), many of these options were unable to be performed by the research team.
 
-After failing to resolve the filament thickness variability, however, the idea of combinging PLA and PCL prior to extrusion was revisited. As a result, in a similar manner to injection molding, it was hypothesized that re-extruding the initial filament output (which had been thermally combined during the first pass through the extruder) may behave similar to existing literature. To test this, initial filament output, referred to as first-pass PLCL, was shredded using a Felfill Shredder+ and re-extruded through the 3Devo Filament Maker One.
+After failing to resolve the filament thickness variability, however, the idea of combinging PLA and PCL prior to extrusion was revisited. As a result, in a similar manner to injection molding, it was hypothesized that re-extruding the initial filament output (which had been thermally combined during the first pass through the extruder) may behave similar to existing literature. To test this, initial filament output, referred to as first-pass PLCL, was shredded using a Felfill Shredder+ and re-extruded through the 3Devo Filament Maker One. The process of creating PLCL regrind to extrude is illustrated below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:creatingRegrind}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/extruding_plcl_regrind_process.png}
+        \caption{Process of creating PLCL regrind. (A) Weighing 1st pass PLCL, (B) Shredding 1st pass PLCL, (C) Pouring regrind into hopper.}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:creatingRegrind}
+\end{figure}
 
 Results and discussion of this re-extrusion research can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} respectively.
 
 \paragraph*{Clogged Extruder}
 
-It was also noticed that routinely while transitioning from low heater 4 and heater 3 back to PLA presets, a clog often formed in the machine. Due to a limited supply of purging compound PLA was used to push out the PLA/PCL clog which usually required running the extruder for an hour.
+It was also noticed that routinely while transitioning from low heater 4 and heater 3 back to PLA presets, a clog often formed in the machine. Due to a limited supply of purging compound, PLA was used to push out the PLA/PCL clog which usually required running the extruder for an hour.
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 

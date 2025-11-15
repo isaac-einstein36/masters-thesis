@@ -131,8 +131,38 @@ The research team was unsure why the output filament was unable to be spooled at
 
 It was also hypothesized that contaminants inside the extrusion barrel could be causing this variable output. A full purge of the extruder was recommended to clean the extruder barrel of any potential contaminants.
 
+\paragraph*{Key Takeaways}
+
+This was the first successful PLCL extrusion for the team. Manually combining PLA and PCL pellets and dispensing material directly into the extruder barrel using the automatic starve feeder proved a functional way to extrude PLCL filament.
+
+The thickness of the spooled filament was highly variable and on average too thin which likely means the extrusion parameters (heat zones and RPM) need to be adjusted.
+
 \subsubsection{Addressing Filament Thickness Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness}}
 
+\paragraph*{Adjusting Heat Zones}
 
+After numerous heat zone adjustments, the spooled filament thickness of the PLA/PCL extrusion was still too thin. 3D printers require tight tolerances (often 1.75±0.03mm) which these extrusions were not within.
 
-% Kept clogging when going from low H4 PLA/PCL to PLA. Was initially broken by running PLA. Discussion -> established need for routine purging.
+Suggestions from 3Devo customer support included lowering heat zones 4 and 3 and raising extruder screw RPM, but when that was not working they did not have many new suggestions.
+
+Because the heat zone adjustment was not yielding adequate results, 3Devo customer support suggested more routinely purging the extruder in case contaminants were blocking the flow of material. They also suggested replacing the standard 4mm nozzle with a 2mm nozzle. As a result, purging compounds were explored (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}) and a smaller nozzle was ordered from 3Devo~\cite{RefWorks:RefID:392-3devo}.
+
+Since the nozzle had to be ordered from 3Devo which required international shipping, it was assumed this would have a substantial lead time. Therefore, alternative extrusion options were explored while waiting for a smaller nozzle to arrive (see ~\fullref{sec:methodology:extrudingPLCL:felfilSystem}).
+
+\paragraph*{Extruding PLCL Regrind}
+
+The PLCL regrinding extrusion yielded promising results in that the initial output was much thicker visually than the first-pass PLCL. Unfortunately, thickness readings could not be measured due to an issue with 3Devo's DevoVision software. Newer computers were bought and updated software had been downloaded following this initial regrind extrusion to resolve these issues.
+
+Once the DevoVision software was functioning properly again, the research team attempted to perform more PLCL regrind extrusions. While this was attempted multiple times, clogging and unfinished purges inhibited this process. This led to additional research into purging the extruder (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}).
+
+\paragraph*{Clogged Extruder}
+
+It was noticed that the extruder routinely formed a clog when shifting from low temperature PLA/PCL extrusions to PLA at normal PLA presets. Due to a limited supply of purging compounds, PLA was run in the extruder until this clog was resolved. This ended up being a time and material intensive process.
+
+As a result, 3Devo customer support recommended properly purging the extruder after every extrusion. This led to additional research into purging the extruder (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}).
+
+\paragraph*{Key Takeaways}
+
+Multiple extrusion attempts were performed to refine the filament thickness following the initial successful PLCL extrusion. Heat zones and RPM were adjusted and first-pass PLCL extrusion was shredded and re-extruded. Various sized extruder nozzles were ordered to address the overall filament thickness.
+
+Extruding reground filament appeared to help the overall filament thickness, but data could not be collected due to issues with DevoVision software. Subsequent regrind extrusions were performed but clogging in the extruder and improper purging procedures inhibited these experiments. As a result, purging procedures and compounds were further researched (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}).
