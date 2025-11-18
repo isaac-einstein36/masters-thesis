@@ -298,5 +298,53 @@ Results and discussion of the initial purging process can be found below in ~\fu
 
 \subsubsection{Supplier Discovery\label{sec:methodology:extrudingPLCL:purgingExtruder:supplierDiscovery}}
 
+The team reached out to 3Devo customer support directly to see DevoClean MT's technical data sheet (TDS) to better understand the material characteristics that should be matched in a replacement extruding compound. This TDS, however, was from a separate company, Dyna-Purge. Dyna-Purge is a company that specializes in extrusion compounds and is based in the United States.
+
+The research team reached out to Dyna-Purge directly as buying from them would avoid international shipping that results from placing an order with 3Devo as they are based in the Netherlands.
+
 \subsubsection{Dyna-Purge Collaboration\label{sec:methodology:extrudingPLCL:purgingExtruder:dynaPurgeCollaboration}}
+
+According to Dyna-Purge, the DevoClean MT was a legacy product and has since been improved. Based on the melt flow index (MFI) of the extruded materials, multiple extruding compounds were suggested and two $10lb$ samples were sent from Dyna-Purge.
+
+Dyna-Purge (abbreviated as DP) sent samples of their DP-D2 and DP-L extruding compounds. DP-D2 had an MFI similar to PCL whereas DP-L had an MFI similar to PLA. A similar MFI is necessary for properly pushing out existing material and effectively purging the extruder~\cite{RefWorks:RefID:493-gate}. DP-D2, required HDPE to transition materials, similar to DevoClean MT, which is unideal given the time and additional material required to perform a purge. A summary of these compounds is shown below in Table~\ref{tab:methodology:extrudingPLCL:dpCollaboration:comparingPurgingCompounds}.
+
+\begin{table}[h!]
+        \centering
+        \caption{Summary of Dyna-Purge Purging Compounds.}
+        \label{tab:methodology:extrudingPLCL:dpCollaboration:comparingPurgingCompounds}
+        \begin{tabular}{l l c}
+                \hline
+                \textbf{Purging Compound} & \textbf{Ideal Material} & \textbf{Requires HDPE?} \\
+                \hline
+                DP-D2                     & PLA                     & Yes                     \\
+                DP-L                      & PCL                     & No                      \\
+                \hline
+        \end{tabular}
+\end{table}
+
+\subsubsection{Purging with DP-L\label{sec:methodology:extrudingPLCL:purgingExtruder:dpLPurge}}
+
+Initially, based on not requiring HDPE, DP-L was tested for purging the extruder. The purging process provided by Dyna-Purge was followed as outlined below in List~\ref{list:test}.
+
+\begin{enumerate}
+        \label{list:test}
+        \item Finish extruding material
+        \item Transition to purging compound
+        \item Raise temperature (180\textcelsius ~to 250\textcelsius)
+        \item Purge material while switching between high and low RPM
+        \item Leave purging compound in barrel and start machine with a new purge
+\end{enumerate}
+
+This process is different from using DevoClean MT (see \autoref{fig:methodology:extrudingPLCL:purgingExtruder:3DevoProcess}) which suggests ending with the initial material rather than the purging compound inside the barrel.
+
+Discussion of purging with DP-L can be found in ~\autoref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpLPurge}.
+
+\subsubsection{Purging with DP-D2\label{sec:methodology:extrudingPLCL:purgingExtruder:dpD2Purge}}
+
+Based on contamination following DP-L purges (see Section ~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpLPurge}), DP-D2 was tested as a purging compound.
+
+This material required HDPE to transition between PLA/PCL and DP-D2. Extrusion labs across The Ohio State University were contacted regarding extra HDPE that could be used. No labs were able to provide HDPE so $5lbs$ of HDPE pellets were ordered from McMaster-Carr~\cite{RefWorks:RefID:494-moistureresistant}.
+
+The DP-D2 was used in purging identically to DP-L following Dyna-Purge's recommendations. Discussion of the DP-D2 purge testing can be found in Section~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpD2Purge}.
+
 % Tried L then D2 (needs HDPE) then K

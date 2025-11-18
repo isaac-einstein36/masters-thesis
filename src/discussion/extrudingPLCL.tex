@@ -170,3 +170,62 @@ Extruding reground filament appeared to help the overall filament thickness, but
 \subsection{Purging Extruder Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder}}
 
 \subsubsection{Initial Purging Process Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:initialPurge}}
+
+The initial DevoClean MT output contained substantial contaminants at first and then transitioned to fully clean purging material. This high level of contamination within the barrel made it clear that regular purging is necessary for consistent extruding.
+
+As mentioned earlier, however, limited supply of 3Devo's DevoClean MT remained which resulted in infrequent purging. $1kg$ of material was provided with the extruder purchase, and roughly $\frac{1}{3}kg$ of material is used with every purge.
+
+This led to a deeper exploration of available purging materials as described in \fullref{sec:methodology:extrudingPLCL:purgingExtruder:supplierDiscovery}.
+
+\subsubsection{Purging with DP-L Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpLPurge}}
+
+\paragraph*{Benefits of DP-L Over DevoClean MT}
+
+The largest benefit of using DP-L as an extruding compound rather than DevoClean MT was not having to use HDPE to transition between materials. Additionally, DP-L used less material and acted faster than DevoClean MT.
+
+\paragraph*{Efficacy of DP-L}
+
+Purging with DP-L initially appeared successful. The output was similar to a DevoClean MT purge in that contaminated output transitioned to clean purging material.
+
+However, when performing subsequent extrusions following a DP-L purge, black specks were noticed in the extrusion output as shown below in Figure~\ref{fig:sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpLBlackSpecks}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/discussion/purgingExtruder/dpL_purge_black_specks.png}
+        \caption{Black specks noticed following a DP-L purge. Initially small specks (A) that became larger (B).}
+        \label{fig:sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpLBlackSpecks}
+\end{figure}
+
+Following discussions with 3Devo customer support and Dyna-Purge customer support, it was believed that these specks were indicative of contaminants left inside the barrel. This means that DP-L was not effectively cleaning the inside of the barrel when purging the extruder.
+
+As a result, DP-D2 was tested due to its closer MFI to PLA and more effective cleaning abilities per Dyna-Purge customer support (see Section~\ref{sec:methodology:extrudingPLCL:purgingExtruder:dpD2Purge}).
+
+\paragraph*{Key Takeaways}
+
+While DP-L purged faster and using less material than DevoClean MT, it was found to ineffectively clean all contaminants in the extruder. These findings led to exploring DP-D2 as a purging compound based on Dyna-Purge's recommendation.
+
+\subsubsection{Purging with DP-D2 Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpD2Purge}}
+
+\paragraph*{Efficacy of DP-D2}
+Using DP-D2 as opposed to DP-L for purging the extruder initially appeared successful. the contaminants in the output filament following a purge mostly disappeared. The contaminants still appeared in output filament, though in much smaller quantities as shown in Figure~\ref{fig:sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpd2BlackSpecks}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/discussion/purgingExtruder/dpD2_purge_black_specks.png}
+        \caption{Black specks following DP-D2 purge.}
+        \label{fig:sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpd2BlackSpecks}
+\end{figure}
+
+Based on these black specks using DP-D2 as a purging compound, 3Devo customer support suggested replacing the nozzle as this may be contributing to contaminated output. This was now the second time 3Devo customer support suggested a nozzle replacement (see Section~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness}), which further emphasized the potential need for a new nozzle.
+
+\paragraph*{Downsides of DP-D2}
+
+As mentioned in Table~\ref{tab:methodology:extrudingPLCL:dpCollaboration:comparingPurgingCompounds}, DP-D2 required HDPE to transition between extruding and purging materials. Subsequent extrusions following DP-D2 purges were found to have HDPE or DP-D2 embedded in the output filament. This is indicative of all purging compound not being extruded when transitioning between materials.
+
+As a result, substantial time and material were required when performing a DP-D2 purge to ensure all material was cleared from the extruder before beginning a new PLA/PCL extrusion.
+
+\paragraph*{Key Takeaways}
+
+The DP-D2 compound appeared to clean more effectively than DP-L, but black contaminant specks were still noticed. Since both purging compounds yielded contaminants, it was hypothesized that the nozzle had contaminants that could not easily be purged, and a nozzle replacement may help.
+
+It was also discovered through trial and error that substantial DP-D2 and HDPE were required to fully clear the extruder and avoid affecting subsequent purges.
