@@ -216,22 +216,54 @@ It was also noticed that routinely while transitioning from low heater 4 and hea
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 
-\subsubsection{Felfil Evo Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvo}}
+Based on the thin filament output by the 3Devo Filament Maker One when extruding a PLA/PCL blend (see ~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}), the Felfil Evo was tested for PLCL extrusions.
 
-\paragraph*{Initial Repairs\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvo:initialRepairs}}
-% a. Tried replacing the hopper without fully disassembling
-% b. Led to the barrel not being secured and spinning out of place
-% c. Disassembled fully, cleaned, and reassembled correctly
-% d. Replaced broken O-ring in nozzle
+The Felfil Evo had been used initially for powder-based PLCL extrusions, but research was paused due to unsuccessful results (see ~\ref{sec:introduction:priorWork:otherTeamWork:plclExtrusions}). Since the 3Devo Filament Maker One, a more robust extruder, also was unsuccessful extruding powders, it was hypothesized that powder-based extrusions for any extruder may be challenging and the Felfil Evo may be more effective with pellet-based extrusions.
 
-\paragraph*{Initial PLA Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvo:initialTesting}}
-% a. Tested with PLA pellets which worked wonderfully
+\subsubsection{Felfil Evo Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}}
 
-\paragraph*{Learnings from Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvo:learningsFromInitialTesting}}
-% a. Pellets remain the best material to extrude with
-% b. Even though we couldn't get the system to work with powders, it can likely work well with pellets
+\paragraph*{Initial Repairs}
+
+To begin testing the Felfil Evo, all remaining PLCL powder from prior research was cleaned using wipes and a vaccuum. The plastic hopper could not be fully cleaned, however, so a new hopper was 3D printed as a replacement. In an effort to save time, only the screws holding the hopper in place were removed rather than disassembling the entire hopper.
+
+This overly simplistic disassembly led to a screw not being properly tightened and the barrel of the extruder was improperly secured to the hopper. When testing the extruder following this hopper replacement, the barrel, which should remain stationary, began rotating which led to a gap between the barrel and hopper. This gap is shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialGap}.
+
+This gap allowed material to fall when traveling from the hopper to the barrel and also negatively impacted the overall insulation of the extruder.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/barrel_gap.png}
+        \caption{Proper distance between hopper and barrel (A) vs Gap between hopper and barrel (B).}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialGap}
+\end{figure}
+
+To properly fix this gap, the extruder was fully disassembled, cleaned, and reassembled. After this, a test extrusion was performed, and it was noticed that material was seeping out the nozzle/barrel interface as shown in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:brokenORing}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/broken_o_ring.png}
+        \caption{Material seeping from nozzle/barrel interface following full extruder disassembly.}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:brokenORing}
+\end{figure}
+
+\paragraph*{Initial PLA Testing}
+
+Once the extruder was fully reassembled, it was tested using PLA pellets as this is an initial test extrusion 3Devo recommends~\cite{RefWorks:RefID:396-3devotroubleshooting}.
+
+This extrusion yielded good-quality PLA filament as shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLAFilament}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/initial_PLA_test.png}
+        \caption{Initial PLA pellet test with Felfil Evo. Test setup (A) and unspooled output (B).}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLAFilament}
+\end{figure}
+
 \subsubsection{Felfil Evo PLCL Extrusion\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}}
 
+Following the successful PLA pellet-based extrusion on the Felfil Evo (see Section~\ref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}), a PLA/PCL extrusion was attempted using the same methodology as the 3Devo PLA/PCL extrusions (see Section~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}).
+
+\hl{Put these next two paragraphs in discussion}
 \paragraph*{Initial PLCL Extrusion Attempts\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL:initialAttempts}}
 % a. Can extrude PLCL at proper thickness on 1st pass and faster than 3Devo
 % b. First time we've had successul proper thickness PLCL filament
@@ -346,5 +378,3 @@ Based on contamination following DP-L purges (see Section ~\ref{sec:discussion:e
 This material required HDPE to transition between PLA/PCL and DP-D2. Extrusion labs across The Ohio State University were contacted regarding extra HDPE that could be used. No labs were able to provide HDPE so $5lbs$ of HDPE pellets were ordered from McMaster-Carr~\cite{RefWorks:RefID:494-moistureresistant}.
 
 The DP-D2 was used in purging identically to DP-L following Dyna-Purge's recommendations. Discussion of the DP-D2 purge testing can be found in Section~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpD2Purge}.
-
-% Tried L then D2 (needs HDPE) then K
