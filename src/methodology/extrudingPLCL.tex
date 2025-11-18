@@ -341,12 +341,28 @@ Results and discussion of this PLCL extrusion can be found in \fullref{sec:resul
 
 \subsubsection{Felfil Evo Hopper Improvements\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements}}
 
+Multiple ideas were brainstormed to insulate the hopper from the extrusion material. Time and cost of materials were prioritized when ranking options. Final options included a rubber or silicone inserted layer or a 3D printed insulator piece.
+
 \paragraph*{Silicone Coating\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:siliconeCoating}}
-% a. Looked into silicone with adhesive backing to block the heat (like what's used in Rasbperry Pi)
-% b. Talked with Chris in electronics lab to see if he's run across that ever
-% c. Initial google search on available materials
+
+Initially, a rubber or silicone coating was explored to act as a barrier between the extruded material and metal wall.
+
+Electronics subject-matter experts across Ohio State University were consulted to see if they have used any similar materials for heat insulation. Multiple potential challenges were presented through these conversations such as the inability of adhesives to withstand high temperatures.
+
+Various materials were researched, regardless, to assess the viability of this option. Some of these materials are shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:siliconHopperCoating}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/various_rubber_coatings.png}
+        \caption{Various rubber insulator materials researched~\cite{RefWorks:RefID:496-silicone,RefWorks:RefID:497-general,RefWorks:RefID:498-silicone,RefWorks:RefID:499-hightemperature}.}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:siliconHopperCoating}
+\end{figure}
+
+Based on the concerns addressed by subject-matter experts and the potential lead time of ordering materials, a 3D printed approach was prioritized.
 
 \paragraph*{3D Printed Hopper Insert\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:3dPrintedHopperInsert}}
+
+\hl{STOPPED HERE!}
 % a. Created a 3D printed insert to block the heat transfer
 % b. Modeled it in SolidWorks after using the existing CAD files to create an assembly of the hopper
 % c. Took 5 versions to properly account for the screw (couldn't measure by hand without fully disassembling machine)
@@ -392,3 +408,8 @@ Claude.ai was used to refine this code. A live visual of the filament thickness 
 % a. Started by shredding multiple times until regrind size looked uniform
 % b. Downloaded sieve from Felfil to control for size and make sure everything is ~5mm x 5mm
 % c. Discovered that medium-thick filament shreds best
+
+\subsubsection{PLCL Extrusions with System Modifications\label{sec:methodology:extrudingPLCL:felfilSystem:extrusionsAfterModifications}}
+% Performed 1st and 2nd pass extrusions with the filament thickness monitoring and hopper insulation
+% Manually adjusted RPM, fan speed, and heat (see extrusion summary excel sheet)
+% Hopper insulator helped with clumping (10/22 #5 extrusion, didn't have to stir pellets or remove clumps at all)
