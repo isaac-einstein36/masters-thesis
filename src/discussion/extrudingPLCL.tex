@@ -167,12 +167,7 @@ Multiple extrusion attempts were performed to refine the filament thickness foll
 
 Extruding reground filament appeared to help the overall filament thickness, but data could not be collected due to issues with DevoVision software. Subsequent regrind extrusions were performed but clogging in the extruder and improper purging procedures inhibited these experiments. As a result, purging procedures and compounds were further researched (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}).
 
-\subsection{Felfil Evo Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo}}
-
-\subsubsection{Initial PLCL Extrusion Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL}}
-
-
-\subsection{Purging Extruder Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder}}
+\subsection{Purging 3Devo Extruder Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder}}
 
 \subsubsection{Initial Purging Process Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:initialPurge}}
 
@@ -236,3 +231,34 @@ As a result, substantial time and material were required when performing a DP-D2
 The DP-D2 compound appeared to clean more effectively than DP-L, but black contaminant specks were still noticed. Since both purging compounds yielded contaminants, it was hypothesized that the nozzle had contaminants that could not easily be purged, and a nozzle replacement may help.
 
 It was also discovered through trial and error that substantial DP-D2 and HDPE were required to fully clear the extruder and avoid affecting subsequent purges.
+
+\subsection{Felfil Evo Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo}}
+
+\subsubsection{Initial PLCL Extrusion Discussion\label{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL}}
+
+\paragraph*{Filament Output}
+% a. Can extrude PLCL at proper thickness on 1st pass and faster than 3Devo
+% b. First time we've had successul proper thickness PLCL filament
+
+This extrusion attempt showed that the Felfil Evo system is able to successfully extrude PLCL. It can create filament output faster than the 3Devo system, and adjustments to parameters such as heat or RPM are seen more quickly due to the smaller size of the extruder. As a result, the Felfil system should be utilized in refining first-pass PLCL extrusions.
+
+\paragraph*{Monitoring Filament Thickness}
+
+It is a concern of the Felfil system that data such as filament thickness cannot be quantitatively collected. A method for tracking filament thickness as precisely as 3Devo's DevoVision should be employed to adequately compare filement output between the 3Devo and Felfil systems.
+
+\paragraph*{Clumping at Hopper}
+% a. Noticed clumping at hopper due to metal wall closest to barrel
+% b. Tried using starve feeding method but would need refining/testing
+% c. Planned to look into isolating that metal wall section from the raw materials
+
+Throughout this extrusion, significant clumping of material in the hopper was noticed. This was not expected because the hopper is predominantly plastic, so heat from the extruder barrel should be well insulated from the extruding material. However, there are two exposed metal walls that conduct heat from the rest of the extruder. It was found that these walls transfer heat to the material in the hopper and thus prematurely melt PCL pellets, causing clumping. It was hypothesized that the clumping, which led to inconsistent material flow, contributed to the variable filament thickness.
+
+The starve feeder that had been developed for the 3Devo system was attempted to resolve the clumping issue, but this would require additional refinement because the opening for the barrel on the Felfil system is much larger than that on the 3Devo extruder. This allows material to sit in the hopper even if starve feeding is enabled. As a result, it was planned to explore methods of insulating the material from the metal hopper walls to prevent clumping.
+
+\paragraph*{Key Takeaways}
+
+Overall, the Felfil PLCL extrusion was successful in that good-quality filament was extruded at a faster rate than the 3Devo Filament Maker One. Filament thickness was on average near 1.75mm, although there was variability within this thickness.
+
+There is no inherent way to measure filament thickness on the Felfil system, and thus a monitoring system should be developed.
+
+There was also clumping noticed at the hopper while extruding material. As a result, an insulation method should be explored to resolve this.

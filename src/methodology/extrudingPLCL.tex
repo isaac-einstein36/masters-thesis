@@ -214,104 +214,7 @@ Results and discussion of this re-extrusion research can be found in ~\fullref{s
 
 It was also noticed that routinely while transitioning from low heater 4 and heater 3 back to PLA presets, a clog often formed in the machine. Due to a limited supply of purging compound, PLA was used to push out the PLA/PCL clog which usually required running the extruder for an hour.
 
-\subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
-
-Based on the thin filament output by the 3Devo Filament Maker One when extruding a PLA/PCL blend (see ~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}), the Felfil Evo was tested for PLCL extrusions.
-
-The Felfil Evo had been used initially for powder-based PLCL extrusions, but research was paused due to unsuccessful results (see ~\ref{sec:introduction:priorWork:otherTeamWork:plclExtrusions}). Since the 3Devo Filament Maker One, a more robust extruder, also was unsuccessful extruding powders, it was hypothesized that powder-based extrusions for any extruder may be challenging and the Felfil Evo may be more effective with pellet-based extrusions.
-
-\subsubsection{Felfil Evo Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}}
-
-\paragraph*{Initial Repairs}
-
-To begin testing the Felfil Evo, all remaining PLCL powder from prior research was cleaned using wipes and a vaccuum. The plastic hopper could not be fully cleaned, however, so a new hopper was 3D printed as a replacement. In an effort to save time, only the screws holding the hopper in place were removed rather than disassembling the entire hopper.
-
-This overly simplistic disassembly led to a screw not being properly tightened and the barrel of the extruder was improperly secured to the hopper. When testing the extruder following this hopper replacement, the barrel, which should remain stationary, began rotating which led to a gap between the barrel and hopper. This gap is shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialGap}.
-
-This gap allowed material to fall when traveling from the hopper to the barrel and also negatively impacted the overall insulation of the extruder.
-
-\begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/barrel_gap.png}
-        \caption{Proper distance between hopper and barrel (A) vs Gap between hopper and barrel (B).}
-        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialGap}
-\end{figure}
-
-To properly fix this gap, the extruder was fully disassembled, cleaned, and reassembled. After this, a test extrusion was performed, and it was noticed that material was seeping out the nozzle/barrel interface as shown in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:brokenORing}.
-
-\begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/broken_o_ring.png}
-        \caption{Material seeping from nozzle/barrel interface following full extruder disassembly.}
-        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:brokenORing}
-\end{figure}
-
-\paragraph*{Initial PLA Testing}
-
-Once the extruder was fully reassembled, it was tested using PLA pellets as this is an initial test extrusion 3Devo recommends~\cite{RefWorks:RefID:396-3devotroubleshooting}.
-
-This extrusion yielded good-quality PLA filament as shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLAFilament}.
-
-\begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/initial_PLA_test.png}
-        \caption{Initial PLA pellet test with Felfil Evo. Test setup (A) and unspooled output (B).}
-        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLAFilament}
-\end{figure}
-
-\subsubsection{Felfil Evo PLCL Extrusion\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}}
-
-Following the successful PLA pellet-based extrusion on the Felfil Evo (see Section~\ref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}), a PLA/PCL extrusion was attempted using the same methodology as the 3Devo PLA/PCL extrusions (see Section~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}).
-
-The Felfil Evo has one heat zone which was initially set at 170\textcelsius ~and was raised to 170\textcelsius. The screw RPM was set to 4.
-
-Results and discussion of this PLCL extrusion can be found in \fullref{sec:results:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL} respectively.
-
-\hl{Put these next two paragraphs in discussion}
-\paragraph*{Initial PLCL Extrusion Attempts\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL:initialAttempts}}
-% a. Can extrude PLCL at proper thickness on 1st pass and faster than 3Devo
-% b. First time we've had successul proper thickness PLCL filament
-
-\paragraph*{Clumping at Hopper\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL:clumpingAtHopper}}
-% a. Noticed clumping at hopper due to metal wall closest to barrel
-% b. Tried using starve feeding method but would need refining/testing
-% c. Planned to look into isolating that metal wall section from the raw materials
-
-\subsubsection{Felfil Evo Hopper Improvements\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements}}
-
-\paragraph*{Silicone Coating\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:siliconeCoating}}
-% a. Looked into silicone with adhesive backing to block the heat (like what's used in Rasbperry Pi)
-% b. Talked with Chris in electronics lab to see if he's run across that ever
-% c. Initial google search on available materials
-
-\paragraph*{3D Printed Hopper Insert\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:3dPrintedHopperInsert}}
-% a. Created a 3D printed insert to block the heat transfer
-% b. Modeled it in SolidWorks after using the existing CAD files to create an assembly of the hopper
-% c. Took 5 versions to properly account for the screw (couldn't measure by hand without fully disassembling machine)
-% d. Added thickness and slope to address thin insert still getting hot
-% i. Add distance between wall and raw materials
-
-\subsubsection{Felfil Spooler+\label{sec:methodology:extrudingPLCL:felfilSystem:felfilSpooler}}
-
-\paragraph*{Noticed Need to Log Thickness\label{sec:methodology:extrudingPLCL:felfilSystem:felfilSpooler:noticedNeedToLogThickness}}
-% a. Realized I needed to log thickness data to analyze it like DevoVision does
-
-\paragraph*{Accessing Firmware\label{sec:methodology:extrudingPLCL:felfilSystem:felfilSpooler:accessingFirmware}}
-% a. Felfil is open source and run on an Arduino Nano
-% b. I was able to access the current firmware (V1.8) and modify it
-% c. USB-MiniB port is accessible through side of spooler or by taking casing off
-
-\paragraph*{Modifying Firmware\label{sec:methodology:extrudingPLCL:felfilSystem:felfilSpooler:modifyingFirmware}}
-% a. I looked through the firmware and found where the live diameter reading was stored
-% b. Started by printing to serial monitor
-% c. Created python script to store readings in a csv for easy logging and graphical analysis
-
-\subsubsection{Felfil Shredder\label{sec:methodology:extrudingPLCL:felfilSystem:felfilShredder}}
-% a. Started by shredding multiple times until regrind size looked uniform
-% b. Downloaded sieve from Felfil to control for size and make sure everything is ~5mm x 5mm
-% c. Discovered that medium-thick filament shreds best
-
-\subsection{Purging Extruder\label{sec:methodology:extrudingPLCL:purgingExtruder}}
+\subsection{Purging 3Devo Extruder\label{sec:methodology:extrudingPLCL:purgingExtruder}}
 % iii.	Purging Compounds
 % 1.	Found initial supplier of 3Devo DevoClean Mid-Temp
 % 2.	Worked with supplier (Dyna-Purge) to find ideal purging material
@@ -382,3 +285,110 @@ Based on contamination following DP-L purges (see Section ~\ref{sec:discussion:e
 This material required HDPE to transition between PLA/PCL and DP-D2. Extrusion labs across The Ohio State University were contacted regarding extra HDPE that could be used. No labs were able to provide HDPE so $5lbs$ of HDPE pellets were ordered from McMaster-Carr~\cite{RefWorks:RefID:494-moistureresistant}.
 
 The DP-D2 was used in purging identically to DP-L following Dyna-Purge's recommendations. Discussion of the DP-D2 purge testing can be found in Section~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpD2Purge}.
+
+\subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
+
+Based on the thin filament output by the 3Devo Filament Maker One when extruding a PLA/PCL blend (see ~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}), the Felfil Evo was tested for PLCL extrusions.
+
+The Felfil Evo had been used initially for powder-based PLCL extrusions, but research was paused due to unsuccessful results (see ~\ref{sec:introduction:priorWork:otherTeamWork:plclExtrusions}). Since the 3Devo Filament Maker One, a more robust extruder, also was unsuccessful extruding powders, it was hypothesized that powder-based extrusions for any extruder may be challenging and the Felfil Evo may be more effective with pellet-based extrusions.
+
+\subsubsection{Felfil Evo Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}}
+
+\paragraph*{Initial Repairs}
+
+To begin testing the Felfil Evo, all remaining PLCL powder from prior research was cleaned using wipes and a vaccuum. The plastic hopper could not be fully cleaned, however, so a new hopper was 3D printed as a replacement. In an effort to save time, only the screws holding the hopper in place were removed rather than disassembling the entire hopper.
+
+This overly simplistic disassembly led to a screw not being properly tightened and the barrel of the extruder was improperly secured to the hopper. When testing the extruder following this hopper replacement, the barrel, which should remain stationary, began rotating which led to a gap between the barrel and hopper. This gap is shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialGap}.
+
+This gap allowed material to fall when traveling from the hopper to the barrel and also negatively impacted the overall insulation of the extruder.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/barrel_gap.png}
+        \caption{Proper distance between hopper and barrel (A) vs Gap between hopper and barrel (B).}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialGap}
+\end{figure}
+
+To properly fix this gap, the extruder was fully disassembled, cleaned, and reassembled. After this, a test extrusion was performed, and it was noticed that material was seeping out the nozzle/barrel interface as shown in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:brokenORing}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/broken_o_ring.png}
+        \caption{Material seeping from nozzle/barrel interface following full extruder disassembly.}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:brokenORing}
+\end{figure}
+
+\paragraph*{Initial PLA Testing}
+
+Once the extruder was fully reassembled, it was tested using PLA pellets as this is an initial test extrusion 3Devo recommends~\cite{RefWorks:RefID:396-3devotroubleshooting}.
+
+This extrusion yielded good-quality PLA filament as shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLAFilament}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/initial_PLA_test.png}
+        \caption{Initial PLA pellet test with Felfil Evo. Test setup (A) and unspooled output (B).}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLAFilament}
+\end{figure}
+
+\subsubsection{Felfil Evo PLCL Extrusion\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}}
+
+Following the successful PLA pellet-based extrusion on the Felfil Evo (see Section~\ref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}), a PLA/PCL extrusion was attempted using the same methodology as the 3Devo PLA/PCL extrusions (see Section~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}).
+
+The Felfil Evo has one heat zone which was initially set at 170\textcelsius ~and was raised to 170\textcelsius. The screw RPM was set to 4.
+
+Results and discussion of this PLCL extrusion can be found in \fullref{sec:results:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL} respectively.
+
+\subsubsection{Felfil Evo Hopper Improvements\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements}}
+
+\paragraph*{Silicone Coating\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:siliconeCoating}}
+% a. Looked into silicone with adhesive backing to block the heat (like what's used in Rasbperry Pi)
+% b. Talked with Chris in electronics lab to see if he's run across that ever
+% c. Initial google search on available materials
+
+\paragraph*{3D Printed Hopper Insert\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:3dPrintedHopperInsert}}
+% a. Created a 3D printed insert to block the heat transfer
+% b. Modeled it in SolidWorks after using the existing CAD files to create an assembly of the hopper
+% c. Took 5 versions to properly account for the screw (couldn't measure by hand without fully disassembling machine)
+% d. Added thickness and slope to address thin insert still getting hot
+% i. Add distance between wall and raw materials
+
+\subsubsection{Logging Filament Thickness\label{sec:methodology:extrudingPLCL:felfilSystem:filamentThickness}}
+
+\paragraph*{Need to Log Thickness}
+% a. Realized I needed to log thickness data to analyze it like DevoVision does
+
+Following the initial PLCL extrusions on the Felfil system (see ~\fullref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}), it was determined that a system for quantitatively monitoring filament thickness was necessary to properly compare this system to the 3Devo Filament Maker One.
+
+\paragraph*{Accessing Firmware}
+% a. Felfil is open source and run on an Arduino Nano
+% b. I was able to access the current firmware (V1.8) and modify it
+% c. USB-MiniB port is accessible through side of spooler or by taking casing off
+The Felfil system is open source and the Spooler+ runs on an Arduino Nano. Thus, it was possible to access the source code and make modifications to the firmware. The version 1.8 source code was downloaded from Felfil's online repository~\cite{RefWorks:RefID:495}.
+
+\paragraph*{Modifying Firmware}
+% a. I looked through the firmware and found where the live diameter reading was stored
+% b. Started by printing to serial monitor
+% c. Created python script to store readings in a csv for easy logging and graphical analysis
+
+The Arduino-based code was read through, and it was noted where filament thickness was calculated and output to the LCD screen.
+
+Initially, the serial monitor was utilized to output filament thickness to the screen. This was more helpful than the initial LCD output as a live list of filament thicknesses could be recorded. However, the Arduino serial monitor does not inherently support large copy/paste, making it difficult to record and analyze the filament thickness across an extended period of time.
+
+\paragraph*{Filament Thickness GUI}
+
+Due to the limitations of the Arduino serial monitor, a python script was developed to export and visually track the filament thickness similarly to DevoVision.
+
+Claude.ai was used to refine this code. A live visual of the filament thickness GUI is shown below in Figure~\ref{fig:methodology:extrudingPLCL:felfilFilamentThicknessGUI}. The final code is included in ~\fullref{chap:appendix:felfilGUICode}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/felfil_filament_thickness_gui.png}
+        \caption{Filament thickness GUI. Created with assistance from Claude.ai.}
+        \label{fig:methodology:extrudingPLCL:felfilFilamentThicknessGUI}
+\end{figure}
+
+\subsubsection{Felfil Shredder\label{sec:methodology:extrudingPLCL:felfilSystem:felfilShredder}}
+% a. Started by shredding multiple times until regrind size looked uniform
+% b. Downloaded sieve from Felfil to control for size and make sure everything is ~5mm x 5mm
+% c. Discovered that medium-thick filament shreds best
