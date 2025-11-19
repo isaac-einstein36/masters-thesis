@@ -66,4 +66,81 @@ Results and discussion of this imaging study can be found in~\fullref{sec:result
 
 \subsection{Tensile Testing\label{sec:methodology:effectsOfBaSO4:tensileTesting}}
 
+Tensile testing was performed with the PLA/BaSO\textsubscript{4} samples to determine how concentrations of barium sulfate impact the yield strength and elastic modulus of a material. These properties indicate the extent of plastic deformation a material can withstand and will help determine the maximum allowable amount of barium sulfate in the implant based on how it impacts material properties.
+
+All tensile testing was performed on an Instron 5859 Universal Testing System at the Center for Design and Manufacturing Excellence (CDME) at The Ohio State University.
+
+\subsubsection{Sample Preparation\label{sec:methodology:effectsOfBaSO4:tensileTesting:samplePrep}}
+
+Following ASTM D638 testing standard for tensile testing, there are five test specimen geometries that can be used. Type I is the recommended specimen, but Type V is recommended when material is limited. This is explored further in~\fullref{sec:literatureReview:testing:specimens}.
+
+Due to limited 3D printable filament and the time involved in extruding more PLA/BaSO\textsubscript{4} filament samples, Type V test specimen were initially 3D printed to preserve material. A 100\% infill density was used to most closely match the material properties of the raw material (see~\fullref{sec:literatureReview:printing:optimalParameters:infillDensity}).
+
+Once 3D printed, samples were measured following ASTM D638 test standard and marked for testing. An example of the marked samples are shown below in Figure~\ref{fig:methodology:effectsofBaSO4:tensileTest:samplePrep}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/mechanicalTesting/tensileTesting/tensile_test_marked_samples.png}
+        \caption{Marked samples in preparation of tensile testing.}
+        \label{fig:methodology:effectsofBaSO4:tensileTest:samplePrep}
+\end{figure}
+
+Cross-sectional area was calculated based on the average measured width and thickness of the rectangular gage length of the test specimen. For both width and thickness, the average of three measurements was recorded. The cross-sectional area of the test specimen is illustrated below in Figure~\ref{methodology:effectsofBaSO4:tensileTest:crossSectionalArea}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/mechanicalTesting/tensileTesting/cross_sectional_area.png}
+        \caption{Cross sectional area of test specimen~\cite{RefWorks:RefID:370-einsteinisaac}.}
+        \label{methodology:effectsofBaSO4:tensileTest:crossSectionalArea}
+\end{figure}
+
+\subsubsection{Performing Tensile Tests\label{sec:methodology:effectsOfBaSO4:tensileTesting:performingTest}}
+
+After measurements were recorded, samples were loaded into an Instron 5859 Universal Testing System as shown in Figure~\ref{fig:methodology:effectsofBaSO4:tensileTest:loadingSamples}. A pre-build ASTM D638 tensile test method was utilized to perform the test. Results were calculated automatically through the Instron software and recorded locally.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/mechanicalTesting/tensileTesting/loaded_sample.png}
+        \caption{Sample loaded into Instron for tensile testing.}
+        \label{fig:methodology:effectsofBaSO4:tensileTest:loadingSamples}
+\end{figure}
+
+\subsubsection{Tensile Test Calculations\label{sec:methodology:effectsOfBaSO4:tensileTesting:calculations}}
+
+\paragraph*{Tensile Strength at Yield}
+
+The yield strength is calculated by dividing the maximum load sustained by the specimen by the initial cross-sectional area as shown in Equation~\eqref{eq:tensileStrength}~\cite{RefWorks:RefID:4-test}. $\sigma_y$ is the yield strength in $MPa$, $F_{max}$ is the maximum applied force, and $A_C$ is the original cross-sectional area of the test specimen.
+
+\begin{equation}
+        \sigma_y (MPa) = F_{max} / A_C
+        \label{eq:tensileStrength}
+\end{equation}
+
+\paragraph*{Elastic Modulus}
+
+The elastic modulus is calculated by taking the slope of the linear portion of the stress vs strain curve. This curve is calculated automatically through Instron software.
+
+Results and discussion of the Type V tensile testing can be found in~\fullref{sec:results:effectsOfBaSO4:tensileTesting:typeV} and~\fullref{sec:discussion:effectsOfBaSO4:tensileTesting:typeV} respectively.
+
+\subsubsection{Type IV Specimen Testing\label{sec:methodology:effectsOfBaSO4:tensileTesting:typeIVSpecimens}}
+
+Due to the unexpected results of the Type V specimen testing and the inability to calculate elastic modulus, Type IV test specimens were 3D printed. The procedure was identical to the testing using Type V test specimens. This time, however, a strain gauge was attached during the tensile test to record strain and create a stress vs strain curve.
+
+Because Type IV specimens are more regularly used than Type V specimens, a template existed to easily mark and measure the dimensions of the test specimen. The sample preparation and test setup are shown below in Figure~\ref{fig:methodology:effectsOfBaSO4:tensileTesting:typeIV}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/mechanicalTesting/tensileTesting/type_iv_tensile_testing.png}
+        \caption{Running a tensile test with Type IV specimens. Sample preparation (A) and test setup (B).}
+        \label{fig:methodology:effectsOfBaSO4:tensileTesting:typeIV}
+\end{figure}
+
+Results and discussion of the Type IV tensile testing can be found in~\fullref{sec:results:effectsOfBaSO4:tensileTesting:typeIV} and~\fullref{sec:discussion:effectsOfBaSO4:tensileTesting:typeIV} respectively.
+
 \subsection{Flexural Testing\label{sec:methodology:effectsOfBaSO4:flexuralTesting}}
+
+Flexural testing was performed to measure the flexural modulus of each PLA/BaSO\textsubscript{4} filament. The flexural modulus shows how a material bends or deflects under a load. It was found that barium sulfate can increase the stiffness of a material. Flexural testing was performed to verify and determine the maximum amount of barium sulfate that can be incorporated without making the implant too stiff for use.
+
+\subsubsection{Sample Preparation\label{sec:methodology:effectsOfBaSO4:flexuralTesting:samplePrep}}
+
+Samples were prepared following ASTM D790
