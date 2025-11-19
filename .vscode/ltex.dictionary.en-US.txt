@@ -24,3 +24,6 @@ Dyna-Purge
 DevoClean
 Felfil
 Evo
+Bambu
+hotend
+allen

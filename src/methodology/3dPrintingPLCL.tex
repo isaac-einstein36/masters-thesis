@@ -1,3 +1,31 @@
 \section{3D Printing PLCL\label{sec:methodology:3dPrintingPLCL}}
 
+All 3D printing was performed on a Bambu P1S.
 
+\subsection{3D Printing Lattice PLCL\label{sec:methodology:3dPrintingPLCL:latticePLCL}}
+
+To begin testing 3D printability of PLCL filament, externally sourced Lattice Medical PLCL filament was used~\cite{RefWorks:RefID:204-70}. This is a commercially produced filament which could therefore act as a benchmark and starting point for testing the printability of custom PLCL filament.
+
+Based on printing parameters provided by Lattice Medical, adjustments were made in Bambu Studio to the initial generic PLA filament presets. Once filament was being printed, Flow Dynamics and Flow Rate calibrations were run through Bambu Studio.
+
+Result and discussion of the parameter refinement can be found in~\fullref{sec:results:3dPrintingPLCL:latticePLCL} and ~\fullref{sec:discussion:3dPrintingPLCL:latticePLCL} respectively.
+
+\subsection{3D Printing Custom-Made PLCL\label{sec:methodology:3dPrintingPLCL:customPLCL}}
+
+To begin printing the Felfil Evo custom-made PLCL filament, the Lattice PLCL printing parameters were initially used. These parameters led to clogging in the 3D printer hotend and minimal material being extruded from the nozzle.
+
+To address this clogging, the temperature was raised from 220\textcelsius ~to 235\textcelsius. The goal of this change was that increasing the temperature should melt more material and thereby prevent clogs from forming.
+
+This still led to clogging in the printer hotend. As a result, a $0.6mm$ cold-hardened nozzle was ordered to replace the $0.4mm$ stainless steel hotend assembly. The larger and stronger nozzle may be more robust against variability in filament thickness.
+
+The clogging persisted with the new nozzle which required other factors such as the filament thickness tolerance to be addressed.
+
+Discussion of this printing process can be found in Section~\ref{sec:discussion:3dPrintingPLCL:customPLCL}.
+
+\subsection{Hotend Clog Cleaning Procedure\label{sec:methodology:3dPrintingPLCL:clogProcedure}}
+
+Due to the repetitive clogging caused by the custom-made PLCL filament, a clog cleaning procedure was developed. While Bambu recommends initial actions to resolve a clog, these suggestions were ineffective when trying to remove PLCL filament from the hotend.
+
+As a result, clogs often required full nozzle/hotend disassembly. The disassembled nozzle was then heated in an air fryer to soften the stuck material enough to push it out of the nozzle or hotend using an allen wrench.
+
+It was also found that unloading PLCL filament immediately after a 3D printing attempt often prevented clogs. This action removed the PLCL filament before it could cool and harden inside the hotend.

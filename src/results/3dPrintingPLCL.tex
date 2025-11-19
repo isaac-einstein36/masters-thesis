@@ -1,0 +1,39 @@
+\section{3D Printing PLCL Results\label{sec:results:3dPrintingPLCL}}
+
+\subsection{3D Printing Lattice PLCL\label{sec:results:3dPrintingPLCL:latticePLCL}}
+
+Most parameters were unchanged from generic PLA to successfully 3D print Lattice Medical PLCL filament. The printing parameters that were adjusted are outlined in Table~\ref{tab:results:3dPrintingPLCL:latticeParameters}.
+
+\begin{table}[h!]
+        \centering
+        \caption{Adjusted printing parameters for Lattice Medical PLCL filament.}
+        \label{tab:results:3dPrintingPLCL:latticeParameters}
+        \begin{adjustbox}{max width=\textwidth}
+                \begin{tabular}{c c c | c c c c c c c c | c c | c}
+                        \hline
+                        \multicolumn{3}{c|}{\textbf{Material Specs}}         &
+                        \multicolumn{8}{c|}{\textbf{Speed (mm/s)}}           &
+                        \multicolumn{2}{c|}{\textbf{Print Temperature (°C)}} &
+                        \textbf{Volumetric Speed Limitation}                                                                             \\
+                        \hline
+                        Base Material                                        & Vendor/Extruder           & Initial Preset &
+                        Initial Layer                                        & Initial Layer Infill      & Outer Wall     & Inner Wall &
+                        Sparse Infill                                        & Internal Solid Infill     &
+                        Textured PEI Initial Layer                           & Textured PEI Other Layers &
+                        Nozzle Initial Layer                                 & Nozzle Other Layers       &
+                        Max Vol. Speed (mm$^3$/s)                                                                                        \\
+                        \hline
+                        PLCL                                                 & Lattice                   & PLA            &
+                        35                                                   & 55                        & 50             & 60         &
+                        50                                                   & 60                        &
+                        55                                                   & 55                        &
+                        220                                                  & 220                       &
+                        12                                                                                                               \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+\end{table}
+
+When running the Flow Dynamics calibration in Bambu Studio, a K factor of 0.040 was selected.
+
+Discussion of this optimization can be found in ~\fullref{sec:discussion:3dPrintingPLCL:latticePLCL}.
