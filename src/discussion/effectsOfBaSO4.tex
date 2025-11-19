@@ -1,7 +1,41 @@
 \section{Evaluating Effects of Barium Sulfate Discussion\label{sec:discussion:effectsOfBaSO4}}
 
 \subsection{Imaging Study Discussion\label{sec:discussion:effectsOfBaSO4:imagingStudy}}
-\hl{STOPPED HERE!}
+
+\paragraph*{Successful Incorporation of Barium Sulfate}
+
+The imaging study illustrated that barium sulfate was successfully incorporated into the PLA filament. As the barium sulfate concentration increased from 0\% to 10\%, the Hounsfield Units (HU) steadily increased as well. This proves that the barium sulfate was properly mixed into the composite filament. Thus, this is a usable methodology of extruding and printing barium sulfate with a raw material.
+
+Based on the growing radiopacity of each sample and comparison to Bonlecule filament, this imaging study illustrated that the established filament creation methodology results in similarly incorporated material as a commercially available filament.
+
+\paragraph*{Radiopacity of Bonlecule Filament}
+
+Based on the imaging study results, the bonlecule filament had a radiopacity between that of 0\% and 2.5\% barium sulfate. Interpolating the results and assuming radiopacity is roughly linearly proportional to percentage of barium sulfate, Equation~\eqref{eq:interpolatingBaSO4Results} can be used to estimate how much barium sulfate concentration the bonlecule filament compares to.
+
+\begin{equation}
+        BaSO_4(estimated\%) = \frac{HU_{Bonlecule}}{HU_{2.5\%} - HU_{0\%}} * (2.5\% - 0\%)
+        \label{eq:interpolatingBaSO4Results}
+\end{equation}
+
+Using Equation~\eqref{eq:interpolatingBaSO4Results} and the results of the imaging study, it is estimated that the Bonlecule filament would measure similarly to a 0.513\% concentration of barium sulfate.
+
+This metric is helpful to know as the optimal concentration of barium sulfate is determined. If more than 0.513\% barium sulfate is required for radiological imaging needs, then the Bonlecule filament cannot be utilized for further testing and development. However, if 0.513\% or roughly 133HU is adequate from an imaging perspective, then this filament can be utilized in lieu of extruding a custom filament.
+
+Mechanical testing was also performed to evaluate how the Bonlecule filament compares to barium sulfate-infused PLA filament.
+
+\paragraph*{Required Amount of Barium Sulfate}
+
+According to radiation oncology staff at OSUCCC, an HU difference of roughly 300 is recommended for ideal contrast between the implanted device and the surrounding tissue. According to OSUCCC, breast tissue has an HU of roughly -100, but a seroma formation has the density of water (0 HU). Thus, a 300HU contrast would require an implant exhibiting 200 to 300 HU.
+
+Based on the results of this imaging study, the Bonlecule filament at 130 HU may be too low, while the 2.5\% barium sulfate filament at 685 HU may be too high and provide excessive contrast. Thus, future testing should be conducted using concentrations between 0\% and 2.5\% barium sulfate. Additionally, however, a thinner sample will lower the apparent HU value, according to OSUCCC staff, so testing should also be conducted with samples that are closer to the projected thickness of the final implant.
+
+\paragraph*{Key Takeaways}
+
+The imaging study illustrated that barium sulfate was successfully incorporated into the PLA filament. Also, as the concentration of barium sulfate increased, the relative HU value of the samples increased as well.
+
+The Bonlecule filament exhibited an HU value between 0\% and 2.5\% barium sulfate samples.
+
+Additionally, based on these HU values, a concentration of barium sulfate between 0\% and 2.5\% should be used to provide adequate contrast between the implant and surrounding tissue. This may need to be adjusted, however, for thinner imaging samples.
 
 \subsection{Tensile Testing Discussion\label{sec:discussion:effectsOfBaSO4:tensileTesting}}
 
