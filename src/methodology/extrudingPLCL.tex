@@ -362,30 +362,31 @@ Based on the concerns addressed by subject-matter experts and the potential lead
 
 \paragraph*{3D Printed Hopper Insert\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoHopperImprovements:3dPrintedHopperInsert}}
 
-\hl{STOPPED HERE!}
-% a. Created a 3D printed insert to block the heat transfer
-% b. Modeled it in SolidWorks after using the existing CAD files to create an assembly of the hopper
-% c. Took 5 versions to properly account for the screw (couldn't measure by hand without fully disassembling machine)
-% d. Added thickness and slope to address thin insert still getting hot
-% i. Add distance between wall and raw materials
+To quickly develop a method of insulating the metal hopper wall from the extruding material, a 3D printed spacer was designed.
+
+To model the component, an assembly of the hopper was created in SolidWorks using CAD files provided by Felfil. A custom shape was created to press-fit along the walls of the hopper. A thin piece was 3D printed to ensure proper tolerances.
+
+Once it was confirmed that the geometry of the component fits within the available space, a thicker piece was designed to increase distance between the metal wall and extruder material.
+
+While the 3D printed component fit well alongside the hopper, as material was extruded it began pushing against this piece and disloging it from the wall. This led to material clumping between the newly formed wall and insulator gap. To address this, a magnet was embedded in the insulator piece to strongly secure it to the metal wall and prevent material from traveling in between. The development of the hopper insulator is shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:hopperInsulator}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/hopper_insulator.png}
+        \caption{Felfil Evo hopper without insulation (A) and with insulator pieces (B).}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:hopperInsulator}
+\end{figure}
 
 \subsubsection{Logging Filament Thickness\label{sec:methodology:extrudingPLCL:felfilSystem:filamentThickness}}
 
 \paragraph*{Need to Log Thickness}
-% a. Realized I needed to log thickness data to analyze it like DevoVision does
 
 Following the initial PLCL extrusions on the Felfil system (see ~\fullref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}), it was determined that a system for quantitatively monitoring filament thickness was necessary to properly compare this system to the 3Devo Filament Maker One.
 
 \paragraph*{Accessing Firmware}
-% a. Felfil is open source and run on an Arduino Nano
-% b. I was able to access the current firmware (V1.8) and modify it
-% c. USB-MiniB port is accessible through side of spooler or by taking casing off
 The Felfil system is open source and the Spooler+ runs on an Arduino Nano. Thus, it was possible to access the source code and make modifications to the firmware. The version 1.8 source code was downloaded from Felfil's online repository~\cite{RefWorks:RefID:495}.
 
 \paragraph*{Modifying Firmware}
-% a. I looked through the firmware and found where the live diameter reading was stored
-% b. Started by printing to serial monitor
-% c. Created python script to store readings in a csv for easy logging and graphical analysis
 
 The Arduino-based code was read through, and it was noted where filament thickness was calculated and output to the LCD screen.
 
@@ -395,7 +396,7 @@ Initially, the serial monitor was utilized to output filament thickness to the s
 
 Due to the limitations of the Arduino serial monitor, a python script was developed to export and visually track the filament thickness similarly to DevoVision.
 
-Claude.ai was used to refine this code. A live visual of the filament thickness GUI is shown below in Figure~\ref{fig:methodology:extrudingPLCL:felfilFilamentThicknessGUI}. The final code is included in ~\fullref{chap:appendix:felfilGUICode}.
+Claude.ai was used to refine this code. A live visual of the filament thickness GUI is shown below in Figure~\ref{fig:methodology:extrudingPLCL:felfilFilamentThicknessGUI}. The final code is included in~\fullref{chap:appendix:felfilGUICode}.
 
 \begin{figure}[h!]
         \centering
@@ -409,7 +410,34 @@ Claude.ai was used to refine this code. A live visual of the filament thickness 
 % b. Downloaded sieve from Felfil to control for size and make sure everything is ~5mm x 5mm
 % c. Discovered that medium-thick filament shreds best
 
+A Felfil Shredder was used to shred existing prints and filament to create regrind for second-pass PLCL extrusions. Initially, first-pass PLCL filament was cut and fed into the shredder. This was re-fed into the shredder multiple times to create semi-uniform sized pieces of regrind. Even after multiple passes, however, there were still thin strands that were too small to be collected by the shredder blades.
+
+The shredding process is shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:shreddingFilament}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/shredder_process.png}
+        \caption{Felfil Shredder process. Initial cut filament (A) and shredder output after four passes (B).}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:shreddingFilament}
+\end{figure}
+
+It was found that shredding thicker pieces (roughly $2.85mm$) yielded similar shredding results after two passes rather than four.
+
+\paragraph*{Filtering Regrind By Size}
+
+A sieve designed by Felfil was downloaded from their online CAD file repository~\cite{RefWorks:RefID:495}. This was designed to sit on top of the shredder output drawer and filter materials that were small enough to be re-extruded (roughly $5mm$ by $5mm$). This sieve was found to be difficult to use as thin long strands could still pass between the openings. A picture of the sieve is shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:shredderSieve}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.5\linewidth]{../figs/methodology/plclExtrusions/pelletExtrusions/felfilEvo/shredder_sieve.png}
+        \caption{3D printed Felfil Shredder sieve.}
+        \label{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:shredderSieve}
+\end{figure}
+
 \subsubsection{PLCL Extrusions with System Modifications\label{sec:methodology:extrudingPLCL:felfilSystem:extrusionsAfterModifications}}
-% Performed 1st and 2nd pass extrusions with the filament thickness monitoring and hopper insulation
-% Manually adjusted RPM, fan speed, and heat (see extrusion summary excel sheet)
-% Hopper insulator helped with clumping (10/22 #5 extrusion, didn't have to stir pellets or remove clumps at all)
+
+Following the above adjustments (hopper insulation, filament thickness tracking, and shredding testing), multiple PLA/PCL pellet extrusions were performed on the Felfil system.
+
+The extrusion temperature was adjusted between 160 and 170\textcelsius, and the RPM was adjusted between 4 and 8RPM. The spooler parameters were also manually adjusted to assess their impact, but were then left on the "Soft Mode" presets.
+
+Results and discussion of these first and second-pass extrusions can be found in~\fullref{sec:results:extrudingPLCL:pelletExtrusions:felfilEvo:modifiedSystem} and~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:modifiedSystem} respectively.

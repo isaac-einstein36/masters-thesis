@@ -158,3 +158,49 @@ The filament thickness when spooling on the Felfil system cannot inherently be l
 Qualitatively and by monitoring the LCD output, the filament thickness appeared to be variable but stay close to the targeted 1.75mm thickness.
 
 Discussion of these results can be found in ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:initialPLCL}.
+
+\subsubsection{PLCL Extrusions with System Modifications Results\label{sec:results:extrudingPLCL:pelletExtrusions:felfilEvo:modifiedSystem}}
+
+\paragraph*{First-Pass PLCL Extrusions}
+
+Results of sequential first-pass extrusions are summarized below in Table~\ref{tab:results:extrudingPLCL:pelletExtrusions:felfil:firstPassSummary}
+
+\begin{table}[h!]
+        \centering
+        \caption{Summarized results of first-pass PLCL extrusions on Felfil Evo}
+        \label{tab:results:extrudingPLCL:pelletExtrusions:felfil:firstPassSummary}
+        \begin{adjustbox} {max width=\linewidth}
+                \begin{tabular}{c c c c c p{5cm}}
+                        \hline
+                        Extrusion Number & Temperature\textcelsius & RPM & Average Filament Thickness (mm) & Hopper Version                & Hopper Notes                                 \\
+                        \hline
+                        1                & 165                     & 6   & 1.807                           & Single insulator, no magnet   & Some clumping, hopper moved away from wall   \\
+                        2                & 165                     & 6   & 1.772                           & Single insulator, with magnet & Less clumping, hopper remained fixed to wall \\
+                        3                & 160                     & 8   & 1.7502                          & Dual insulator, with magnet   & No clumping, hopper remained fixed to wall   \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+\end{table}
+
+Filament thickness readings of each first-pass extrusion are shown below in Figure~\ref{fig:results:extrudingPLCL:felfilEvo:modifiedFirstPassThickness}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/results/plclExtrusions/pelletExtrusions/felfilEvo/modified_system_first_pass_thickness.png}
+        \caption{Filament thickness measurements of first-pass extrusions. Extrusion numbers correspond to Table~\ref{tab:results:extrudingPLCL:pelletExtrusions:felfil:firstPassSummary}.}
+        \label{fig:results:extrudingPLCL:felfilEvo:modifiedFirstPassThickness}
+\end{figure}
+
+\paragraph*{Second-Pass PLCL Extrusion}
+
+A second-pass PLCL extrusion was performed using shredded first-pass PLCL. This extrusion was run at 165\textcelsius ~and 6-9RPM. The overall average thickness of this extrusion was $1.461mm$. The thickness measurements of the extrusion are shown below in Figure~\ref{fig:results:extrudingPLCL:felfilEvo:modifiedSecondPassThickness}
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../figs/results/plclExtrusions/pelletExtrusions/felfilEvo/modified_system_second_pass_thickness.png}
+        \caption{Filament thickness of second-pass PLCL extrusion.}
+        \label{fig:results:extrudingPLCL:felfilEvo:modifiedSecondPassThickness}
+\end{figure}
+
+
+Discussion of these results can be found in~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:felfilEvo:modifiedSystem}
