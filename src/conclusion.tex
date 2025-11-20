@@ -1,11 +1,89 @@
 \chapter{Conclusion\label{chap:conclusion}}
 
-\if@ms
-In this chapter, we summarize the status of the work presented in this proposal, and outline future plans~\cite{template}.
-\else
-In this chapter, we summarize the status of the work presented in this dissertation, and outline future plans.
-\fi
+\section{Review of Research Problem}
 
-\section{Summary\label{sec:conclusion:summary}}
+The goal of this research was to help progress the development of a biodegradable continuously radiopaque implant to improve tumor cavity marking for radiation therapy treatment planning following a lumpectomy procedure.
 
-\section{Contributions\label{sec:conclusion:contributions}}
+A lumpectomy procedure is often followed by radiation therapy to the tumor bed to kill any stray cancer cells and prevent cancer recurrence. Once the tumor is removed, however, it is more difficult to accurately mark the area that contained cancerous cells.
+
+Current methods for marking the tumor bed include seroma identification, fiducial markers, or other implants. These methods, however, all have various shortcomings which establishes the need for a biodegradable continuously radiopaque implant.
+
+Prior team research identified Poly(L-lactide-co-$\epsilon$-caprolactone)(PLCL) as a suitable biodegradable base material and barium sulfate as a suitable radiopaque agent. This thesis aimed to refine the manufacturing process of PLCL to create a 3D printable filament for future implant design research.
+
+\section{Summary of Key Findings}
+
+\paragraph*{Extruding PLCL}
+
+It was found that performing solely powder-based extrusions result in substantial challenges and inefficiencies from a processing perspective and often lead to an overly brittle filament.
+
+PLCL was extruded using a pellet-based blend of its co-polymers (PLA and PCL). NMR testing was performed to verify the percent composition of the PLA/PCL blend.
+
+An automatic pellet dispenser was developed and refined to control the release of material into the extruder and prevent premature melting of material. The use of this pellet dispenser made PLCL extrusion possible, although filament thickness was outside of necessary tolerances for 3D printing. PLCL filament was extruded on a Felfil Evo system with an average thickness of 1.75mm, although the variability of thickness caused clogging when 3D printing.
+
+Shredding and re-extruding first-pass PLCL filament was also explored as a method of controlling output filament thickness. It was determined that the shredding process needed to be refined further to allow for consistent extrusion flow of reground filament.
+
+\paragraph*{Incorporation of Barium Sulfate}
+
+Barium sulfate was successfully incorporated into PLA to create composite filaments of 0 to 10\% barium sulfate. These materials were tested to evaluate the effects of barium sulfate on material properties.
+
+Tensile testing indicated an unclear relationship between barium sulfate concentration and yield strength and elastic modulus.
+
+Flexural testing indicated a direct relationship between barium sulfate concentration and flexural modulus.
+
+Imaging testing was also performed to evaluate the effects of barium sulfate on radiopacity. It was found that 2.5\% barium sulfate concentration likely provides adequate contrast between this implant and surrounding tissue for radiation therapy planning. Additionally, increasing the concentration of barium sulfate in an extruded filament directly relates to a higher radiopacity of 3D printed material.
+
+\paragraph*{Purging Extruder}
+
+Multiple purging compounds were evaluated to clean an extruder following PLA/PCL extrusions. An optimal purging compound, Dyna-Purge K, was chosen based on its cleaning abilities, and minimal required time and materials for purging.
+
+\section{Contributions}
+
+\paragraph*{Extrusion Process}
+
+A gap in the knowledge base exists regarding creating PLCL filament for 3D printing. This research provides a successful methodology for extruding PLCL filament on a single screw tabletop extruder. Filament thickness, however, still needs to be further refined.
+
+\paragraph*{Automatic Pellet Dispenser}
+
+A novel automatic pellet dispensing system was developed to assist with automatically feeding an extruder. This system improves on existing manual approaches of feeding material into the extruder in a controlled manner, such as if the material is prone to melting prematurely.
+
+\section{Limitations}
+
+\paragraph*{Tensile Testing}
+
+The tensile testing performed yielded an insignificant relationship between barium sulfate concentration and yield strength and elastic modulus. This disagrees with existing literature which claims barium sulfate concentration and yield strength are inversely related.
+
+It is possible that a limited number of samples contributed to these inconclusive findings.
+
+\paragraph*{Shredding Filament}
+
+The research team had access to a Felfil Shredder, a small-scale tabletop shredder. With this equipment, the team was unable to create uniformly sized regrind for re-extrusion. It is possible that with more robust equipment, this regrind could be made more uniformly which may impact the extrudability of reground filament.
+
+\paragraph*{NMR Testing}
+
+NMR testing was performed to characterize the percent composition of a PLA/PCL blend. One test was performed using a single piece of reground PLCL filament. Thus, these results may not be indicative of the entire output filament and additional tests should be run across the full length of filament to determine the average percent composition.
+
+\section{Future Work}
+
+\paragraph*{Extruding PLCL}
+
+This research made significant progress in the extrusion process of PLCL. However, the filament thickness is still too variable for reliable 3D printing. Thus, the filament thickness needs to be further refined. Methods for this include using shredded first-pass PLCL filament or optimizing the extruding parameters of first-pass PLCL filament.
+
+\paragraph*{Creating Regrind}
+
+Regrind, or shredded filament, was created using a Felfil Shredder. Given the increased functionality of the equipment, it may be helpful to partner with the Center for Design and Manufacturing Excellence (CDME) to utilize their large-scale shredding equipment.
+
+\paragraph*{Incorporating Barium Sulfate}
+
+Barium sulfate was successfully incorporated into PLA via extrusion. The long-term goal of this research is to incorporate barium sulfate with PLCL. This will likely require the further optimization of extruding PLCL before barium sulfate can be added. However, a methodology for incorporating barium sulfate in a base material through extrusion has been established.
+
+\paragraph*{Customer Discovery}
+
+Multiple surgical oncologists have been observed and interviewed to gather insights into design requirements for this implantable device. Interviews with radiation oncologists were unable to be arranged, but discussing the imaging capabilities of the device with radiation oncologists will provide a necessary perspective as these stakeholders will use the device for radiation therapy treatment planning. In the future, radiation oncologists should be observed and/or interviewed to better understand the imaging perspectives needed for development of this device.
+
+\section{Final Remarks}
+
+Refining the extrusion process of PLCL can make the development of new 3D printed PLCL-based devices possible and attainable for small-scale research.
+
+This research also helps progress the development of a biodegradable continuously radiopaque 3D printable filament which can be useful in any treatment process where precise radiation treatment planning is required.
+
+Lastly, with more accurate radiation delivery to a tumor bed following a lumpectomy procedure, breast cancer recurrence rates can be substantially decreased.
