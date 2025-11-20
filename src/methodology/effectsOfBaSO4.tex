@@ -141,6 +141,59 @@ Results and discussion of the Type IV tensile testing can be found in~\fullref{s
 
 Flexural testing was performed to measure the flexural modulus of each PLA/BaSO\textsubscript{4} filament. The flexural modulus shows how a material bends or deflects under a load. It was found that barium sulfate can increase the stiffness of a material. Flexural testing was performed to verify and determine the maximum amount of barium sulfate that can be incorporated without making the implant too stiff for use.
 
+All flexural testing was performed using a Mark-10 Universal Test Machine at CDME.
+
 \subsubsection{Sample Preparation\label{sec:methodology:effectsOfBaSO4:flexuralTesting:samplePrep}}
 
-Samples were prepared following ASTM D790
+Samples were prepared following ASTM D790 test standard. Following this standard, rectangular test specimens $12.7mm$ wide, $3.2mm$ thick, and $127mm$ long were 3D printed.
+
+\subsubsection{Performing Flexural Test}
+
+First, measurements of test specimens were taken and recorded. The support span was calculated with a 16:1 support span-to-depth ratio.
+
+The rate of crosshead motion was calculated using Equation~\eqref{eq:flexuralCrossheadMotion}. R is the rate of motion ($mm/min$), L is the support span ($mm$), d is the depth of the beam ($mm$), and Z is the rate of straining of the outer fiber which is set equal to 0.01.
+
+\begin{equation}
+        R = \frac{ZL^2}{6d}
+        \label{eq:flexuralCrossheadMotion}
+\end{equation}
+
+Next, the maximum allowable midspan deflection was calculated using Equation~\eqref{eq:flexuralMaxDeflection}. D is the midspan deflection ($mm$), r is the strain which is set to 0.05$mm/mm$, L is the support span ($mm$), and d is the depth of the beam ($mm$).
+
+\begin{equation}
+        D = \frac{rL^2}{6d}
+        \label{flexuralMaxDeflection}
+\end{equation}
+
+Using these equations, Table~\ref{tab:methodology:effectsOfBaSO4:flexuralTesting:sampleMeasurements} summarizes the measurements and calculated values for all samples.
+
+\begin{table}[h!]
+        \centering
+        \caption{Measurements and calculated values for flexural testing.}
+        \label{tab:methodology:effectsOfBaSO4:flexuralTesting:sampleMeasurements}
+        \begin{adjustbox}{width=\textwidth}
+                \begin{tabular}{c l l c c c c c c}
+                        \hline
+                        \textbf{Test \#} & \textbf{Sample Group} & \textbf{Material} & \textbf{D (Avg)} & \textbf{W (Avg)} & \textbf{Full Length (Avg)} & \textbf{Support Span} & \textbf{Rate R} & \textbf{Deflection at 0.05 Strain} \\
+                        \hline
+                        1                & 0\% BaSO$_4$          & PLA               & 3.350            & 12.617           & 126.553                    & 53.600                & 1.429           & 7.147                              \\
+                        2                & 0\% BaSO$_4$          & PLA               & 3.347            & 12.647           & 126.627                    & 53.547                & 1.428           & 7.140                              \\
+                        3                & 0\% BaSO$_4$          & PLA               & 3.350            & 12.697           & 126.747                    & 53.600                & 1.429           & 7.147                              \\
+                        4                & 0\% BaSO$_4$          & PLA               & 3.347            & 12.690           & 126.667                    & 53.547                & 1.428           & 7.140                              \\
+                        5                & 0\% BaSO$_4$          & PLA               & 3.353            & 12.647           & 126.717                    & 53.653                & 1.431           & 7.154                              \\
+                        6                & 5\% BaSO$_4$          & PLA               & 3.417            & 12.647           & 126.627                    & 54.667                & 1.458           & 7.289                              \\
+                        7                & 5\% BaSO$_4$          & PLA               & 3.480            & 12.693           & 126.640                    & 55.680                & 1.485           & 7.424                              \\
+                        8                & 5\% BaSO$_4$          & PLA               & 3.477            & 12.707           & 126.740                    & 55.627                & 1.483           & 7.417                              \\
+                        9                & 5\% BaSO$_4$          & PLA               & 3.367            & 12.600           & 126.633                    & 53.867                & 1.436           & 7.182                              \\
+                        10               & 5\% BaSO$_4$          & PLA               & 3.363            & 12.627           & 126.660                    & 53.813                & 1.435           & 7.175                              \\
+                        11               & 10\% BaSO$_4$         & PLA               & 3.363            & 12.640           & 126.673                    & 53.813                & 1.435           & 7.175                              \\
+                        12               & 10\% BaSO$_4$         & PLA               & 3.363            & 12.643           & 126.713                    & 53.813                & 1.435           & 7.175                              \\
+                        13               & 10\% BaSO$_4$         & PLA               & 3.370            & 12.663           & 126.470                    & 53.920                & 1.438           & 7.189                              \\
+                        14               & 10\% BaSO$_4$         & PLA               & 3.353            & 12.540           & 126.643                    & 53.653                & 1.431           & 7.154                              \\
+                        15               & 10\% BaSO$_4$         & PLA               & 3.393            & 12.627           & 126.627                    & 54.293                & 1.448           & 7.239                              \\
+                        \hline
+                \end{tabular}
+        \end{adjustbox}
+\end{table}
+
+Results and discussion of the flexural testing can be found in~\fullref{sec:results:effectsOfBaSO4:flexuralTesting} and~\fullref{sec:discussion:effectsOfBaSO4:flexuralTesting} respectively.
