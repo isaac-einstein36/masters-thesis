@@ -30,3 +30,5 @@ allen
 Bonlecule
 Instron
 midspan
+Agilent
+Nomisma
