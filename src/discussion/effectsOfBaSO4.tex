@@ -49,7 +49,7 @@ It was expected, based on relevant literature, that the tensile strength should 
 
 It was hypothesized by staff at CDME that the test specimen were too small for their Instron to measure accurate data from. As a result, it was recommended that Type IV specimen be tested to utilize a strain gauge and ensure proper gripping of test specimens.
 
-Based on these insights, i`t is possible that inaccuracies arose from the sample being too small for the machine which could have contributed to the unexpected insignificant affects of barium sulfate on tensile strength.
+Based on these insights, it is possible that inaccuracies arose from the sample being too small for the machine which could have contributed to the unexpected insignificant affects of barium sulfate on tensile strength.
 
 \paragraph*{Key Takeaways}
 
@@ -57,16 +57,27 @@ Because elastic modulus could not be recorded and CDME staff expressed concerns 
 
 \subsubsection{Type IV Tensile Testing Discussion\label{sec:discussion:effectsOfBaSO4:tensileTesting:typeIV}}
 
-The results of the Type IV tensile testing did not appear to exhibit a pattern or show a direct effect of barium sulfate on tensile strength or elastic modulus.
+The results of the Type IV tensile testing did not appear to exhibit a pattern or show a direct effect of barium sulfate on tensile strength or elastic modulus. However, the results were within the proper order of magnitude as the custom-made 0\% BaSO$_4$ sample had a similar tensile strength to generic Bambu PLA.
 
 \paragraph*{Possible Limitations}
 Minimal samples were run for this testing. The testing standard recommends at least five test specimens be used, but due to material limitations, only 2 to 5 were used for each sample group. It is possible that this limited sample size contributed to skewed data. To rule this out, future testing should be performed with an adequate sample size and printing with multiple sections of the extruded filament to ensure all portions of the extrusion are being tested.
 
 It is also possible that the print orientation (flat on the print bed) impacted the overall results of this testing. As detailed in~\fullref{sec:literatureReview:printing:optimalParameters:orientation}, the print orientation has a direct impact on overall component strength. To test this, multiple test specimens can be printed across various print orientations.
 
+Additionally, compared literature measured BaSO$_4$ concentrations across 0-25\% concentration, whereas this study looked more closely at 0-10\% as shown below in Figure~\ref{fig:discussion:effectsOfBaSO4:concentrationRanges}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/discussion/baSO4Extrusions/baSO4_range_in_thesis.png}
+        \caption{Difference in BaSO$_4$ ranges between this thesis and existing literature~\cite{RefWorks:RefID:435-yang2015morphologies}.}
+        \label{fig:discussion:effectsOfBaSO4:concentrationRanges}
+\end{figure}
+
+As a result of the increased resolution in this smaller range, it is possible that barium sulfate concentration has negligible effect on tensile properties in this smaller range. Additional testing with a larger sample size should be performed to confirm these findings.
+
 \paragraph*{Key Takeaways}
 
-The results of this experiment did not align with existing research which found an inverse relationship between barium sulfate concentration and tensile strength~\cite{RefWorks:RefID:32-amestoy2021crystallization,RefWorks:RefID:435-yang2015morphologies}.
+The results of this experiment did not align with existing research which found an inverse relationship between barium sulfate concentration and tensile strength~\cite{RefWorks:RefID:32-amestoy2021crystallization,RefWorks:RefID:435-yang2015morphologies}. However, this testing suggests that barium sulfate concentration has a negligible impact on tensile properties between 0\% and 10\% as a relationship could not be determined.
 
 There are multiple possible confounding variables that could lead to this difference in findings including limited test samples and differences in print orientation of samples. Future testing can be conducted to either reaffirm or challenge the findings of this experiment.
 
