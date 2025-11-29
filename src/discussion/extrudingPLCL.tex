@@ -1,8 +1,47 @@
-\section{Extruding PLCL Discussion\label{discussion:extrudingPLCL}}
+\section{Extruding PLCL Discussion\label{sec:discussion:extrudingPLCL}}
 
-\subsection{Qualitatively Assessing Filament Output\label{discussion:extrudingPLCL:assessingFilamentOutput}}
+\subsection{Qualitatively Assessing Filament Output\label{sec:discussion:extrudingPLCL:assessingFilamentOutput}}
 
-\hl{Add what I look for in terms of filament quality with a table as well}.
+"Good quality" filament output is determined through various quantitative and qualitative factors. A detailed explanation of these factors can be found in~\autoref{sec:literatureReview:extrusion:issues}.
+
+\subsubsection{Quantitative Factors\label{sec:discussion:extrudingPLCL:assessingFilamentOutput:quantitative}}
+
+Quantitatively, filament thickness and screw current are the predominant metrics used to assess filament quality.
+
+\paragraph*{Filament Thickness}
+Filament thickness should stay within $1.75mm \pm 0.1mm$. This metric indicates steady filament output, and consistent filament thickness is required for reliable 3D printing.
+
+\paragraph*{Extruder Current}
+Extruder current should also remain relatively steady and never exceed 6000mA. Rapid rises in current are indicative of blockages forming within the extruder barrel~\cite{RefWorks:RefID:396-3devotroubleshooting}. Adequate and unusable filament based on extruder current and filament thickness are shown below in Figure~\ref{fig:discussion:extrudingPLCL:quantitativeFactors}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/discussion/plclExtrusions/filament_assessment_quantitative.png}
+        \caption{Quantitatively assessing filament thickness. Unusable (top) and usable filament (bottom)~\cite{RefWorks:RefID:396-3devotroubleshooting}.}
+        \label{fig:discussion:extrudingPLCL:quantitativeFactors}
+\end{figure}
+
+\subsubsection{Qualitative Factors\label{sec:discussion:extrudingPLCL:assessingFilamentOutput:qualitative}}
+
+Qualitatively, filament output rate, filament surface texture, and circularity of filament are some of the factors assessed to determine "good quality" filament. Many of these factors were determined and identified through experience and discussions with 3Devo customer support.
+
+\paragraph*{Filament Output}
+Thin filament output indicates inadequate back pressure pushing material out of the extruder which can be caused by blockages or insufficient material flow.
+
+\paragraph*{Filament Surface}
+Filament surface texture, specifically filament being rough or bumpy is often indicative of contaminants in the barrel either getting embedded in the filament output or scratching/gouging the extrusion output.
+
+\paragraph*{Filament Circularity}
+Flat or non-circular filament can mean the output is not properly being cooled before being pushed through the filament sensor. This can require increased cooling or by increasing fan speed or slowing the output rate.
+
+Some examples of poor filament quality noticed throughout PLCL extrusions can be found below in Figure~\ref{fig:discussion:extrudingPLCL:qualitativeFactors}.
+
+\begin{figure}[h!]
+        \centering
+        \includegraphics[width=\linewidth]{../figs/discussion/plclExtrusions/filament_assessment_qualitative.png}
+        \caption{Qualitatively assessing filament thickness. Thin output (A), rough surface texture (B), flat filament (C).}
+        \label{fig:discussion:extrudingPLCL:qualitativeFactors}
+\end{figure}
 
 \subsection{Powder Extrusion Discussion\label{sec:discussion:extrudingPLCL:powderExtrusion}}
 
@@ -13,13 +52,13 @@ The filament was highly brittle and could snap easily. Although the powder was d
 
 Additionally, the output was thin and experienced a variable flow rate. The Devostick pusher was used to address feed rate variability, but this did not adequately solve the issue. The variable feed rate and Devostick also led to concerning spikes in current as shown in~\autoref{fig:results:extrudingPLCL:powderExtrusion:currentOutput}.
 
-Lastly, the filament had air bubbles inside indicative of temperature being too high. If the temperature is too high, the powder is likely degrading into a gas~\cite{RefWorks:RefID:396-3devotroubleshooting}. These air bubbles are shown below in~\autoref{fig:results:extrudingPLCL:powderExtrusion:airBubbles}
+Lastly, the filament had air bubbles inside indicative of temperature being too high. If the temperature is too high, the powder is likely degrading into a gas~\cite{RefWorks:RefID:396-3devotroubleshooting}. These air bubbles are shown below in~\autoref{fig:discussion:extrudingPLCL:powderExtrusion:airBubbles}
 
 \begin{figure}[h!]
         \centering
         \includegraphics[width=0.3\linewidth]{../figs/discussion/plclExtrusions/powderExtrusion/air_bubbles.png}
         \caption{Performing PLCL powder extrusion. Measuring powder (left) and pouring into extruder (right).}
-        \label{fig:results:extrudingPLCL:powderExtrusion:airBubbles}
+        \label{fig:discussion:extrudingPLCL:powderExtrusion:airBubbles}
 \end{figure}
 
 \paragraph*{Alternative Approaches}
