@@ -4,46 +4,81 @@
 
 Table~\ref{tab:results:3dPrintingBaSO4:printingParameters} summarizes the final printing parameters for each barium sulfate composite filament.
 
+% \begin{table}[h!]
+%         \centering
+%         \caption{Printing parameters for barium sulfate composite filaments.}
+%         \label{tab:results:3dPrintingBaSO4:printingParameters}
+%         \begin{adjustbox}{max width=\textwidth}
+%                 \begin{tabular}{l l l l l c c c c c c l c c c c c}
+%                         \hline
+%                         \textbf{Base Material}                        &
+%                         \textbf{Vendor/Extruder}                      &
+%                         \textbf{Initial Preset}                       &
+%                         \textbf{BaSO$_4$ \%}                          &
+%                         \textbf{Nozzle Size (mm)}                     &
+%                         \textbf{Initial Layer}                        &
+%                         \textbf{Initial layer infill}                 &
+%                         \textbf{Outer wall}                           &
+%                         \textbf{Inner wall}                           &
+%                         \textbf{Sparse infill}                        &
+%                         \textbf{Internal solid infill}                &
+%                         \textbf{Recommended Nozzle Temperature Range} &
+%                         \textbf{Textured PEI Plate Initial Layer}     &
+%                         \textbf{Textured PEI Plate Other Layers}      &
+%                         \textbf{Nozzle Initial Layer}                 &
+%                         \textbf{Nozzle Other Layers}                  &
+%                         \textbf{Max Volumetric Speed (mm$^3$/s)}                                                                                                                                           \\
+%                         \hline
+
+%                         PLA                                           & Bambu          & PLA        & 0.0\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 220 & 21 \\
+
+%                         PLA                                           & Custom - 3Devo & PLA Marble & 0.0\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 220 & 12 \\
+
+%                         PLA                                           & Custom - 3Devo & PLA Marble & 2.5\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 230 & 12 \\
+
+%                         PLA                                           & Custom - 3Devo & PLA Marble & 5.0\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 230 & 12 \\
+
+%                         PLA                                           & Custom - 3Devo & PLA Marble & 7.5\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 230 & 12 \\
+
+%                         PLA                                           & Custom - 3Devo & PLA Marble & 10.0\% & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 225 & 230 & 12 \\
+%                         \hline
+%                 \end{tabular}
+%         \end{adjustbox}
+% \end{table}
+
+
 \begin{table}[h!]
         \centering
         \caption{Printing parameters for barium sulfate composite filaments.}
-        \label{tab:results:3dPrintingBaSO4:printingParameters}
+        \label{tab:results:3dPrintingBaSO4:printingParameters_revised}
         \begin{adjustbox}{max width=\textwidth}
-                \begin{tabular}{l l l l l c c c c c c l c c c c c}
+                \begin{tabular}{l l l l l c c c c c c c c c c c}
                         \hline
-                        \textbf{Base Material}                        &
-                        \textbf{Vendor/Extruder}                      &
-                        \textbf{Initial Preset}                       &
-                        \textbf{BaSO$_4$ \%}                          &
-                        \textbf{Nozzle Size (mm)}                     &
-                        \textbf{Initial Layer}                        &
-                        \textbf{Initial layer infill}                 &
-                        \textbf{Outer wall}                           &
-                        \textbf{Inner wall}                           &
-                        \textbf{Sparse infill}                        &
-                        \textbf{Internal solid infill}                &
-                        \textbf{Recommended Nozzle Temperature Range} &
-                        \textbf{Textured PEI Plate Initial Layer}     &
-                        \textbf{Textured PEI Plate Other Layers}      &
-                        \textbf{Nozzle Initial Layer}                 &
-                        \textbf{Nozzle Other Layers}                  &
-                        \textbf{Max Volumetric Speed (mm$^3$/s)}                                                                                                                                           \\
+                        \textbf{Base}        & \textbf{Vendor/}                           & \textbf{Initial}                         & \textbf{BaSO$_4$}                                    & \textbf{Nozzle}    & \textbf{Max}                                                                                                                                                                                             \\
+                        \textbf{Material}    & \textbf{Extruder}                          & \textbf{Preset}                          & \textbf{\%}                                          & \textbf{Size (mm)} & \textbf{Volumetric}                                                                                                                                                                                      \\
+                        \textbf{}            & \textbf{}                                  & \textbf{}                                & \textbf{}                                            & \textbf{}          & \textbf{Speed (mm$^3$/s)}                                                                                                                                                                                \\
+                        \hline
+                        \multicolumn{5}{c}{} & \multicolumn{5}{c}{\textbf{Speeds (mm/s)}} & \multicolumn{1}{c}{\textbf{Recommended}} & \multicolumn{4}{c}{\textbf{Temperature ($^\circ$C)}}                                                                                                                                                                                                                                 \\
+                        \cline{6-10} \cline{12-15}
+                        \textbf{Material}    & \textbf{Extruder}                          & \textbf{Preset}                          & \textbf{\%}                                          & \textbf{Size}      & \textbf{Initial}          & \textbf{Initial} & \textbf{Outer} & \textbf{Inner} & \textbf{Sparse} & \textbf{Nozzle Temp}       & \textbf{Plate} & \textbf{Plate} & \textbf{Nozzle} & \textbf{Nozzle}      \\
+                        \textbf{}            & \textbf{}                                  & \textbf{}                                & \textbf{}                                            & \textbf{}          & \textbf{Layer}            & \textbf{Infill}  & \textbf{Wall}  & \textbf{Wall}  & \textbf{Infill} & \textbf{Range ($^\circ$C)} & \textbf{Init}  & \textbf{Other} & \textbf{Init}   & \textbf{Other}       \\
                         \hline
 
-                        PLA                                           & Bambu          & PLA        & 0.0\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 220 & 21 \\
+                        PLA                  & Bambu                                      & PLA                                      & 0.0\%                                                & 0.6 Cold Hardened  & 35                        & 55               & 120            & 150            & 120             & 190--240                   & 55             & 55             & 220             & 220             & 21 \\
 
-                        PLA                                           & Custom - 3Devo & PLA Marble & 0.0\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 220 & 12 \\
+                        PLA                  & Custom - 3Devo                             & PLA Marble                               & 0.0\%                                                & 0.6 Cold Hardened  & 35                        & 55               & 120            & 150            & 120             & 190--240                   & 55             & 55             & 220             & 220             & 12 \\
 
-                        PLA                                           & Custom - 3Devo & PLA Marble & 2.5\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 230 & 12 \\
+                        PLA                  & Custom - 3Devo                             & PLA Marble                               & 2.5\%                                                & 0.6 Cold Hardened  & 35                        & 55               & 120            & 150            & 120             & 190--240                   & 55             & 55             & 220             & 230             & 12 \\
 
-                        PLA                                           & Custom - 3Devo & PLA Marble & 5.0\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 230 & 12 \\
+                        PLA                  & Custom - 3Devo                             & PLA Marble                               & 5.0\%                                                & 0.6 Cold Hardened  & 35                        & 55               & 120            & 150            & 120             & 190--240                   & 55             & 55             & 220             & 230             & 12 \\
 
-                        PLA                                           & Custom - 3Devo & PLA Marble & 7.5\%  & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 220 & 230 & 12 \\
+                        PLA                  & Custom - 3Devo                             & PLA Marble                               & 7.5\%                                                & 0.6 Cold Hardened  & 35                        & 55               & 120            & 150            & 120             & 190--240                   & 55             & 55             & 220             & 230             & 12 \\
 
-                        PLA                                           & Custom - 3Devo & PLA Marble & 10.0\% & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 190--240 & 55 & 55 & 225 & 230 & 12 \\
+                        PLA                  & Custom - 3Devo                             & PLA Marble                               & 10.0\%                                               & 0.6 Cold Hardened  & 35                        & 55               & 120            & 150            & 120             & 190--240                   & 55             & 55             & 225             & 230             & 12 \\
                         \hline
                 \end{tabular}
         \end{adjustbox}
 \end{table}
+
 
 Discussion of these results can be found in~\fullref{sec:discussion:3dPrintingBaSO4:printingParameters}.

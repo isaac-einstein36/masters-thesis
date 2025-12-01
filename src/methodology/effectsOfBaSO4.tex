@@ -1,14 +1,16 @@
 \section{Evaluating Effects of Barium Sulfate\label{sec:methodology:effectsOfBaSO4}}
 
+The effects of barium sulfate concentration (imaging and mechanical properties) when incorporated with PLA were analyzed. The goal of this analysis was to determine the optimal barium sulfate concentration required for imaging, and ensure the material properties at this concentration were within usable ranges for this implantable device.
+
 \subsection{Imaging Study\label{sec:methodology:effectsOfBaSO4:imagingStudy}}
 
 A predominant goal of the barium sulfate extrusions and printing was to evaluate its effects on radiopacity. To measure these effects, an imaging study was conducted. This study was conducted in collaboration with the Stephanie Spielman Comprehensive Breast Center (OSUCCC).
 
 \subsubsection{Sample Preparation\label{sec:methodology:effectsOfBaSO4:imagingStudy:samplePrep}}
 
-Samples were prepared based on similar conducted literature~\cite{RefWorks:RefID:77-hamedani2018threedimensional}. A $1cm$ wide and $1cm$ tall cylinder was designed in SolidWorks, and numerous samples were printed for each barium sulfate concentration group. Based on supply of extruded filament, four samples were printed for each concentration group.
+Samples were prepared based on similar conducted literature~\cite{RefWorks:RefID:77-hamedani2018threedimensional}. A $1cm$ wide and $1cm$ tall cylinder was designed in SolidWorks, and numerous samples were printed for each barium sulfate concentration group. Based on limited supply of extruded filament, four samples were printed for each concentration group.
 
-To eliminate air gaps, samples were printed with 100\% infill.
+To minimize air gaps, samples were printed with 100\% infill.
 
 The various 3D printed samples for imaging are shown below in Figure~\ref{fig:methodology:effectsOfBaSO4:imagingStudySamples}
 
@@ -31,34 +33,31 @@ Due to limited filament initially supplied, three samples of Bonlecule filament 
         \centering
         \caption{Printing parameters for Bonlecule filament.}
         \label{tab:methodology:bonleculeParameters}
-        \begin{adjustbox}{max width=\textwidth}
-                \begin{tabular}{l l l l l c c c c c c l c c c c c}
-                        \hline
-                        \textbf{Base Material}                        &
-                        \textbf{Vendor/Extruder}                      &
-                        \textbf{Initial Preset}                       &
-                        \textbf{BaSO$_4$ \%}                          &
-                        \textbf{Nozzle Size (mm)}                     &
-                        \textbf{Initial Layer}                        &
-                        \textbf{Initial layer infill}                 &
-                        \textbf{Outer wall}                           &
-                        \textbf{Inner wall}                           &
-                        \textbf{Sparse infill}                        &
-                        \textbf{Internal solid infill}                &
-                        \textbf{Recommended Nozzle Temperature Range} &
-                        \textbf{Textured PEI Plate Initial Layer}     &
-                        \textbf{Textured PEI Plate Other Layers}      &
-                        \textbf{Nozzle Initial Layer}                 &
-                        \textbf{Nozzle Other Layers}                  &
-                        \textbf{Max Volumetric Speed (mm$^3$/s)}                                                                                                                                      \\
-                        \hline
-
-                        Unknown                                       & Bonlecule & PLA Marble & Unknown & 0.6 Cold Hardened\% & 35 & 55 & 120 & 150 & 120 & 150 & 220--240 & 85 & 85 & 230 & 230 & 8 \\
-
-                        \hline
-                \end{tabular}
-        \end{adjustbox}
+        \begin{tabular}{l l}
+                \hline
+                \textbf{Parameter}               & \textbf{Value}    \\
+                \hline
+                Base Material                    & Unknown           \\
+                Vendor / Extruder                & Bonlecule         \\
+                Initial Preset                   & PLA Marble        \\
+                BaSO$_4$ \%                      & Unknown           \\
+                Nozzle Size (mm)                 & 0.6 Cold Hardened \\
+                Initial Layer                    & 35                \\
+                Initial Layer Infill             & 55                \\
+                Outer Wall                       & 120               \\
+                Inner Wall                       & 150               \\
+                Sparse Infill                    & 120               \\
+                Internal Solid Infill            & 150               \\
+                Recommended Nozzle Temp Range    & 220--240          \\
+                Textured PEI Plate Initial Layer & 85                \\
+                Textured PEI Plate Other Layers  & 85                \\
+                Nozzle Initial Layer             & 230               \\
+                Nozzle Other Layers              & 230               \\
+                Max Volumetric Speed (mm$^3$/s)  & 8                 \\
+                \hline
+        \end{tabular}
 \end{table}
+
 
 Samples were given to OSUCCC where Dr. Eric Cochran helped image all samples.
 
@@ -112,7 +111,7 @@ After measurements were recorded, samples were loaded into an Instron 5859 Unive
 The yield strength is calculated by dividing the maximum load sustained by the specimen by the initial cross-sectional area as shown in Equation~\eqref{eq:tensileStrength}~\cite{RefWorks:RefID:4-test}. $\sigma_y$ is the yield strength in $MPa$, $F_{max}$ is the maximum applied force, and $A_C$ is the original cross-sectional area of the test specimen.
 
 \begin{equation}
-        \sigma_y (MPa) = F_{max} / A_C
+        \sigma_y (MPa) = \frac{F_{max}}{A_C}
         \label{eq:tensileStrength}
 \end{equation}
 
@@ -162,7 +161,7 @@ Next, the maximum allowable midspan deflection was calculated using Equation~\eq
 
 \begin{equation}
         D = \frac{rL^2}{6d}
-        \label{flexuralMaxDeflection}
+        \label{eq:flexuralMaxDeflection}
 \end{equation}
 
 Using these equations, Table~\ref{tab:methodology:effectsOfBaSO4:flexuralTesting:sampleMeasurements} summarizes the measurements and calculated values for all samples.

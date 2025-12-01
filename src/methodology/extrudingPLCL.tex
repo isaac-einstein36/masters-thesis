@@ -2,7 +2,7 @@
 
 \subsection{Summary of PLCL Extrusions\label{methodology:extrudingPLCL:plclSummary}}
 
-A significant portion of the research in this thesis pertains to extruding PLCL into a 3D printable filament. Multiple approaches that can be utilized to fabricate an implantable device were employed to eventually achieve this outcome. Powder extrusions were first attempted as PLCL was only sourceable in a powder form. It was found that powder extrusions yielded unprintably thin and brittle output. As a result, this was followed by manually and then automatically combining PLA and PCL pellets in a single screw extruder as pellets are the preferred form factor for extruding materials. Two extruders, 3Devo Filament Maker 1 and the Felfil Evo, were used to conduct these extrusions. When pellets alone yielded overly thin filament, shredding or regrinding the initial PLCL output and re-extruding was tested to address thickness tolerance concerns. Figure~\ref{methodology:extrudingPLCL:plclSummary} outlines this process at a high level.
+A significant portion of the research in this thesis pertains to extruding PLCL into a 3D printable filament to develop a biodegradable implant. Multiple approaches that can be utilized to fabricate an implantable device were employed to eventually achieve this outcome. Powder extrusions were first attempted as PLCL was only available in a powder form. It was found that powder extrusions yielded unprintably thin and brittle output. As a result, this was followed by manually and then automatically combining PLA and PCL pellets in a single screw extruder as pellets are the preferred form factor for extruding materials. Two extruders, 3Devo Filament Maker 1 and the Felfil Evo, were used to conduct these extrusions. When pellets alone yielded overly thin filament, shredding or regrinding the initial PLCL output and re-extruding was tested to address thickness tolerance concerns. Figure~\ref{methodology:extrudingPLCL:plclSummary} outlines this process at a high level.
 
 \begin{figure}[h!]
         \centering
@@ -17,7 +17,7 @@ Additionally,~\fullref{tab:appendix:extrusionSummary} details all extrusions per
 
 Based on material availability, the team attempted to extrude PLCL powder to create PLCL filament. While pellets are more commonly extruded than powders (see~\fullref{sec:literatureReview:extrusion:powder}), the team was unable to source PLCL pellets at a scalable price. As a result, PLCL powder was bought from a company called Nomisma~\cite{RefWorks:RefID:387-nomisma} for these initial extrusions on a 3Devo Filament Maker 1 single screw extruder.
 
-Prior to extruding, the PLCL powder was dried in a vacuum oven at 45\textcelsius ~overnight based on the material manufacturer's recommendations. The Polymer Synthesis Research Facility (PSRF) at Ohio State University was utilized for this task (see~\fullref{sec:methodology:externalLabs:polymersLab} for more information on research conducted with this additional lab).
+Prior to extruding, the PLCL powder was dried in a vacuum oven at 45\textcelsius ~overnight based on the material manufacturer's recommendations. The Polymer Synthesis Research Facility (PSRF) at Ohio State University was utilized for this task (see~\fullref{methodology:externalLabs} for more information on research conducted with this additional lab).
 
 The powder was measured and poured into the extruder as shown in Figure~\ref{fig:methodology:extrudingPLCL:powderExtrusion}.
 
@@ -84,6 +84,8 @@ Mixing the pellets in a tumbler styler mixer was also explored. To lower the cos
 \paragraph*{Discussions with ISE Department}
 The team also met with extrusion subject-matter experts in the Industrial and Systems Engineering (ISE) department at The Ohio State University. This included Dr. Rachmat Mulyana.
 
+Discussion of these findings can be found in~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:combiningMaterials}.
+
 \subsection{Initial Pellet Extrusion\label{sec:methodology:extrudingPLCL:pelletExtrusions:initialExtrusion}}
 
 PLA pellets were purchased from 3DXTECH and PCL pellets were ordered from Sigma Aldrich~\cite{RefWorks:RefID:487-ecomax,RefWorks:RefID:488-polycaprolactone}. Following manufacturer recommendations, PLA and PCL pellets were dried overnight in a vacuum oven at 55\textcelsius and 40\textcelsius respectively prior to extruding.
@@ -99,7 +101,7 @@ Figure~\ref{fig:methodology:extrudingPLCL:mixingPellets} shows the pellet mixtur
         \label{fig:methodology:extrudingPLCL:mixingPellets}
 \end{figure}
 
-In this extrusion, the 3Devo Feeder was used for the first time. The temperature profile was is shown below in Table~\ref{tab:methodology:extrudingPLCL:initialPelletExtrusion:tempPresets} based on existing literature~\cite{RefWorks:RefID:253-åkerlund2022effect}. All pellets were poured into the hopper with the Feeder running and the extrusion began.
+In this extrusion, the 3Devo Feeder was used for the first time. The temperature profile used is shown below in Table~\ref{tab:methodology:extrudingPLCL:initialPelletExtrusion:tempPresets} based on existing literature~\cite{RefWorks:RefID:253-åkerlund2022effect}. All pellets were poured into the hopper with the Feeder running and the extrusion began.
 
 \begin{table}[h!]
         \centering
@@ -127,7 +129,7 @@ Based on findings from the initial pellet extrusion (see~\fullref{sec:discussion
 
 Based on time available, this extrusion was divided into two sequential extrusions. The first tested PCL between 60\textcelsius ~and 110\textcelsius ~while the second extrusion tested PCL between 120\textcelsius ~and 180\textcelsius.
 
-Starve feeding was also explored during these extrusions. Extrusion 1 (60-110\textcelsius) employed manual starve feeding. An Excel spreadsheet was used to track the amount of PCL poured and the time between pours. A section of that spreadsheet is shown below in Figure~\ref{fig:methodology:extrudingPLCL:manualStarveFeedingLog}.
+Starve feeding, where pellets are fed directly into the extruder rather than sitting in the hopper, was also explored during these extrusions. Extrusion 1 (60-110\textcelsius) employed manual starve feeding. An Excel spreadsheet was used to track the amount of PCL poured and the time between pours. A section of that spreadsheet is shown below in Figure~\ref{fig:methodology:extrudingPLCL:manualStarveFeedingLog}.
 
 \begin{figure}[h!]
         \centering
@@ -153,7 +155,7 @@ The extrusion began with just PLA pellets at 180\textcelsius. Once this was extr
 
 The filament output was then spooled by feeding the output through the filament sensor and into the spooler on the 3Devo Filament Maker One. Filament thickness was variable and on average too low (1.4mm instead of 1.75mm). Various parameters were adjusted to try and improve the filament thickness average and consistency. Overall, the thickness was not able to be improved, and the extrusion was terminated by extruding solely PLA pellets.
 
-The highlights of this extrusion can be found below in Table.
+The highlights of this extrusion can be found below in Table~\ref{methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}.
 
 \begin{table}[h!]
         \centering
@@ -183,23 +185,23 @@ Results and discussion of this initial starve-feeder based PLCL extrusion can be
 
 \subsubsection{Addressing Filament Thickness\label{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}}
 
-After performing a Devo Mid-Temp (MT) purge (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}), multiple other PLCL pellet-based extrusion were attempted as detailed in ~\autoref{tab:appendix:extrusionSummary}.
+After performing a Devo Mid-Temp (MT) purge (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}), multiple other PLCL pellet-based extrusions were attempted as detailed in ~\autoref{tab:appendix:extrusionSummary}.
 
-\paragraph*{Adjusting Heat Zones}
+\paragraph*{Adjusting Heat Zones and RPM}
 
 Following recommendations from 3Devo customer support, the temperature of heater 4 was lowered to 100\textcelsius ~which was as low as it could get. The goal was with this lower initial heat, more solidified material would be pushing the softer material through the rest of the barrel.
 
-Eventually extrusions were attempted with heater 4 and heater 3 at 100\textcelsius. Additionally, the RPM was raised incrementally from 3.5 to 7 to see if this parameter helped address filament thickness.
+Eventually, extrusions were attempted with heater 4 and heater 3 at 100\textcelsius. Additionally, the RPM was raised incrementally from 3.5 to 7 to see if this parameter helped address filament thickness.
 
-A final extrusion was attempted following a published methodology that used a 3Devo Filament Maker One but pre-combined PLA/PCL pellets. This paper set heat zones to 140, 155, 160, and 160 (all \textcelsius) for heaters four through 1 respectively~\cite{RefWorks:RefID:253-åkerlund2022effect}.
+A final extrusion was attempted following a published methodology that used a 3Devo Filament Maker One but pre-combined PLA/PCL pellets. This paper set heat zones to 140, 155, 160, and 160 (all \textcelsius) for heaters 4 through 1 respectively~\cite{RefWorks:RefID:253-åkerlund2022effect}.
 
 Results and discussion of this heat zone adjustment research can be found in ~\fullref{sec:results:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} and ~\fullref{sec:discussion:extrudingPLCL:pelletExtrusions:addressingFilamentThickness} respectively.
 
 \paragraph*{Extruding PLCL Regrind}
 
-Many papers that successfully extruded PLCL using PLA and PCl pellets combined the material beforehand (see ~\fullref{sec:literatureReview:PLCL}). While research was conducted on combining PLA and PCL prior to extruding (see ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:combiningMaterials}), many of these options were unable to be performed by the research team.
+Many papers that successfully extruded PLCL using PLA and PCl pellets combined the material beforehand (see~\fullref{sec:literatureReview:PLCL}). While research was conducted on combining PLA and PCL prior to extruding (see ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:combiningMaterials}), many of these options were unable to be performed by the research team.
 
-After failing to resolve the filament thickness variability, however, the idea of combinging PLA and PCL prior to extrusion was revisited. As a result, in a similar manner to injection molding, it was hypothesized that re-extruding the initial filament output (which had been thermally combined during the first pass through the extruder) may behave similar to existing literature. To test this, initial filament output, referred to as first-pass PLCL, was shredded using a Felfill Shredder+ and re-extruded through the 3Devo Filament Maker One. The process of creating PLCL regrind to extrude is illustrated below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:creatingRegrind}.
+After failing to resolve the filament thickness variability, however, the idea of combining PLA and PCL prior to extrusion was revisited. As a result, similarly to injection molding, it was hypothesized that re-extruding the initial filament output (which had been thermally combined during the first pass through the extruder) may behave similar to existing literature. To test this, initial filament output, referred to as first-pass PLCL, was shredded using a Felfill Shredder+ and re-extruded through the 3Devo Filament Maker One. The process of creating PLCL regrind to extrude is illustrated below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:creatingRegrind}.
 
 \begin{figure}[h!]
         \centering
@@ -220,11 +222,11 @@ It was also noticed that routinely while transitioning from low heater 4 and hea
 % 2.	Worked with supplier (Dyna-Purge) to find ideal purging material
 % a.	Tried L then D2 (needs HDPE) then K
 
-Following clogging and overly thin filament output (see ~\fullref{{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}}), purging the extruder was further researched.
+Following clogging and overly thin filament output (see~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}), purging the extruder was further researched.
 
 \subsubsection{Initial Purging Process\label{sec:methodology:extrudingPLCL:purgingExtruder:initialProcess}}
 
-Initially, the purging process followed was provided by 3Devo~\cite{RefWorks:RefID:405-purging}. This required DevoClean Mid-Temp (MT) and to transition from PLA/PCL to DevoClean MT and back. 1 kg of DevoClean MT was provided with the extruder purchase, but this material supply was becoming limited. As a result, purges were limited in an effort to preserve resources. This process is outlined below in Figure~\ref{fig:methodology:extrudingPLCL:purgingExtruder:3DevoProcess}
+Initially, the purging process followed was provided by 3Devo~\cite{RefWorks:RefID:405-purging}. This required transitioning from PLA/PCL to DevoClean MT and back. 1 kg of DevoClean MT was provided with the extruder purchase, but this material supply was becoming limited. As a result, purges were limited in an effort to preserve resources. This process is outlined below in Figure~\ref{fig:methodology:extrudingPLCL:purgingExtruder:3DevoProcess}
 
 \begin{figure}[h!]
         \centering
@@ -282,15 +284,15 @@ Discussion of purging with DP-L can be found in ~\autoref{sec:discussion:extrudi
 
 Based on contamination following DP-L purges (see Section ~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpLPurge}), DP-D2 was tested as a purging compound.
 
-This material required HDPE to transition between PLA/PCL and DP-D2. Extrusion labs across The Ohio State University were contacted regarding extra HDPE that could be used. No labs were able to provide HDPE so $5lbs$ of HDPE pellets were ordered from McMaster-Carr~\cite{RefWorks:RefID:494-moistureresistant}.
+This material required HDPE to transition between PLA/PCL and DP-D2. Extrusion labs across The Ohio State University were contacted regarding extra HDPE that could be used. No labs were able to provide HDPE, so $5lbs$ of HDPE pellets were ordered from McMaster-Carr~\cite{RefWorks:RefID:494-moistureresistant}.
 
 The DP-D2 was used in purging identically to DP-L following Dyna-Purge's recommendations. Discussion of the DP-D2 purge testing can be found in Section~\ref{sec:discussion:extrudingPLCL:pelletExtrusions:purgingExtruder:dpD2Purge}.
 
 \subsection{Felfil System\label{sec:methodology:extrudingPLCL:felfilSystem}}
 
-Based on the thin filament output by the 3Devo Filament Maker One when extruding a PLA/PCL blend (see ~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}), the Felfil Evo was tested for PLCL extrusions.
+Based on the thin filament output by the 3Devo Filament Maker One when extruding a PLA/PCL blend (see ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:addressingFilamentThickness}), the Felfil Evo was tested for PLCL extrusions.
 
-The Felfil Evo had been used initially for powder-based PLCL extrusions, but research was paused due to unsuccessful results (see ~\ref{sec:introduction:priorWork:otherTeamWork:plclExtrusions}). Since the 3Devo Filament Maker One, a more robust extruder, also was unsuccessful extruding powders, it was hypothesized that powder-based extrusions for any extruder may be challenging and the Felfil Evo may be more effective with pellet-based extrusions.
+The Felfil Evo had been used initially for powder-based PLCL extrusions, but research was paused due to unsuccessful results (see ~\fullref{sec:introduction:priorWork:otherTeamWork:plclExtrusions}). Since the 3Devo Filament Maker One, a more robust extruder, also was unsuccessful extruding powders, it was hypothesized that powder-based extrusions for any extruder may be challenging and the Felfil Evo may be more effective with pellet-based extrusions.
 
 \subsubsection{Felfil Evo Initial Testing\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}}
 
@@ -333,7 +335,7 @@ This extrusion yielded good-quality PLA filament as shown below in Figure~\ref{f
 
 \subsubsection{Felfil Evo PLCL Extrusion\label{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoPLCL}}
 
-Following the successful PLA pellet-based extrusion on the Felfil Evo (see Section~\ref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}), a PLA/PCL extrusion was attempted using the same methodology as the 3Devo PLA/PCL extrusions (see Section~\ref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}).
+Following the successful PLA pellet-based extrusion on the Felfil Evo (see Section~\fullref{sec:methodology:extrudingPLCL:felfilSystem:felfilEvoInitialTesting}), a PLA/PCL extrusion was attempted using the same methodology as the 3Devo PLA/PCL extrusions (see Section~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}).
 
 The Felfil Evo has one heat zone which was initially set at 170\textcelsius ~and was raised to 170\textcelsius. The screw RPM was set to 4.
 
@@ -349,7 +351,7 @@ Initially, a rubber or silicone coating was explored to act as a barrier between
 
 Electronics subject-matter experts across Ohio State University were consulted to see if they have used any similar materials for heat insulation. Multiple potential challenges were presented through these conversations such as the inability of adhesives to withstand high temperatures.
 
-Various materials were researched, regardless, to assess the viability of this option. Some of these materials are shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:siliconHopperCoating}
+Regardless, various materials were researched to assess the viability of this option. Some of these materials are shown below in Figure~\ref{fig:methodology:extrudingPLCL:pelletExtrusions:felfilEvo:siliconHopperCoating}
 
 \begin{figure}[h!]
         \centering

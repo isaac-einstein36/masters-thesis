@@ -9,30 +9,40 @@ Most parameters were unchanged from generic PLA to successfully 3D print Lattice
         \caption{Adjusted printing parameters for Lattice Medical PLCL filament.}
         \label{tab:results:3dPrintingPLCL:latticeParameters}
         \begin{adjustbox}{max width=\textwidth}
-                \begin{tabular}{c c c | c c c c c c c c | c c | c}
+                \begin{tabular}{l l l l}
                         \hline
-                        \multicolumn{3}{c|}{\textbf{Material Specs}}         &
-                        \multicolumn{8}{c|}{\textbf{Speed (mm/s)}}           &
-                        \multicolumn{2}{c|}{\textbf{Print Temperature (°C)}} &
-                        \textbf{Volumetric Speed Limitation}                                                                             \\
+                        \textbf{Category} & \textbf{Parameter}         & \textbf{Value} & \textbf{Units} \\
                         \hline
-                        Base Material                                        & Vendor/Extruder           & Initial Preset &
-                        Initial Layer                                        & Initial Layer Infill      & Outer Wall     & Inner Wall &
-                        Sparse Infill                                        & Internal Solid Infill     &
-                        Textured PEI Initial Layer                           & Textured PEI Other Layers &
-                        Nozzle Initial Layer                                 & Nozzle Other Layers       &
-                        Max Vol. Speed (mm$^3$/s)                                                                                        \\
+
+                        \multirow{3}{*}{Material Specs}
+                                          & Base Material              & PLCL           & --             \\
+                                          & Vendor/Extruder            & Lattice        & --             \\
+                                          & Initial Preset             & PLA            & --             \\
                         \hline
-                        PLCL                                                 & Lattice                   & PLA            &
-                        35                                                   & 55                        & 50             & 60         &
-                        50                                                   & 60                        &
-                        55                                                   & 55                        &
-                        220                                                  & 220                       &
-                        12                                                                                                               \\
+
+                        \multirow{8}{*}{Speed Settings}
+                                          & Initial Layer              & 35             & mm/s           \\
+                                          & Initial Layer Infill       & 55             & mm/s           \\
+                                          & Outer Wall                 & 50             & mm/s           \\
+                                          & Inner Wall                 & 60             & mm/s           \\
+                                          & Sparse Infill              & 50             & mm/s           \\
+                                          & Internal Solid Infill      & 60             & mm/s           \\
+                                          & Textured PEI Initial Layer & 55             & mm/s           \\
+                                          & Textured PEI Other Layers  & 55             & mm/s           \\
+                        \hline
+
+                        \multirow{2}{*}{Print Temperature}
+                                          & Nozzle Initial Layer       & 220            & °C             \\
+                                          & Nozzle Other Layers        & 220            & °C             \\
+                        \hline
+
+                        Volumetric Limit
+                                          & Max Vol. Speed             & 12             & mm$^3$/s       \\
                         \hline
                 \end{tabular}
         \end{adjustbox}
 \end{table}
+
 
 When running the Flow Dynamics calibration in Bambu Studio, a K factor of 0.040 was selected.
 

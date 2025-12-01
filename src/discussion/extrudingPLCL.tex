@@ -87,7 +87,7 @@ As mentioned in ~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:combini
 
 \paragraph*{College of Pharmacy}
 
-It was determined that the College of Pharmacy did not have adequate equipment to assist in mixing PLA and PCL pellets. Any mixing equipment they were able to provide was meant for small-scale (a few gram) mixing.
+It was determined that the College of Pharmacy did not have adequate equipment to assist in mixing PLA and PCL pellets. Any mixing equipment they were able to provide was meant for small-scale (less than 5 grams) mixing.
 
 \paragraph*{Injection Molding}
 
@@ -99,7 +99,7 @@ Various faculty were also hesitant to recommend injection molding given the stee
 
 \paragraph*{Chemically Combining Materials}
 
-After discussing the option of chemically combining the pellets with the PSRF (see~\autoref{sec:methodology:externalLabs:polymersLab}) using chloroform or DCM as a dissolving agent, the team was told this could not be done. For safety purposes, the PSRF no longer carries DCM or chloroform and is not allowed to work with these materials in most cases.
+After discussing the option of chemically combining the pellets with the PSRF (see~\fullref{methodology:externalLabs}) using chloroform or DCM as a dissolving agent, the team was told this could not be done. For safety purposes, the PSRF no longer carries DCM or chloroform and is not allowed to work with these materials in most cases.
 
 The final output of thermally combining the materials on a hotplate, as shown in~\autoref{fig:methodology:extrudingPLCL:meltingOnHotplate}, was too large to easily shred into extrudable pellets. Melting these materials in a shallower and wider dish may have resulted in a more shreddable output. However, this could not be done easily on a hotplate for the scale of materials needed for extruding. As a result, this rudimentary method of combining materials was eliminated.
 
@@ -113,7 +113,7 @@ Discussions with the ISE department were helpful in planning out multiple best a
 
 Dr. Mulyana was confident that dedicated mixing equipment was not required and that the pellets could be manually mixed in a container prior to extrusion. Due to a single screw extruder's inherently poor mixing capabilities, the limiting factor in creating a homogenous output would be the extruder rather than the degree of homogeneity of the pre-extrusion mixture.
 
-To address this bottleneck, Dr. Mulyana offered the team uses a twin screw extruder in the ISE department. While this equipment would mix materials well, it would require high volumes of raw materials to run and time to learn how to use this equipment. It was decided that a twin screw extruder would be a viable backup option if using a single screw extruder did not mix materials well enough.
+To address this bottleneck, Dr. Mulyana suggested the team use a twin screw extruder in the ISE department. While this equipment would mix materials well, it would require high volumes of raw materials to run and time to learn how to use this equipment. It was decided that a twin screw extruder would be a viable backup option if using a single screw extruder did not mix materials well enough.
 
 \paragraph*{Key Takeaways}
 
@@ -125,11 +125,11 @@ After consulting with Dr. Mulyana, the team opted to start by mixing pellets man
 
 The team was surprised that this extrusion led to clumping at the hopper given the use of the Feeder and pellets rather than powders. The expected outcome of using the Feeder was that its vibrations would keep pellets from being stagnant long enough to start bridging.
 
-Conversations with 3Devo customer support following this extrusion revealed that the Feeder can not be used with more than one homogenous material. When a blend is poured into the hopper, the Feeder's vibrations will cause solid segregation, causing one material to sink to the bottom and the other to rise to the top. This was directly seen in the extrusion with PLA moving to the bottom of the hopper and PCL moving to the top.
+Conversations with 3Devo customer support following this extrusion revealed that the Feeder cannot be used with more than one homogenous material. When a blend is poured into the hopper, the Feeder's vibrations will cause solid segregation, causing one material to sink to the bottom and the other to rise to the top. This was directly seen in the extrusion with PLA moving to the bottom of the hopper and PCL moving to the top.
 
 It was expected that temperatures were low enough to prevent premature melting of material. However, PCL pellets appeared to melt and bridge in the hopper. 3Devo customer support believed this is because the metal hopper is not insulated, so material sitting in the hopper for extended periods of time can be subject to additional heat. Because PCL has a lower melting point than PLA, the PLA pellets did not melt while sitting in the hopper but the PCL pellets began to.
 
-As a result, it was recommended to explore PCL's workable extrusion temperature range to determine how high temperatures could be set for this material. Ideally the upper end of the PCL extrusion temperature range would overlap with the lower end of the PLA extrusion temperature range. This overlap would be the ideal extrusion temperature for the blend of materials.
+As a result, it was recommended to explore PCL's workable extrusion temperature range to determine how high temperatures could be set for this material. Ideally, the upper end of the PCL extrusion temperature range would overlap with the lower end of the PLA extrusion temperature range. This overlap would be the ideal extrusion temperature for the blend of materials.
 
 Starve feeding, or pouring material directly into the barrel rather than letting it sit in the hopper, was suggested to prevent PCL from prematurely melting in the uninsulated metal hopper. It was also hypothesized that insulating the hopper could help prevent this premature melting.
 
@@ -166,9 +166,10 @@ As a result, an automatic starve feeding system should be developed to assist wi
 
 \paragraph*{Success of Extrusion}
 
-While the filament thickness was variable and overall too thin, this extrusion achieved a notable milestone for the research team. This was the first time the research was able to steadily extrude good-quality PLCL filament (no air bubbles and not overly brittle).
+While the filament thickness was variable and overall too thin, this extrusion achieved a notable milestone for the research team. This was the first time the research team was able to steadily extrude good-quality PLCL filament (no air bubbles and not overly brittle).
 
-This extrusion proved the efficacy of the starve feeder given the improvements in extrusion output rate and lack of clogging from the initial PLCL extrusion (see~\fullref{sec:methodology:sec:discussion:extrudingPLCL:pelletExtrusions:initialPelletExtrusion}).
+This extrusion proved the efficacy of the starve feeder given the improvements in extrusion output rate and lack of clogging from the initial PLCL extrusion (see~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:initialExtrusion}).
+
 
 \paragraph*{Filament Thickness}
 
@@ -192,11 +193,11 @@ The thickness of the spooled filament was highly variable and on average too thi
 
 After numerous heat zone adjustments, the spooled filament thickness of the PLA/PCL extrusion was still too thin. 3D printers require tight tolerances (often 1.75±0.03mm) which these extrusions were not within.
 
-Suggestions from 3Devo customer support included lowering heat zones 4 and 3 and raising extruder screw RPM, but when that was not working they did not have many new suggestions.
+Suggestions from 3Devo customer support included lowering heat zones 4 and 3 and raising extruder screw RPM. Neither of the suggestions resolved the filament thickness variability, and 3Devo customer support had limited additional suggestions.
 
-Because the heat zone adjustment was not yielding adequate results, 3Devo customer support suggested more routinely purging the extruder in case contaminants were blocking the flow of material. They also suggested replacing the standard 4mm nozzle with a 2mm nozzle. As a result, purging compounds were explored (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}) and a smaller nozzle was ordered from 3Devo~\cite{RefWorks:RefID:392-3devo}.
+Because the heat zone adjustment was not yielding adequate results, 3Devo customer support suggested more routinely purging the extruder in case contaminants were blocking the flow of material. As a result, purging compounds were explored (see ~\fullref{sec:methodology:extrudingPLCL:purgingExtruder}) and a smaller nozzle was ordered from 3Devo~\cite{RefWorks:RefID:392-3devo}.
 
-Since the nozzle had to be ordered from 3Devo which required international shipping, it was assumed this would have a substantial lead time. Therefore, alternative extrusion options were explored while waiting for a smaller nozzle to arrive (see ~\fullref{sec:methodology:extrudingPLCL:felfilSystem}).
+3Devo customer support also suggested replacing the standard 4mm nozzle with a 2mm nozzle to produce initial output at a filament thickness which is closer to the ideal 1.75$mm$ value. Since the nozzle had to be ordered from 3Devo which required international shipping, it was assumed this would have a substantial lead time. Therefore, alternative extrusion options were explored while waiting for a smaller nozzle to arrive (see ~\fullref{sec:methodology:extrudingPLCL:felfilSystem}).
 
 \paragraph*{Extruding PLCL Regrind}
 

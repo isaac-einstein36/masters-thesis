@@ -1,7 +1,7 @@
 
 \section{Starve Feeder Development\label{sec:methodology:starveFeeder}}
 
-To automate standardize the starve feeding process, an automatic pellet dispensing starve feeder was developed. This was adapted from an online model and went through various hardware and user interface (UI) iterations.
+To automate and standardize the starve feeding process (see~\fullref{sec:methodology:extrudingPLCL:pelletExtrusions:usingStarveFeeder:initialPLCLExtrusion}), an automatic pellet dispensing starve feeder was developed. This was adapted from an online model and went through various hardware and user interface (UI) iterations. Starve feeding was automated to increase efficiency and reliability when extruding materials that require starve feeding.
 
 \subsection{Online Models\label{sec:methodology:starveFeeder:onlineModels}}
 
@@ -187,7 +187,7 @@ Based on space limitations and predicted force/stability requirements, the belt 
 
 \subsubsection{Gear System Acquisition\label{sec:methodology:starveFeeder:gearLabCollaboration:gearSystemAcquisition}}
 
-In addition to belt tensioning, the Dr. Hong was able to find an old drivetrain system that was powered by a Nema 23 stepper motor. This system was disassembled and the stepper motor pulley, large gear, and rubber belt was used. These metal, plastic, and rubber components replaced the 3D printed counterparts.
+In addition to belt tensioning, Dr. Hong was able to find an old drivetrain system that was powered by a Nema 23 stepper motor. This system was disassembled and the stepper motor pulley, large gear, and rubber belt was used in the 3D printed starve feeder. These metal, plastic, and rubber components replaced the 3D printed counterparts.
 
 The metal stepper motor pulley and rubber drive belt were able to seamlessly replace the existing components in the system. The large gear that drives the auger screw, however, required modifications to the pellet dispenser (see~\fullref{sec:methodology:starveFeeder:systemReDesign:augerScrewReDesign}).
 
@@ -230,7 +230,7 @@ To create this design in a way that properly fits the existing gear, an initial 
         \label{fig:methodology:starveFeeder:largeGearUndimensioned}
 \end{figure}
 
-With this initial image, a software called ImageJ was used to measure the slot dimensions. ImageJ works by marking a reference distance, mapping that to a pixel conversion, and then estimating measurements of lines drawn on a photo. The calipers in the initial photo were used for a reference measurement.
+With this initial image, a software called ImageJ was used to measure the slot dimensions. ImageJ works by marking a reference distance, mapping that distance to a pixel conversion, and then estimating measurements of lines drawn on a photo. The calipers in the initial photo were used for a reference measurement.
 
 Figure~\ref{fig:methodology:starveFeeder:augerScrewMeasuringAndDesign} shows the measurement process and initial design of the attachment piece.
 
@@ -306,7 +306,7 @@ Once the system was runnable solely via the serial monitor, the research team de
 
 To design the GUI, ChatGPT and Claude.ai were utilized. This GUI was run in VSCode on the same computer used to connect to the extruder via DevoVision. Installation of pyserial was required to interact with the Arduino-based code.
 
-With the GUI in place, the keypad was removed from the system. The final Python-based code for the GUI can be found in ~\fullref{sec:appendix:pelletDispenserCode:Python}.
+With the GUI in place, the keypad component was removed from the system. The final Python-based code for the GUI can be found in ~\fullref{sec:appendix:pelletDispenserCode:Python}.
 
 Figure~\ref{fig:methodology:starveFeeder:pythonGUI} shows the python-based GUI.
 
