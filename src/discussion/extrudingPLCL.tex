@@ -2,7 +2,7 @@
 
 \subsection{Qualitatively Assessing Filament Output\label{sec:discussion:extrudingPLCL:assessingFilamentOutput}}
 
-"Good quality" filament output is determined through various quantitative and qualitative factors. A detailed explanation of these factors can be found in~\autoref{sec:literatureReview:extrusion:issues}.
+"Good quality" filament output is determined through various quantitative and qualitative factors. A detailed explanation of these factors can be found in~\fullref{sec:literatureReview:extrusion:issues}.
 
 \subsubsection{Quantitative Factors\label{sec:discussion:extrudingPLCL:assessingFilamentOutput:quantitative}}
 
@@ -29,10 +29,10 @@ Qualitatively, filament output rate, filament surface texture, and circularity o
 Thin filament output indicates inadequate back pressure pushing material out of the extruder which can be caused by blockages or insufficient material flow.
 
 \paragraph*{Filament Surface}
-Filament surface texture, specifically filament being rough or bumpy is often indicative of contaminants in the barrel either getting embedded in the filament output or scratching/gouging the extrusion output.
+Filament surface texture, specifically filament being rough or bumpy, is often indicative of contaminants in the barrel either getting embedded in the filament output or scratching/gouging the extrusion output.
 
 \paragraph*{Filament Circularity}
-Flat or non-circular filament can mean the output is not properly being cooled before being pushed through the filament sensor. This can require increased cooling or by increasing fan speed or slowing the output rate.
+Flat or non-circular filament can mean the output is not being properly cooled before moving through the filament sensor. This can require increased cooling by increasing fan speed or slowing the output rate.
 
 Some examples of poor filament quality noticed throughout PLCL extrusions can be found below in Figure~\ref{fig:discussion:extrudingPLCL:qualitativeFactors}.
 
@@ -71,11 +71,11 @@ Various alternative device development approaches were researched including embe
 
 In addition to the filament output, there were concerns with the extrusion process as a whole. It was noted that the powder formed clumps (bridging) at the hopper. Even with the Devostick pusher, these clumps could not be consistently broken up which contributed to the variable flow rate. It was determined based on feedback from 3Devo customer support that this clumping is likely due to solely using powders and the heat zone temperatures being too high.
 
-Also, the process of extruding powder was found to be chaotic and messy as well as inefficient. It was difficult to keep the powder from dispersing when transferring from the initial container to the hopper. This led to dirtying of equipment and wasted raw material.
+Also, the process of extruding powder was found to be inefficient as it was difficult to keep the powder from dispersing when transferring from the initial container to the hopper. This led to dirtying of equipment and wasted raw material.
 
 \paragraph*{Key Takeaways}
 % order feeder, powders will always be brittle
-Key takeaways from this extrusion experiment are that: a 3Devo Feeder~\cite{RefWorks:RefID:310-3devofeeder} should be ordered to address clumping and variable flow rate, heat zones should be decreased to address clumping, cleaning supplies should be ordered to address powder dispersion, and alternative extrusion routes should be explored to address inherent brittleness of powder extrusions.
+Key takeaways from this extrusion experiment are that: a 3Devo Feeder~\cite{RefWorks:RefID:310-3devofeeder} should be ordered to address clumping and variable flow rate, heat zones should be decreased to address clumping, cleaning supplies such as wipes and a vacuum should be ordered to address powder dispersion, and alternative extrusion routes should be explored to address inherent brittleness of powder extrusions.
 
 Because the Nomisma PLCL powder is expensive and has a long lead time, the team decided to pause powder extrusion research until the 3Devo Feeder arrived to avoid potentially wasting raw material. In the meantime, alternative device fabrication approaches were explored.
 
@@ -127,7 +127,7 @@ The team was surprised that this extrusion led to clumping at the hopper given t
 
 Conversations with 3Devo customer support following this extrusion revealed that the Feeder cannot be used with more than one homogenous material. When a blend is poured into the hopper, the Feeder's vibrations will cause solid segregation, causing one material to sink to the bottom and the other to rise to the top. This was directly seen in the extrusion with PLA moving to the bottom of the hopper and PCL moving to the top.
 
-It was expected that temperatures were low enough to prevent premature melting of material. However, PCL pellets appeared to melt and bridge in the hopper. 3Devo customer support believed this is because the metal hopper is not insulated, so material sitting in the hopper for extended periods of time can be subject to additional heat. Because PCL has a lower melting point than PLA, the PLA pellets did not melt while sitting in the hopper but the PCL pellets began to.
+It was expected that temperatures were low enough to prevent premature melting of material. However, PCL pellets appeared to melt and bridge in the hopper. 3Devo customer support believed this is because the metal hopper is not insulated, so material sitting in the hopper for extended periods of time can be subject to additional heat. Because PCL has a lower melting point than PLA, the PLA pellets did not melt while sitting in the hopper while the PCL pellets began to.
 
 As a result, it was recommended to explore PCL's workable extrusion temperature range to determine how high temperatures could be set for this material. Ideally, the upper end of the PCL extrusion temperature range would overlap with the lower end of the PLA extrusion temperature range. This overlap would be the ideal extrusion temperature for the blend of materials.
 
